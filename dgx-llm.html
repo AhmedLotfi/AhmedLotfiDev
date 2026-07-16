@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: On-Prem LLM Platform on NVIDIA DGX — Ahmed Lotfy Mahfouz</title>
+<meta name="description" content="How we run AI code review, security review, grounded RAG chat, and code generation on self-hosted LLMs — with sensitive data never leaving the organization.">
+<link rel="canonical" href="https://ahmedlotfi.dev/dgx-llm.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Case Study: Production AI on-premises — code review, security review, RAG, codegen">
+<meta property="og:description" content="Four AI workloads in production on self-hosted LLMs (Ollama × NVIDIA DGX) behind one .NET abstraction. Architecture, decisions, trade-offs.">
+<meta property="og:url" content="https://ahmedlotfi.dev/dgx-llm.html">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="%230b141a"/><line x1="16" y1="3" x2="16" y2="29" stroke="%231d3140" stroke-width="2"/><circle cx="16" cy="16" r="6.5" fill="%230b141a" stroke="%2343d17c" stroke-width="2"/><circle cx="16" cy="16" r="2.2" fill="%2343d17c"/></svg>'>
+<link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Archivo Var';src:url('fonts/archivo-latin-wdth-normal.woff2') format('woff2');font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+@font-face{font-family:'Plex Sans Var';src:url('fonts/ibm-plex-sans-latin-wght-normal.woff2') format('woff2');font-weight:100 700;font-display:swap}
+@font-face{font-family:'Plex Mono';src:url('fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Plex Mono';src:url('fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Plex Mono';src:url('fonts/ibm-plex-mono-latin-600-normal.woff2') format('woff2');font-weight:600;font-display:swap}
+:root{
+  --ink:#eef2f4;--panel:#ffffff;--panel-2:#f5f8f9;--line:#d7e1e6;--text:#152530;--muted:#5a7180;--faint:#8ba1ad;
+  --ok:#0c9a55;--warn:#a3780f;--err:#c94a35;--info:#0b7ea5;
+  --disp:'Archivo Var',sans-serif;--body:'Plex Sans Var',sans-serif;--mono:'Plex Mono',monospace;color-scheme:light}
+[data-theme="dark"]{--ink:#0b141a;--panel:#101c24;--panel-2:#0e1820;--line:#1d3140;--text:#d7e3ea;--muted:#7d93a1;--faint:#57707e;
+  --ok:#43d17c;--warn:#e8b23d;--err:#e8604c;--info:#4cc3e8;color-scheme:dark}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16.5px;line-height:1.7;transition:background-color .25s,color .25s}
+a{color:var(--info);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--ok);outline-offset:3px}
+.top{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:12px clamp(20px,4vw,48px);border-bottom:1px solid var(--line);
+  background:color-mix(in srgb,var(--ink) 88%,transparent);backdrop-filter:blur(8px);font-family:var(--mono);font-size:12px}
+.top a.back{color:var(--muted);letter-spacing:.1em}
+.top a.back:hover{color:var(--ok);text-decoration:none}
+.top .crumb{color:var(--faint);letter-spacing:.12em}
+.top .crumb b{color:var(--ok);font-weight:500}
+.theme-toggle{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer}
+.theme-toggle:hover{border-color:var(--ok);color:var(--ok)}
+.wrap{max-width:860px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+header.case{padding:clamp(48px,8vh,84px) 0 34px}
+.svc-tag{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+.svc-tag .proto{color:var(--ok)}
+.svc-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);display:inline-block;box-shadow:0 0 6px color-mix(in srgb,var(--ok) 55%,transparent)}
+h1{font-family:var(--disp);font-weight:900;font-stretch:118%;text-transform:uppercase;line-height:1.02;font-size:clamp(28px,5vw,52px);letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--ok)}
+.lede{margin-top:20px;font-size:18px;color:var(--muted);max-width:62ch}
+.lede b{color:var(--text)}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;padding:16px 20px;border:1px solid var(--line);border-radius:8px;background:var(--panel);font-family:var(--mono);font-size:12px}
+.facts div{display:grid;gap:2px}
+.facts .k{color:var(--faint);letter-spacing:.12em;text-transform:uppercase;font-size:10px}
+.facts .v{color:var(--text)}
+h2{font-family:var(--disp);font-weight:800;font-stretch:112%;text-transform:uppercase;font-size:clamp(20px,2.6vw,27px);margin:56px 0 18px;letter-spacing:.01em}
+h2 .n{color:var(--faint);font-family:var(--mono);font-size:.6em;letter-spacing:.15em;vertical-align:middle;margin-right:10px}
+p{margin-bottom:16px;color:var(--muted)}
+p b,li b{color:var(--text);font-weight:600}
+.pull{border-left:3px solid var(--ok);padding:4px 0 4px 20px;margin:26px 0;font-size:17.5px;color:var(--text)}
+figure{margin:30px 0;border:1px solid var(--line);border-radius:10px;background:var(--panel);overflow:hidden}
+figure svg{display:block;width:100%;height:auto}
+figcaption{font-family:var(--mono);font-size:11px;color:var(--faint);padding:10px 16px;border-top:1px solid var(--line);letter-spacing:.08em}
+.wl-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+.wl{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:20px}
+.wl .wl-id{font-family:var(--mono);font-size:10px;color:var(--warn);letter-spacing:.16em}
+.wl h3{font-family:var(--disp);font-weight:800;font-size:15.5px;text-transform:uppercase;margin:6px 0 10px}
+.wl p{font-size:14px;margin-bottom:10px}
+.wl .io{font-family:var(--mono);font-size:11px;color:var(--faint);display:grid;gap:3px}
+.wl .io span b{color:var(--info);font-weight:500}
+ul.plain{list-style:none;display:grid;gap:10px;margin:0 0 16px}
+ul.plain li{padding-left:20px;position:relative;color:var(--muted)}
+ul.plain li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-size:13px}
+.tr-table{width:100%;border-collapse:collapse;font-size:14px;margin:20px 0 30px}
+.tr-table th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);text-align:left;padding:8px 12px;border-bottom:1px solid var(--line)}
+.tr-table td{padding:10px 12px;border-bottom:1px dashed var(--line);color:var(--muted);vertical-align:top}
+.tr-table td:first-child{color:var(--text);font-weight:600;white-space:nowrap}
+.cta{margin:60px 0 70px;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:28px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.cta p{margin:0;color:var(--muted)}
+.cta p b{color:var(--text)}
+.btn{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:12px 20px;border:1px solid var(--ok);border-radius:4px;color:#fff;background:var(--ok);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .btn{color:var(--ink)}
+.btn:hover{filter:brightness(1.08);text-decoration:none}
+@media(max-width:720px){.wl-grid{grid-template-columns:1fr}.facts{gap:16px}}
+@media print{.top,.cta{display:none}body{background:#fff}:root{--ink:#fff;--panel:#fff;--text:#111;--muted:#444;--line:#ccc}}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a class="back" href="index.html">← ALM · CTRL-PLANE</a>
+  <span class="crumb">case://<b>dgx-llm</b></span>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">◐</button>
+</nav>
+
+<div class="wrap">
+<header class="case">
+  <div class="svc-tag"><span class="dot"></span><span class="proto">case://</span>dgx-llm <span>· in production</span></div>
+  <h1>Production AI, <em>On-Premises</em></h1>
+  <p class="lede">How my team runs <b>four AI workloads in production</b> — code review, security code review, grounded RAG chat, and code generation — on <b>self-hosted LLMs</b> (Ollama × NVIDIA DGX), behind one .NET abstraction, with sensitive data never leaving the organization.</p>
+  <div class="facts">
+    <div><span class="k">Role</span><span class="v">Technical Team Lead · owner</span></div>
+    <div><span class="k">Team</span><span class="v">5 engineers</span></div>
+    <div><span class="k">Stack</span><span class="v">.NET · MEAI · Ollama · DGX</span></div>
+    <div><span class="k">Status</span><span class="v" style="color:var(--ok)">live · in daily use</span></div>
+  </div>
+</header>
+
+<h2><span class="n">01</span>The Problem</h2>
+<p>Hosted LLM APIs are the fastest way to ship AI features — and a non-starter for a large part of enterprise work. Our source code, internal policies, incident history, and operational documents are exactly the inputs that make AI useful for engineering teams, and exactly the data that <b>cannot cross the organization's boundary</b>.</p>
+<p>The naive answers both fail. "Just use the API" fails compliance. "Ban AI" fails the team — engineers were already losing hours to manual code review passes, repetitive security checklists, and hunting through documentation. The real requirement was: <b>bring the model to the data, not the data to the model.</b></p>
+
+<h2><span class="n">02</span>The Architecture</h2>
+<p>Every consumer — CI pipelines, the chat UI, IDE tooling — talks to one .NET gateway built on <b>Microsoft.Extensions.AI's <code>IChatClient</code></b> abstraction. The gateway routes each request by data sensitivity: workloads touching internal code or documents go to <b>open models served by Ollama on NVIDIA DGX hardware</b>, fully on-premises; general-purpose requests can route to hosted models. Sensitivity is a per-request decision, not a per-project rewrite.</p>
+
+<figure>
+<svg viewBox="0 0 860 430" xmlns="http://www.w3.org/2000/svg" font-family="'Plex Mono',monospace" role="img" aria-label="Architecture: consumers connect to a .NET AI gateway which routes by sensitivity to on-prem DGX models or hosted APIs; a RAG ingestion pipeline feeds a vector store used for grounding">
+  <style>
+    .bx{fill:var(--panel-2);stroke:var(--line);rx:8}
+    .bx2{fill:var(--panel);stroke:var(--line);rx:8}
+    .tt{fill:var(--text);font-size:12.5px;font-weight:600}
+    .ts{fill:var(--muted);font-size:10.5px}
+    .tm{fill:var(--faint);font-size:9.5px;letter-spacing:.1em}
+    .ln{stroke:var(--faint);stroke-width:1.3;fill:none;marker-end:url(#arr)}
+    .lnok{stroke:var(--ok);stroke-width:1.6;fill:none;marker-end:url(#arrok)}
+    .lninfo{stroke:var(--info);stroke-width:1.3;fill:none;marker-end:url(#arrinfo);stroke-dasharray:5 4}
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="var(--faint)"/></marker>
+    <marker id="arrok" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="var(--ok)"/></marker>
+    <marker id="arrinfo" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="var(--info)"/></marker>
+  </defs>
+
+  <!-- consumers -->
+  <rect class="bx2" x="20" y="30" width="170" height="52"/><text class="tt" x="36" y="52">CI/CD pipelines</text><text class="ts" x="36" y="68">code + security review</text>
+  <rect class="bx2" x="20" y="100" width="170" height="52"/><text class="tt" x="36" y="122">Chat UI</text><text class="ts" x="36" y="138">grounded RAG assistant</text>
+  <rect class="bx2" x="20" y="170" width="170" height="52"/><text class="tt" x="36" y="192">Engineering tools</text><text class="ts" x="36" y="208">code generation</text>
+
+  <!-- gateway -->
+  <rect class="bx" x="270" y="88" width="200" height="118"/>
+  <text class="tm" x="286" y="110">.NET AI GATEWAY</text>
+  <text class="tt" x="286" y="132">IChatClient (MEAI)</text>
+  <text class="ts" x="286" y="152">auth · rate limits · telemetry</text>
+  <text class="ts" x="286" y="168">structured output · retries</text>
+  <text class="ts" x="286" y="188" fill="var(--warn)">route by data sensitivity</text>
+
+  <!-- on-prem -->
+  <rect x="560" y="26" width="280" height="196" fill="none" stroke="var(--ok)" stroke-dasharray="6 5" rx="10"/>
+  <text class="tm" x="576" y="48" fill="var(--ok)">ORG BOUNDARY — DATA STAYS INSIDE</text>
+  <rect class="bx2" x="580" y="62" width="240" height="64"/>
+  <text class="tt" x="596" y="86">Ollama · NVIDIA DGX</text>
+  <text class="ts" x="596" y="104">open models · quantized · queued</text>
+  <rect class="bx2" x="580" y="142" width="240" height="64"/>
+  <text class="tt" x="596" y="166">Vector store</text>
+  <text class="ts" x="596" y="184">embeddings of code + docs</text>
+
+  <!-- hosted -->
+  <rect class="bx2" x="580" y="250" width="240" height="58"/>
+  <text class="tt" x="596" y="274">Hosted APIs (Claude / OpenAI)</text>
+  <text class="ts" x="596" y="292">non-sensitive workloads only</text>
+
+  <!-- ingestion -->
+  <rect class="bx2" x="270" y="330" width="200" height="66"/>
+  <text class="tm" x="286" y="352">INGESTION (OFFLINE)</text>
+  <text class="tt" x="286" y="372">Docs + repos → chunks</text>
+  <text class="ts" x="286" y="388">embed on-prem → index</text>
+
+  <!-- edges -->
+  <path class="ln" d="M190 56 H240 Q255 56 258 80 L266 96"/>
+  <path class="ln" d="M190 126 H262"/>
+  <path class="ln" d="M190 196 H240 Q255 196 258 176 L266 160"/>
+  <path class="lnok" d="M470 118 H540 Q556 118 560 108 L574 94"/>
+  <path class="lninfo" d="M470 176 H540 Q556 176 562 200 L578 264"/>
+  <path class="lnok" d="M470 152 H520 Q545 152 560 165 L576 172"/>
+  <path class="lnok" d="M370 330 V212"/>
+  <path class="lnok" d="M470 363 H700 Q716 363 716 340 V212"/>
+  <text class="tm" x="488" y="88" fill="var(--ok)">sensitive</text>
+  <text class="tm" x="482" y="232" fill="var(--info)">general</text>
+</svg>
+<figcaption>fig.01 — one gateway, two worlds: routing by sensitivity makes on-prem vs hosted a configuration decision</figcaption>
+</figure>
+
+<h2><span class="n">03</span>Four Workloads in Production</h2>
+<div class="wl-grid">
+  <div class="wl">
+    <span class="wl-id">WL-01 · CI-INTEGRATED</span>
+    <h3>AI Code Review</h3>
+    <p>Every merge request gets a model pass before human review: correctness risks, N+1 queries, missing cancellation tokens, convention drift. Findings post as structured review comments — humans stay the approvers; the model clears the underbrush.</p>
+    <div class="io"><span><b>in</b> diff + surrounding context</span><span><b>out</b> typed findings → MR comments</span></div>
+  </div>
+  <div class="wl">
+    <span class="wl-id">WL-02 · CI-INTEGRATED</span>
+    <h3>Security Code Review</h3>
+    <p>A separate pass with a security-specific prompt and ruleset: injection risks, authZ gaps, secret leakage, unsafe deserialization. Runs on-prem by necessity — the code being audited is exactly what can't be sent to an external API.</p>
+    <div class="io"><span><b>in</b> diff + dependency manifest</span><span><b>out</b> severity-ranked findings</span></div>
+  </div>
+  <div class="wl">
+    <span class="wl-id">WL-03 · INTERACTIVE</span>
+    <h3>Grounded RAG Chat</h3>
+    <p>An assistant answering from our own knowledge: internal docs and repos are chunked, embedded on-prem, and retrieved per question. Answers cite their sources; "grounded" means the model is constrained to retrieved context, not free to improvise policy.</p>
+    <div class="io"><span><b>in</b> question + top-k retrieved chunks</span><span><b>out</b> cited answer</span></div>
+  </div>
+  <div class="wl">
+    <span class="wl-id">WL-04 · TOOLING</span>
+    <h3>Code Generation</h3>
+    <p>Scaffolding, tests, migrations, and boilerplate generated against our conventions, with repository context retrieved the same way the chat is grounded. Output is a starting point that compiles against our patterns — not generic samples from the internet.</p>
+    <div class="io"><span><b>in</b> spec + retrieved repo context</span><span><b>out</b> code, reviewed like any code</span></div>
+  </div>
+</div>
+
+<h2><span class="n">04</span>Decisions &amp; Trade-offs</h2>
+<table class="tr-table">
+  <thead><tr><th>Decision</th><th>Why</th><th>The trade-off we accepted</th></tr></thead>
+  <tbody>
+    <tr><td>Self-host on DGX</td><td>Data boundary is non-negotiable for code and internal docs</td><td>We own ops, upgrades, and capacity planning; models trail frontier quality</td></tr>
+    <tr><td>MEAI abstraction</td><td>Routing is config, not rewrites; providers are swappable</td><td>A thin layer to maintain; occasional provider-specific features need escape hatches</td></tr>
+    <tr><td>Structured output everywhere</td><td>CI can't parse prose — findings must be typed and validated</td><td>Stricter prompts; a retry-with-error loop for schema violations</td></tr>
+    <tr><td>Humans stay approvers</td><td>Model findings advise, never gate a merge alone</td><td>Slower than full automation — deliberately</td></tr>
+    <tr><td>Eval set before every swap</td><td>Model/quantization changes are deploys, not experiments</td><td>Maintaining golden datasets takes real time</td></tr>
+  </tbody>
+</table>
+
+<h2><span class="n">05</span>What It Changed</h2>
+<ul class="plain">
+  <li><b>Review depth without review delay</b> — every merge request now gets a consistent automated pass for both quality and security before a human ever looks, so human reviewers spend their attention on design instead of lint-level findings.</li>
+  <li><b>Institutional knowledge became queryable</b> — questions that used to mean finding-the-right-person now get cited answers from the docs themselves.</li>
+  <li><b>AI adoption without a compliance fight</b> — because the boundary question was answered by architecture, not by policy exceptions.</li>
+  <li><b>A reusable platform, not a feature</b> — new workloads onboard by writing a prompt and a typed contract against the same gateway.</li>
+</ul>
+<p class="pull">The unlock wasn't the model — it was treating AI infrastructure like any other production system: one abstraction, routed by data sensitivity, observable, and evaluated before every change.</p>
+
+<div class="cta">
+  <p><b>Building something similar?</b><br>I'm happy to compare notes on running LLMs inside the boundary.</p>
+  <a class="btn" href="mailto:ahmedlotfiali@gmail.com">Open channel</a>
+</div>
+</div>
+
+<script>
+const store={get(k){try{return localStorage.getItem(k)}catch{return null}},set(k,v){try{localStorage.setItem(k,v)}catch{}}};
+(function(){
+  const btn=document.getElementById('theme-toggle');
+  const apply=t=>{if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');btn.textContent='◑';}
+    else{document.documentElement.removeAttribute('data-theme');btn.textContent='◐';}};
+  let theme=store.get('alm-theme')||'light';apply(theme);
+  btn.onclick=()=>{theme=theme==='light'?'dark':'light';apply(theme);store.set('alm-theme',theme);};
+})();
+</script>
+</body>
+</html>
