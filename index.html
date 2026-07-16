@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ahmed Lotfy Mahfouz — Technical Team Lead · .NET × Production AI</title>
-<meta name="description" content="Technical Team Lead in Dubai building enterprise .NET systems — payments, POS, SSO — and production AI with self-hosted LLMs on NVIDIA DGX.">
-<link rel="canonical" href="https://ahmedlotfi.dev/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Lotfy Mahfouz — Technical Team Lead · .NET × Production AI</title>
+  <meta name="description"
+    content="Technical Team Lead in Dubai building enterprise .NET systems — payments, POS, SSO — and production AI with self-hosted LLMs on NVIDIA DGX.">
+  <link rel="canonical" href="https://ahmedlotfi.dev/">
 
-<!-- Open Graph / link previews -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ahmed Lotfy Mahfouz — Technical Team Lead">
-<meta property="og:description" content="Enterprise .NET systems × production AI. Payments, POS, SSO integrations — and self-hosted LLMs on NVIDIA DGX.">
-<meta property="og:url" content="https://ahmedlotfi.dev/">
-<meta property="og:site_name" content="ALM Control Plane">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ahmed Lotfy Mahfouz — Technical Team Lead">
-<meta name="twitter:description" content="Enterprise .NET systems × production AI, Dubai.">
+  <!-- Open Graph / link previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahmed Lotfy Mahfouz — Technical Team Lead">
+  <meta property="og:description"
+    content="Enterprise .NET systems × production AI. Payments, POS, SSO integrations — and self-hosted LLMs on NVIDIA DGX.">
+  <meta property="og:url" content="https://ahmedlotfi.dev/">
+  <meta property="og:site_name" content="ALM Control Plane">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ahmed Lotfy Mahfouz — Technical Team Lead">
+  <meta name="twitter:description" content="Enterprise .NET systems × production AI, Dubai.">
 
-<!-- Favicon: bus node -->
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="%230b141a"/><line x1="16" y1="3" x2="16" y2="29" stroke="%231d3140" stroke-width="2"/><circle cx="16" cy="16" r="6.5" fill="%230b141a" stroke="%2343d17c" stroke-width="2"/><circle cx="16" cy="16" r="2.2" fill="%2343d17c"/></svg>'>
+  <!-- Favicon: bus node -->
+  <link rel="icon"
+    href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="%230b141a"/><line x1="16" y1="3" x2="16" y2="29" stroke="%231d3140" stroke-width="2"/><circle cx="16" cy="16" r="6.5" fill="%230b141a" stroke="%2343d17c" stroke-width="2"/><circle cx="16" cy="16" r="2.2" fill="%2343d17c"/></svg>'>
 
-<!-- Structured data -->
-<script type="application/ld+json">
+  <!-- Structured data -->
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -41,1034 +45,2802 @@
 }
 </script>
 
-<!-- Self-hosted fonts (fontsource, latin subsets, ~188 KB total) -->
-<link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-@font-face{font-family:'Archivo Var';src:url('fonts/archivo-latin-wdth-normal.woff2') format('woff2');
-  font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:swap}
-@font-face{font-family:'Plex Sans Var';src:url('fonts/ibm-plex-sans-latin-wght-normal.woff2') format('woff2');
-  font-weight:100 700;font-style:normal;font-display:swap}
-@font-face{font-family:'Plex Mono';src:url('fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
-  font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Plex Mono';src:url('fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2');
-  font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Plex Mono';src:url('fonts/ibm-plex-mono-latin-600-normal.woff2') format('woff2');
-  font-weight:600;font-style:normal;font-display:swap}
+  <!-- Self-hosted fonts (fontsource, latin subsets, ~188 KB total) -->
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Archivo Var';
+      src: url('fonts/archivo-latin-wdth-normal.woff2') format('woff2');
+      font-weight: 100 900;
+      font-stretch: 62% 125%;
+      font-style: normal;
+      font-display: swap
+    }
 
-/* ================= THEME SYSTEM — light is default ================= */
-:root{
-  --ink:#eef2f4;           /* page: cool paper */
-  --panel:#ffffff;
-  --panel-2:#f5f8f9;
-  --line:#d7e1e6;
-  --text:#152530;
-  --muted:#5a7180;
-  --faint:#8ba1ad;         /* timestamps, dividers-on-panel */
-  --ok:#0c9a55;
-  --warn:#a3780f;
-  --err:#c94a35;
-  --info:#0b7ea5;
-  --glow-ok:0 0 6px color-mix(in srgb, var(--ok) 55%, transparent);
-  --bg-orbs:radial-gradient(1200px 600px at 80% -10%, color-mix(in srgb, var(--info) 7%, transparent), transparent 60%),
-            radial-gradient(900px 500px at -10% 40%, color-mix(in srgb, var(--ok) 6%, transparent), transparent 60%);
-  --rail-bg:linear-gradient(180deg, color-mix(in srgb, var(--panel) 92%, transparent), color-mix(in srgb, var(--ink) 96%, transparent));
-  --disp:'Archivo Var',sans-serif;
-  --body:'Plex Sans Var',sans-serif;
-  --mono:'Plex Mono',monospace;
-  --rail:76px;
-  color-scheme:light;
-}
-[data-theme="dark"]{
-  --ink:#0b141a;
-  --panel:#101c24;
-  --panel-2:#0e1820;
-  --line:#1d3140;
-  --text:#d7e3ea;
-  --muted:#7d93a1;
-  --faint:#57707e;
-  --ok:#43d17c;
-  --warn:#e8b23d;
-  --err:#e8604c;
-  --info:#4cc3e8;
-  color-scheme:dark;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6;
-  background-image:var(--bg-orbs);transition:background-color .25s,color .25s}
-::selection{background:var(--ok);color:var(--panel)}
-a{color:var(--info);text-decoration:none}
-a:hover{text-decoration:underline}
-:focus-visible{outline:2px solid var(--ok);outline-offset:3px;border-radius:2px}
-.mono,.svc-tag,.status-line{font-variant-numeric:tabular-nums}
+    @font-face {
+      font-family: 'Plex Sans Var';
+      src: url('fonts/ibm-plex-sans-latin-wght-normal.woff2') format('woff2');
+      font-weight: 100 700;
+      font-style: normal;
+      font-display: swap
+    }
 
-/* ================= BOOT SEQUENCE ================= */
-#boot{position:fixed;inset:0;z-index:200;background:#0b141a;color:#d7e3ea;display:grid;place-items:center;
-  font-family:var(--mono);font-size:13.5px;transition:opacity .45s;cursor:pointer}
-#boot.done{opacity:0;pointer-events:none}
-#boot .boot-box{width:min(420px,86vw)}
-#boot .boot-title{color:#43d17c;letter-spacing:.2em;font-size:11px;margin-bottom:14px;text-transform:uppercase}
-#boot .bl{opacity:0;margin:3px 0;color:#7d93a1}
-#boot .bl .ok{color:#43d17c;float:right}
-#boot .bl.show{animation:bl-in .18s forwards}
-@keyframes bl-in{to{opacity:1}}
-#boot .skip{margin-top:18px;font-size:10.5px;color:#3d5260;letter-spacing:.12em}
+    @font-face {
+      font-family: 'Plex Mono';
+      src: url('fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap
+    }
 
-/* ================= THE BUS ================= */
-.rail{position:fixed;inset:0 auto 0 0;width:var(--rail);border-right:1px solid var(--line);
-  background:var(--rail-bg);z-index:50;display:flex;flex-direction:column;align-items:center;
-  padding:18px 0;backdrop-filter:blur(6px)}
-.rail .brand{font-family:var(--mono);font-size:11px;color:var(--ok);writing-mode:vertical-rl;
-  letter-spacing:.35em;text-transform:uppercase;margin-bottom:14px}
-.bus{position:relative;flex:1;width:2px;background:var(--line)}
-.bus .packet{position:absolute;left:50%;width:6px;height:6px;border-radius:50%;
-  transform:translateX(-50%);background:var(--ok);box-shadow:var(--glow-ok);animation:travel 7s linear infinite}
-.bus .packet.p2{background:var(--info);box-shadow:0 0 6px color-mix(in srgb,var(--info) 55%,transparent);animation-duration:11s;animation-delay:3s}
-.bus .packet.p3{background:var(--warn);box-shadow:0 0 6px color-mix(in srgb,var(--warn) 55%,transparent);animation-duration:9s;animation-delay:6s}
-@keyframes travel{0%{top:-2%;opacity:0}6%{opacity:1}94%{opacity:1}100%{top:101%;opacity:0}}
-.node{position:absolute;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;
-  border:1px solid var(--line);background:var(--panel);display:grid;place-items:center;cursor:pointer}
-.node svg{width:14px;height:14px;stroke:var(--muted);fill:none;stroke-width:1.7;transition:stroke .2s}
-.node::after{content:attr(data-label);position:absolute;left:42px;top:50%;transform:translateY(-50%);
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-  background:var(--panel);border:1px solid var(--line);padding:3px 8px;border-radius:3px;opacity:0;
-  pointer-events:none;transition:opacity .18s;white-space:nowrap;z-index:5}
-.node:hover::after{opacity:1}
-.node.active{border-color:var(--ok)}
-.node.active svg{stroke:var(--ok)}
-.node.active::before{content:'';position:absolute;inset:-5px;border-radius:50%;
-  border:1px solid color-mix(in srgb,var(--ok) 40%,transparent);animation:ping 2.2s ease-out infinite}
-@keyframes ping{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.5);opacity:0}}
-.theme-toggle{margin-top:12px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);
-  background:var(--panel);color:var(--muted);cursor:pointer;display:grid;place-items:center;font-size:14px;transition:.2s}
-.theme-toggle:hover{border-color:var(--ok);color:var(--ok)}
+    @font-face {
+      font-family: 'Plex Mono';
+      src: url('fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap
+    }
 
-main{margin-left:var(--rail)}
-.wrap{max-width:1060px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
-section.svc{padding:clamp(56px,8vh,96px) 0;border-bottom:1px solid var(--line)}
-.svc-tag{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
-.svc-tag .proto{color:var(--ok)}
-.svc-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:var(--glow-ok);display:inline-block}
-h2{font-family:var(--disp);font-weight:800;font-stretch:115%;font-size:clamp(26px,3.6vw,40px);
-  letter-spacing:-.01em;margin-bottom:26px;text-transform:uppercase}
-h2 em{font-style:normal;color:var(--ok)}
-.sec-note{color:var(--muted);max-width:62ch;margin:-8px 0 34px;font-size:15px}
+    @font-face {
+      font-family: 'Plex Mono';
+      src: url('fonts/ibm-plex-mono-latin-600-normal.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap
+    }
 
-/* ================= HERO ================= */
-header.hero{min-height:92vh;display:flex;align-items:center;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
-.hero-grid{width:100%;display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:end}
-.status-line{font-family:var(--mono);font-size:12.5px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:22px}
-.status-line .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:var(--glow-ok);animation:blink 2.4s infinite}
-@keyframes blink{50%{opacity:.35}}
-h1{font-family:var(--disp);font-weight:900;font-stretch:120%;text-transform:uppercase;line-height:.95;
-  font-size:clamp(40px,7.2vw,88px);letter-spacing:-.015em}
-h1 .thin{display:block;font-family:var(--disp);font-weight:500;font-stretch:75%;font-size:.42em;letter-spacing:.12em;color:var(--muted);margin-top:14px}
-.hero-sub{margin-top:26px;max-width:56ch;color:var(--muted);font-size:17px}
-.hero-sub strong{color:var(--text);font-weight:600}
-.hero-cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:12px 20px;
-  border:1px solid var(--line);border-radius:4px;color:var(--text);background:var(--panel);transition:.2s;cursor:pointer}
-.btn:hover{border-color:var(--ok);color:var(--ok);text-decoration:none;transform:translateY(-1px)}
-.btn.primary{background:var(--ok);color:#fff;border-color:var(--ok);font-weight:600}
-[data-theme="dark"] .btn.primary{color:var(--ink)}
-.btn.primary:hover{color:#fff;filter:brightness(1.08)}
-[data-theme="dark"] .btn.primary:hover{color:var(--ink)}
-.tele{border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden;box-shadow:0 1px 3px rgba(21,37,48,.06)}
-.tele-head{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted);
-  padding:10px 14px;border-bottom:1px solid var(--line);letter-spacing:.1em;text-transform:uppercase}
-.tele-body{padding:16px 14px;display:grid;gap:13px}
-.tele-row{display:grid;grid-template-columns:130px 1fr auto;gap:10px;align-items:center;font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums}
-.tele-row .k{color:var(--muted)}
-.meter{height:5px;border-radius:3px;background:var(--panel-2);overflow:hidden;border:1px solid var(--line)}
-.meter i{display:block;height:100%;background:linear-gradient(90deg,var(--info),var(--ok));width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
-.tele-row .v{color:var(--ok)}
-</style>
-<style>
-/* ================= capabilities ================= */
-.cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.cap{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:20px 20px 16px;box-shadow:0 1px 3px rgba(21,37,48,.05)}
-.cap-head{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
-.cap-id{font-family:var(--mono);font-size:10.5px;color:var(--warn);letter-spacing:.15em}
-.cap h3{font-family:var(--disp);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.05em}
-.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
-.chips li{font-family:var(--mono);font-size:12px;padding:5px 11px;border:1px solid var(--line);border-radius:99px;color:var(--muted);transition:.15s}
-.chips li:hover{color:var(--text);border-color:var(--muted)}
-.chips.ai li{border-color:color-mix(in srgb,var(--ok) 40%,transparent);color:color-mix(in srgb,var(--ok) 75%,var(--text))}
-.chips.ai li:hover{border-color:var(--ok);color:var(--ok)}
+    /* ================= THEME SYSTEM — light is default ================= */
+    :root {
+      --ink: #eef2f4;
+      /* page: cool paper */
+      --panel: #ffffff;
+      --panel-2: #f5f8f9;
+      --line: #d7e1e6;
+      --text: #152530;
+      --muted: #5a7180;
+      --faint: #8ba1ad;
+      /* timestamps, dividers-on-panel */
+      --ok: #0c9a55;
+      --warn: #a3780f;
+      --err: #c94a35;
+      --info: #0b7ea5;
+      --glow-ok: 0 0 6px color-mix(in srgb, var(--ok) 55%, transparent);
+      --bg-orbs: radial-gradient(1200px 600px at 80% -10%, color-mix(in srgb, var(--info) 7%, transparent), transparent 60%),
+        radial-gradient(900px 500px at -10% 40%, color-mix(in srgb, var(--ok) 6%, transparent), transparent 60%);
+      --rail-bg: linear-gradient(180deg, color-mix(in srgb, var(--panel) 92%, transparent), color-mix(in srgb, var(--ink) 96%, transparent));
+      --disp: 'Archivo Var', sans-serif;
+      --body: 'Plex Sans Var', sans-serif;
+      --mono: 'Plex Mono', monospace;
+      --rail: 76px;
+      color-scheme: light;
+    }
 
-/* ================= deployment log ================= */
-.dep{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:26px 0;border-top:1px dashed var(--line)}
-.dep:first-of-type{border-top:none}
-.dep-meta{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:6px;font-variant-numeric:tabular-nums}
-.dep-ver{color:var(--ok);letter-spacing:.12em}
-.dep.edu .dep-ver{color:var(--info)}
-.dep-body h3{font-family:var(--disp);font-weight:700;font-size:18px;margin-bottom:10px;letter-spacing:.01em}
-.dep-body h3 a{color:var(--text)}
-.dep-body ul{list-style:none;display:grid;gap:8px}
-.dep-body li{padding-left:18px;position:relative;color:var(--muted);font-size:15px}
-.dep-body li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-size:12px;top:3px}
-.dep-body b{color:var(--text);font-weight:600}
+    [data-theme="dark"] {
+      --ink: #0b141a;
+      --panel: #101c24;
+      --panel-2: #0e1820;
+      --line: #1d3140;
+      --text: #d7e3ea;
+      --muted: #7d93a1;
+      --faint: #57707e;
+      --ok: #43d17c;
+      --warn: #e8b23d;
+      --err: #e8604c;
+      --info: #4cc3e8;
+      color-scheme: dark;
+    }
 
-/* ================= systems / sims ================= */
-.sys{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:24px;margin-bottom:22px;box-shadow:0 1px 3px rgba(21,37,48,.05)}
-.sys-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:16px;flex-wrap:wrap}
-.sys h3{font-family:var(--disp);font-weight:800;font-size:19px;text-transform:uppercase;letter-spacing:.02em}
-.sys-sub{color:var(--muted);font-size:13.5px;margin-top:4px;max-width:60ch}
-.badge{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;padding:5px 10px;border-radius:3px;white-space:nowrap}
-.badge.sim{background:color-mix(in srgb,var(--warn) 12%,transparent);color:var(--warn);border:1px solid color-mix(in srgb,var(--warn) 45%,transparent)}
-.badge.link{background:color-mix(in srgb,var(--info) 10%,transparent);color:var(--info);border:1px solid color-mix(in srgb,var(--info) 45%,transparent)}
-.badge.link:hover{text-decoration:none;background:color-mix(in srgb,var(--info) 20%,transparent)}
-.badge-row{display:flex;gap:8px;align-items:center}
-.sys-skills{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
-.sys-skills li{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px dashed var(--line);border-radius:99px;padding:3px 10px}
-.sim{border:1px solid var(--line);border-radius:6px;background:var(--panel-2);overflow:hidden}
-.sim-stats{display:flex;gap:34px;padding:14px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.sim-stats .num{font-family:var(--mono);font-size:22px;color:var(--ok);display:block;font-weight:600;font-variant-numeric:tabular-nums;min-width:4ch}
-.sim-stats .lbl{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
-.log{height:172px;overflow:hidden;padding:12px 16px;font-family:var(--mono);font-size:12.5px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;font-variant-numeric:tabular-nums}
-.log .ln{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;animation:lnin .3s forwards}
-@keyframes lnin{to{opacity:1}}
-.log .t{color:var(--faint)}.log .ok{color:var(--ok)}.log .er{color:var(--err)}.log .wn{color:var(--warn)}.log .in{color:var(--info)}
-.rag{padding:16px}
-.rag-route{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
-.route-lbl{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.14em}
-.route-btn{font-family:var(--mono);font-size:12px;padding:7px 13px;border-radius:4px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:.15s}
-.route-btn.active{border-color:var(--ok);color:var(--ok);background:color-mix(in srgb,var(--ok) 8%,transparent)}
-.route-note{font-family:var(--mono);font-size:11px;color:var(--warn)}
-.rag-q{font-family:var(--mono);font-size:13px;color:var(--text);min-height:22px;margin-bottom:10px;overflow:hidden}
-.rag-q::before{content:'? ';color:var(--info)}
-.rag-chips{display:flex;gap:8px;flex-wrap:wrap;min-height:30px;margin-bottom:12px;align-content:flex-start}
-.rag-chips span{font-family:var(--mono);font-size:10.5px;border:1px solid color-mix(in srgb,var(--info) 45%,transparent);color:var(--info);padding:4px 9px;border-radius:3px;opacity:0;animation:lnin .35s forwards}
-.rag-a{font-size:14.5px;color:var(--muted);height:84px;line-height:1.65;overflow:hidden}
-.caret{color:var(--ok);animation:blink 1s infinite}
-.vip{padding:16px}
-.vip-road{position:relative;height:54px;border:1px dashed var(--line);border-radius:5px;margin-bottom:14px;overflow:hidden;
-  background:repeating-linear-gradient(90deg,transparent 0 34px,color-mix(in srgb,var(--muted) 14%,transparent) 34px 36px)}
-.vip-car{position:absolute;top:50%;left:-40px;transform:translateY(-50%);font-size:24px;filter:saturate(.75)}
-.vip-gate{position:absolute;right:56px;top:6px;bottom:6px;width:4px;background:var(--err);border-radius:2px;transition:background .3s, transform .4s;transform-origin:bottom}
-.vip-gate.open{background:var(--ok);transform:rotate(78deg)}
-.trace{list-style:none;font-family:var(--mono);font-size:12.5px;display:grid;gap:6px;font-variant-numeric:tabular-nums}
-.trace li{color:var(--faint);padding-left:20px;position:relative;transition:color .2s}
-.trace li::before{content:'○';position:absolute;left:0;color:var(--line)}
-.trace li.done{color:var(--muted)}.trace li.done::before{content:'●';color:var(--ok)}
-.trace li.done .ms{color:var(--ok)}
-.trace .ms{float:right;color:var(--faint)}
-.sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:6px}
-.mini{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:20px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 3px rgba(21,37,48,.05)}
-.mini-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.mini h4{font-family:var(--disp);font-weight:800;font-size:15.5px;text-transform:uppercase}
-.mini p{color:var(--muted);font-size:13.5px;flex:1}
-.latbar{display:grid;gap:6px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
-.lat{display:flex;align-items:center;gap:8px}
-.lat i{display:block;height:6px;border-radius:3px;background:var(--err);width:0;transition:width 1s .2s}
-.lat.after i{background:var(--ok);transition-delay:.5s}
-.lat em{font-style:normal;white-space:nowrap}
-.tenant-btns{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
-.t-btn{font-family:var(--mono);font-size:10.5px;padding:5px 9px;border-radius:3px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
-.t-btn.active{border-color:var(--warn);color:var(--warn)}
-.t-table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11px;font-variant-numeric:tabular-nums}
-.t-table th{text-align:left;color:var(--faint);font-weight:500;padding:4px 6px;border-bottom:1px solid var(--line);letter-spacing:.08em}
-.t-table td{padding:5px 6px;color:var(--muted);border-bottom:1px dashed var(--line)}
-.t-table .st-ok{color:var(--ok)}.t-table .st-wn{color:var(--warn)}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
 
-/* ================= field notes ================= */
-.note{border:1px solid var(--line);border-radius:10px;background:var(--panel);margin-bottom:14px;overflow:hidden;box-shadow:0 1px 3px rgba(21,37,48,.05)}
-.note summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
-.note summary::-webkit-details-marker{display:none}
-.note summary:hover{background:var(--panel-2)}
-.note .n-id{font-family:var(--mono);font-size:10.5px;color:var(--info);letter-spacing:.15em}
-.note h3{font-family:var(--disp);font-weight:700;font-size:16.5px;flex:1;min-width:240px}
-.note .n-open{font-family:var(--mono);font-size:11px;color:var(--faint)}
-.note[open] .n-open{color:var(--ok)}
-.note .n-body{padding:0 22px 22px;color:var(--muted);font-size:15px;max-width:74ch;display:grid;gap:12px}
-.note .n-body b{color:var(--text);font-weight:600}
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: var(--ink);
+      color: var(--text);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.6;
+      background-image: var(--bg-orbs);
+      transition: background-color .25s, color .25s
+    }
+
+    ::selection {
+      background: var(--ok);
+      color: var(--panel)
+    }
+
+    a {
+      color: var(--info);
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: underline
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--ok);
+      outline-offset: 3px;
+      border-radius: 2px
+    }
+
+    .mono,
+    .svc-tag,
+    .status-line {
+      font-variant-numeric: tabular-nums
+    }
+
+    /* ================= BOOT SEQUENCE ================= */
+    #boot {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: #0b141a;
+      color: #d7e3ea;
+      display: grid;
+      place-items: center;
+      font-family: var(--mono);
+      font-size: 13.5px;
+      transition: opacity .45s;
+      cursor: pointer
+    }
+
+    #boot.done {
+      opacity: 0;
+      pointer-events: none
+    }
+
+    #boot .boot-box {
+      width: min(420px, 86vw)
+    }
+
+    #boot .boot-title {
+      color: #43d17c;
+      letter-spacing: .2em;
+      font-size: 11px;
+      margin-bottom: 14px;
+      text-transform: uppercase
+    }
+
+    #boot .bl {
+      opacity: 0;
+      margin: 3px 0;
+      color: #7d93a1
+    }
+
+    #boot .bl .ok {
+      color: #43d17c;
+      float: right
+    }
+
+    #boot .bl.show {
+      animation: bl-in .18s forwards
+    }
+
+    @keyframes bl-in {
+      to {
+        opacity: 1
+      }
+    }
+
+    #boot .skip {
+      margin-top: 18px;
+      font-size: 10.5px;
+      color: #3d5260;
+      letter-spacing: .12em
+    }
+
+    /* ================= THE BUS ================= */
+    .rail {
+      position: fixed;
+      inset: 0 auto 0 0;
+      width: var(--rail);
+      border-right: 1px solid var(--line);
+      background: var(--rail-bg);
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 18px 0;
+      backdrop-filter: blur(6px)
+    }
+
+    .rail .brand {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ok);
+      writing-mode: vertical-rl;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      margin-bottom: 14px
+    }
+
+    .bus {
+      position: relative;
+      flex: 1;
+      width: 2px;
+      background: var(--line)
+    }
+
+    .bus .packet {
+      position: absolute;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      background: var(--ok);
+      box-shadow: var(--glow-ok);
+      animation: travel 7s linear infinite
+    }
+
+    .bus .packet.p2 {
+      background: var(--info);
+      box-shadow: 0 0 6px color-mix(in srgb, var(--info) 55%, transparent);
+      animation-duration: 11s;
+      animation-delay: 3s
+    }
+
+    .bus .packet.p3 {
+      background: var(--warn);
+      box-shadow: 0 0 6px color-mix(in srgb, var(--warn) 55%, transparent);
+      animation-duration: 9s;
+      animation-delay: 6s
+    }
+
+    @keyframes travel {
+      0% {
+        top: -2%;
+        opacity: 0
+      }
+
+      6% {
+        opacity: 1
+      }
+
+      94% {
+        opacity: 1
+      }
+
+      100% {
+        top: 101%;
+        opacity: 0
+      }
+    }
+
+    .node {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      display: grid;
+      place-items: center;
+      cursor: pointer
+    }
+
+    .node svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--muted);
+      fill: none;
+      stroke-width: 1.7;
+      transition: stroke .2s
+    }
+
+    .node::after {
+      content: attr(data-label);
+      position: absolute;
+      left: 42px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 3px 8px;
+      border-radius: 3px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .18s;
+      white-space: nowrap;
+      z-index: 5
+    }
+
+    .node:hover::after {
+      opacity: 1
+    }
+
+    .node.active {
+      border-color: var(--ok)
+    }
+
+    .node.active svg {
+      stroke: var(--ok)
+    }
+
+    .node.active::before {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      border: 1px solid color-mix(in srgb, var(--ok) 40%, transparent);
+      animation: ping 2.2s ease-out infinite
+    }
+
+    @keyframes ping {
+      0% {
+        transform: scale(.8);
+        opacity: 1
+      }
+
+      100% {
+        transform: scale(1.5);
+        opacity: 0
+      }
+    }
+
+    .theme-toggle {
+      margin-top: 12px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--muted);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      transition: .2s
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--ok);
+      color: var(--ok)
+    }
+
+    main {
+      margin-left: var(--rail)
+    }
+
+    .wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 56px)
+    }
+
+    section.svc {
+      padding: clamp(56px, 8vh, 96px) 0;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .svc-tag {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 14px
+    }
+
+    .svc-tag .proto {
+      color: var(--ok)
+    }
+
+    .svc-tag .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--ok);
+      box-shadow: var(--glow-ok);
+      display: inline-block
+    }
+
+    h2 {
+      font-family: var(--disp);
+      font-weight: 800;
+      font-stretch: 115%;
+      font-size: clamp(26px, 3.6vw, 40px);
+      letter-spacing: -.01em;
+      margin-bottom: 26px;
+      text-transform: uppercase
+    }
+
+    h2 em {
+      font-style: normal;
+      color: var(--ok)
+    }
+
+    .sec-note {
+      color: var(--muted);
+      max-width: 62ch;
+      margin: -8px 0 34px;
+      font-size: 15px
+    }
+
+    /* ================= HERO ================= */
+    header.hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      overflow: hidden
+    }
+
+    .hero-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 40px;
+      align-items: end
+    }
+
+    .status-line {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: var(--muted);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 22px
+    }
+
+    .status-line .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--ok);
+      box-shadow: var(--glow-ok);
+      animation: blink 2.4s infinite
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: .35
+      }
+    }
+
+    h1 {
+      font-family: var(--disp);
+      font-weight: 900;
+      font-stretch: 120%;
+      text-transform: uppercase;
+      line-height: .95;
+      font-size: clamp(40px, 7.2vw, 88px);
+      letter-spacing: -.015em
+    }
+
+    h1 .thin {
+      display: block;
+      font-family: var(--disp);
+      font-weight: 500;
+      font-stretch: 75%;
+      font-size: .42em;
+      letter-spacing: .12em;
+      color: var(--muted);
+      margin-top: 14px
+    }
+
+    .hero-sub {
+      margin-top: 26px;
+      max-width: 56ch;
+      color: var(--muted);
+      font-size: 17px
+    }
+
+    .hero-sub strong {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    .hero-cta {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 12px 20px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--text);
+      background: var(--panel);
+      transition: .2s;
+      cursor: pointer
+    }
+
+    .btn:hover {
+      border-color: var(--ok);
+      color: var(--ok);
+      text-decoration: none;
+      transform: translateY(-1px)
+    }
+
+    .btn.primary {
+      background: var(--ok);
+      color: #fff;
+      border-color: var(--ok);
+      font-weight: 600
+    }
+
+    [data-theme="dark"] .btn.primary {
+      color: var(--ink)
+    }
+
+    .btn.primary:hover {
+      color: #fff;
+      filter: brightness(1.08)
+    }
+
+    [data-theme="dark"] .btn.primary:hover {
+      color: var(--ink)
+    }
+
+    .tele {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(21, 37, 48, .06)
+    }
+
+    .tele-head {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--line);
+      letter-spacing: .1em;
+      text-transform: uppercase
+    }
+
+    .tele-body {
+      padding: 16px 14px;
+      display: grid;
+      gap: 13px
+    }
+
+    .tele-row {
+      display: grid;
+      grid-template-columns: 130px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums
+    }
+
+    .tele-row .k {
+      color: var(--muted)
+    }
+
+    .meter {
+      height: 5px;
+      border-radius: 3px;
+      background: var(--panel-2);
+      overflow: hidden;
+      border: 1px solid var(--line)
+    }
+
+    .meter i {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--info), var(--ok));
+      width: 0;
+      transition: width 1.2s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .tele-row .v {
+      color: var(--ok)
+    }
+  </style>
+  <style>
+    /* ================= capabilities ================= */
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px
+    }
+
+    .cap {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 20px 20px 16px;
+      box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
+    }
+
+    .cap-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px
+    }
+
+    .cap-id {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--warn);
+      letter-spacing: .15em
+    }
+
+    .cap h3 {
+      font-family: var(--disp);
+      font-weight: 700;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: .05em
+    }
+
+    .chips {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .chips li {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 5px 11px;
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      color: var(--muted);
+      transition: .15s
+    }
+
+    .chips li:hover {
+      color: var(--text);
+      border-color: var(--muted)
+    }
+
+    .chips.ai li {
+      border-color: color-mix(in srgb, var(--ok) 40%, transparent);
+      color: color-mix(in srgb, var(--ok) 75%, var(--text))
+    }
+
+    .chips.ai li:hover {
+      border-color: var(--ok);
+      color: var(--ok)
+    }
+
+    /* ================= deployment log ================= */
+    .dep {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 24px;
+      padding: 26px 0;
+      border-top: 1px dashed var(--line)
+    }
+
+    .dep:first-of-type {
+      border-top: none
+    }
+
+    .dep-meta {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-variant-numeric: tabular-nums
+    }
+
+    .dep-ver {
+      color: var(--ok);
+      letter-spacing: .12em
+    }
+
+    .dep.edu .dep-ver {
+      color: var(--info)
+    }
+
+    .dep-body h3 {
+      font-family: var(--disp);
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 10px;
+      letter-spacing: .01em
+    }
+
+    .dep-body h3 a {
+      color: var(--text)
+    }
+
+    .dep-body ul {
+      list-style: none;
+      display: grid;
+      gap: 8px
+    }
+
+    .dep-body li {
+      padding-left: 18px;
+      position: relative;
+      color: var(--muted);
+      font-size: 15px
+    }
+
+    .dep-body li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--ok);
+      font-size: 12px;
+      top: 3px
+    }
+
+    .dep-body b {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    /* ================= systems / sims ================= */
+    .sys {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      padding: 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
+    }
+
+    .sys-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      flex-wrap: wrap
+    }
+
+    .sys h3 {
+      font-family: var(--disp);
+      font-weight: 800;
+      font-size: 19px;
+      text-transform: uppercase;
+      letter-spacing: .02em
+    }
+
+    .sys-sub {
+      color: var(--muted);
+      font-size: 13.5px;
+      margin-top: 4px;
+      max-width: 60ch
+    }
+
+    .badge {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: .14em;
+      padding: 5px 10px;
+      border-radius: 3px;
+      white-space: nowrap
+    }
+
+    .badge.sim {
+      background: color-mix(in srgb, var(--warn) 12%, transparent);
+      color: var(--warn);
+      border: 1px solid color-mix(in srgb, var(--warn) 45%, transparent)
+    }
+
+    .badge.link {
+      background: color-mix(in srgb, var(--info) 10%, transparent);
+      color: var(--info);
+      border: 1px solid color-mix(in srgb, var(--info) 45%, transparent)
+    }
+
+    .badge.link:hover {
+      text-decoration: none;
+      background: color-mix(in srgb, var(--info) 20%, transparent)
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 8px;
+      align-items: center
+    }
+
+    .sys-skills {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 16px
+    }
+
+    .sys-skills li {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      border: 1px dashed var(--line);
+      border-radius: 99px;
+      padding: 3px 10px
+    }
+
+    .sim {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel-2);
+      overflow: hidden
+    }
+
+    .sim-stats {
+      display: flex;
+      gap: 34px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap
+    }
+
+    .sim-stats .num {
+      font-family: var(--mono);
+      font-size: 22px;
+      color: var(--ok);
+      display: block;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      min-width: 4ch
+    }
+
+    .sim-stats .lbl {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--muted);
+      letter-spacing: .12em;
+      text-transform: uppercase
+    }
+
+    .log {
+      height: 172px;
+      overflow: hidden;
+      padding: 12px 16px;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 4px;
+      font-variant-numeric: tabular-nums
+    }
+
+    .log .ln {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      opacity: 0;
+      animation: lnin .3s forwards
+    }
+
+    @keyframes lnin {
+      to {
+        opacity: 1
+      }
+    }
+
+    .log .t {
+      color: var(--faint)
+    }
+
+    .log .ok {
+      color: var(--ok)
+    }
+
+    .log .er {
+      color: var(--err)
+    }
+
+    .log .wn {
+      color: var(--warn)
+    }
+
+    .log .in {
+      color: var(--info)
+    }
+
+    .rag {
+      padding: 16px
+    }
+
+    .rag-route {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px
+    }
+
+    .route-lbl {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--muted);
+      letter-spacing: .14em
+    }
+
+    .route-btn {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 7px 13px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: .15s
+    }
+
+    .route-btn.active {
+      border-color: var(--ok);
+      color: var(--ok);
+      background: color-mix(in srgb, var(--ok) 8%, transparent)
+    }
+
+    .route-note {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--warn)
+    }
+
+    .rag-q {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text);
+      min-height: 22px;
+      margin-bottom: 10px;
+      overflow: hidden
+    }
+
+    .rag-q::before {
+      content: '? ';
+      color: var(--info)
+    }
+
+    .rag-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      min-height: 30px;
+      margin-bottom: 12px;
+      align-content: flex-start
+    }
+
+    .rag-chips span {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      border: 1px solid color-mix(in srgb, var(--info) 45%, transparent);
+      color: var(--info);
+      padding: 4px 9px;
+      border-radius: 3px;
+      opacity: 0;
+      animation: lnin .35s forwards
+    }
+
+    .rag-a {
+      font-size: 14.5px;
+      color: var(--muted);
+      height: 84px;
+      line-height: 1.65;
+      overflow: hidden
+    }
+
+    .caret {
+      color: var(--ok);
+      animation: blink 1s infinite
+    }
+
+    .vip {
+      padding: 16px
+    }
+
+    .vip-road {
+      position: relative;
+      height: 54px;
+      border: 1px dashed var(--line);
+      border-radius: 5px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      background: repeating-linear-gradient(90deg, transparent 0 34px, color-mix(in srgb, var(--muted) 14%, transparent) 34px 36px)
+    }
+
+    .vip-car {
+      position: absolute;
+      top: 50%;
+      left: -40px;
+      transform: translateY(-50%);
+      font-size: 24px;
+      filter: saturate(.75)
+    }
+
+    .vip-gate {
+      position: absolute;
+      right: 56px;
+      top: 6px;
+      bottom: 6px;
+      width: 4px;
+      background: var(--err);
+      border-radius: 2px;
+      transition: background .3s, transform .4s;
+      transform-origin: bottom
+    }
+
+    .vip-gate.open {
+      background: var(--ok);
+      transform: rotate(78deg)
+    }
+
+    .trace {
+      list-style: none;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      display: grid;
+      gap: 6px;
+      font-variant-numeric: tabular-nums
+    }
+
+    .trace li {
+      color: var(--faint);
+      padding-left: 20px;
+      position: relative;
+      transition: color .2s
+    }
+
+    .trace li::before {
+      content: '○';
+      position: absolute;
+      left: 0;
+      color: var(--line)
+    }
+
+    .trace li.done {
+      color: var(--muted)
+    }
+
+    .trace li.done::before {
+      content: '●';
+      color: var(--ok)
+    }
+
+    .trace li.done .ms {
+      color: var(--ok)
+    }
+
+    .trace .ms {
+      float: right;
+      color: var(--faint)
+    }
+
+    .sys-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 6px
+    }
+
+    .mini {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
+    }
+
+    .mini-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px
+    }
+
+    .mini h4 {
+      font-family: var(--disp);
+      font-weight: 800;
+      font-size: 15.5px;
+      text-transform: uppercase
+    }
+
+    .mini p {
+      color: var(--muted);
+      font-size: 13.5px;
+      flex: 1
+    }
+
+    .latbar {
+      display: grid;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--muted)
+    }
+
+    .lat {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .lat i {
+      display: block;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--err);
+      width: 0;
+      transition: width 1s .2s
+    }
+
+    .lat.after i {
+      background: var(--ok);
+      transition-delay: .5s
+    }
+
+    .lat em {
+      font-style: normal;
+      white-space: nowrap
+    }
+
+    .tenant-btns {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 10px
+    }
+
+    .t-btn {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      padding: 5px 9px;
+      border-radius: 3px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer
+    }
+
+    .t-btn.active {
+      border-color: var(--warn);
+      color: var(--warn)
+    }
+
+    .t-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-variant-numeric: tabular-nums
+    }
+
+    .t-table th {
+      text-align: left;
+      color: var(--faint);
+      font-weight: 500;
+      padding: 4px 6px;
+      border-bottom: 1px solid var(--line);
+      letter-spacing: .08em
+    }
+
+    .t-table td {
+      padding: 5px 6px;
+      color: var(--muted);
+      border-bottom: 1px dashed var(--line)
+    }
+
+    .t-table .st-ok {
+      color: var(--ok)
+    }
+
+    .t-table .st-wn {
+      color: var(--warn)
+    }
+
+    /* ================= field notes ================= */
+    .note {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      margin-bottom: 14px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
+    }
+
+    .note summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 22px;
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+      flex-wrap: wrap
+    }
+
+    .note summary::-webkit-details-marker {
+      display: none
+    }
+
+    .note summary:hover {
+      background: var(--panel-2)
+    }
+
+    .note .n-id {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--info);
+      letter-spacing: .15em
+    }
+
+    .note h3 {
+      font-family: var(--disp);
+      font-weight: 700;
+      font-size: 16.5px;
+      flex: 1;
+      min-width: 240px
+    }
+
+    .note .n-open {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--faint)
+    }
+
+    .note[open] .n-open {
+      color: var(--ok)
+    }
+
+    .note .n-body {
+      padding: 0 22px 22px;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 74ch;
+      display: grid;
+      gap: 12px
+    }
+
+    .note .n-body b {
+      color: var(--text);
+      font-weight: 600
+    }
 
 
 
-/* ================= mini-card simulations ================= */
-.msim{border:1px solid var(--line);border-radius:6px;background:var(--panel-2);padding:10px 12px;display:grid;gap:8px;font-variant-numeric:tabular-nums}
-.msim-status{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.06em;height:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.acv-card{border:1px dashed var(--line);border-radius:5px;padding:8px 10px}
-.acv-arch{font-family:var(--mono);font-size:11px;color:var(--warn);letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px;height:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.acv-row{display:grid;grid-template-columns:76px 1fr 22px;gap:8px;align-items:center;font-family:var(--mono);font-size:9.5px;color:var(--faint);margin:3px 0}
-.acv-bar{height:5px;border-radius:3px;background:var(--panel);border:1px solid var(--line);overflow:hidden}
-.acv-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--info),var(--ok));transition:width .9s cubic-bezier(.2,.8,.2,1)}
-.acv-row em{font-style:normal;color:var(--ok);text-align:right}
-.epay-flow{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;min-height:52px;align-content:center}
-.epay-flow span{padding:4px 8px;border:1px solid var(--line);border-radius:3px;color:var(--faint);transition:.25s}
-.epay-flow span.on{border-color:var(--ok);color:var(--ok);background:color-mix(in srgb,var(--ok) 8%,transparent)}
-.epay-flow i{color:var(--faint);font-style:normal;font-size:10px}
-.cuaq-camp{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--text);white-space:nowrap;gap:8px}
-.cuaq-camp span:last-child{color:var(--ok)}
-.cuaq-track{height:6px;border-radius:3px;background:var(--panel);border:1px solid var(--line);overflow:hidden}
-.cuaq-track i{display:block;height:100%;width:0;background:var(--ok);transition:width .6s}
-.dmg-pipe{list-style:none;display:flex;gap:4px;flex-wrap:wrap;font-family:var(--mono);font-size:9px;letter-spacing:.08em;min-height:24px;align-content:flex-start}
-.dmg-pipe li{padding:4px 7px;border:1px solid var(--line);border-radius:3px;color:var(--faint);position:relative;transition:.25s}
-.dmg-pipe li.done{border-color:var(--ok);color:var(--ok)}
-.dmg-pipe li.now{border-color:var(--warn);color:var(--warn)}
-.aip-scan{height:4px;border-radius:2px;background:var(--panel);border:1px solid var(--line);overflow:hidden}
-.aip-scan i{display:block;height:100%;width:0;background:var(--info)}
-.aip-findings{display:flex;flex-direction:column;gap:3px;font-family:var(--mono);font-size:9.5px;height:48px;overflow:hidden;justify-content:flex-start}
-.aip-findings div{opacity:0;animation:lnin .3s forwards;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:0 0 auto}
-.aip-findings .sev-w{color:var(--warn)}.aip-findings .sev-e{color:var(--err)}.aip-findings .sev-ok{color:var(--ok)}
+    /* ================= mini-card simulations ================= */
+    .msim {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel-2);
+      padding: 10px 12px;
+      display: grid;
+      gap: 8px;
+      font-variant-numeric: tabular-nums
+    }
 
-/* ================= peer review ================= */
-.peer-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.peer{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:20px 22px;box-shadow:0 1px 3px rgba(21,37,48,.05)}
-blockquote.peer p{color:var(--text);font-size:15px;line-height:1.65;margin-bottom:12px}
-blockquote.peer footer{font-family:var(--mono);font-size:11.5px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-blockquote.peer footer b{color:var(--text)}
-.p-badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;padding:3px 8px;border-radius:3px;background:color-mix(in srgb,var(--ok) 10%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent);margin-left:auto}
-.peer.link-out{display:flex;gap:14px;align-items:center;color:var(--text);grid-column:1/-1}
-.peer.link-out:hover{border-color:var(--ok);text-decoration:none}
-.peer.link-out .p-icon{font-size:20px;color:var(--info)}
-.peer.link-out .p-sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
-@media(max-width:820px){.peer-grid{grid-template-columns:1fr}}
+    .msim-status {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--muted);
+      letter-spacing: .06em;
+      height: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
 
-/* ================= certs slot ================= */
-.cert-slot{border:1px dashed var(--line);border-radius:10px;padding:34px;display:grid;gap:8px;justify-items:center;text-align:center;background:color-mix(in srgb,var(--panel) 50%,transparent)}
-.cert-slot .cs-icon{font-size:22px;opacity:.5}
-.cert-slot .cs-title{font-family:var(--mono);font-size:12px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
-.cert-slot p{color:var(--faint);font-size:13.5px;max-width:46ch}
+    .acv-card {
+      border: 1px dashed var(--line);
+      border-radius: 5px;
+      padding: 8px 10px
+    }
 
-/* ================= contact ================= */
-.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
-.c-card{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:18px 20px;font-family:var(--mono);font-size:14px;color:var(--text);transition:.2s;box-shadow:0 1px 3px rgba(21,37,48,.05)}
-.c-card:hover{border-color:var(--ok);text-decoration:none;transform:translateY(-2px)}
-.c-proto{color:var(--ok);margin-right:6px}
-.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:44px;font-family:var(--mono);font-size:11px;color:var(--faint)}
-section#contact{border-bottom:none}
+    .acv-arch {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--warn);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+      height: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
 
-@media(max-width:920px){.sys-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:820px){
-  .rag-q{min-height:42px}
-  .rag-chips{min-height:62px}
-  .rag-a{height:150px}
-  :root{--rail:0px}
-  .rail{inset:auto 0 0 0;width:100%;height:60px;flex-direction:row;padding:0 14px;border-right:none;border-top:1px solid var(--line)}
-  .rail .brand{writing-mode:horizontal-tb;margin:0 10px 0 0;font-size:10px}
-  .bus{height:2px;width:auto;flex:1}
-  .bus .packet{display:none}
-  .node{top:50%!important;transform:translate(-50%,-50%)}
-  .node::after{display:none}
-  .theme-toggle{margin:0 0 0 10px}
-  main{margin-left:0;padding-bottom:70px}
-  .hero-grid{grid-template-columns:1fr}
-  .contact-grid,.sys-grid,.cap-grid{grid-template-columns:1fr}
-  .dep{grid-template-columns:1fr;gap:10px}.dep-meta{flex-direction:row;flex-wrap:wrap;gap:14px}
-}
-@media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-  .bus .packet{display:none}
-}
+    .acv-row {
+      display: grid;
+      grid-template-columns: 76px 1fr 22px;
+      gap: 8px;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 9.5px;
+      color: var(--faint);
+      margin: 3px 0
+    }
 
-/* ================= PRINT = clean CV ================= */
-@media print{
-  :root{--ink:#fff;--panel:#fff;--panel-2:#fff;--line:#ccc;--text:#111;--muted:#444;--faint:#777;
-    --ok:#0a7a44;--warn:#8a6410;--err:#b03a28;--info:#0a6a8a}
-  body{background:#fff!important;background-image:none!important;font-size:12px}
-  .rail,#boot,.sim,.hero-cta,.badge.sim,.theme-toggle,.note .n-open,.cert-slot .cs-icon{display:none!important}
-  main{margin-left:0}
-  header.hero{min-height:auto;padding:10mm 0 6mm}
-  .hero-grid{grid-template-columns:1fr;gap:8mm}
-  h1{font-size:26pt}
-  section.svc{padding:6mm 0;page-break-inside:avoid}
-  .sys,.mini,.cap,.note,.c-card{box-shadow:none;break-inside:avoid}
-  .sys-grid{grid-template-columns:1fr 1fr}
-  .note{border:none;border-top:1px solid #ccc;border-radius:0}
-  .note .n-body{display:grid!important}
-  details.note{display:block}
-  a{color:#111}
-  .c-card::after{content:''}
-  .foot{display:none}
-}
-</style>
+    .acv-bar {
+      height: 5px;
+      border-radius: 3px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden
+    }
+
+    .acv-bar i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--info), var(--ok));
+      transition: width .9s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .acv-row em {
+      font-style: normal;
+      color: var(--ok);
+      text-align: right
+    }
+
+    .epay-flow {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-wrap: wrap;
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: .06em;
+      min-height: 52px;
+      align-content: center
+    }
+
+    .epay-flow span {
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      color: var(--faint);
+      transition: .25s
+    }
+
+    .epay-flow span.on {
+      border-color: var(--ok);
+      color: var(--ok);
+      background: color-mix(in srgb, var(--ok) 8%, transparent)
+    }
+
+    .epay-flow i {
+      color: var(--faint);
+      font-style: normal;
+      font-size: 10px
+    }
+
+    .cuaq-camp {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text);
+      white-space: nowrap;
+      gap: 8px
+    }
+
+    .cuaq-camp span:last-child {
+      color: var(--ok)
+    }
+
+    .cuaq-track {
+      height: 6px;
+      border-radius: 3px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden
+    }
+
+    .cuaq-track i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: var(--ok);
+      transition: width .6s
+    }
+
+    .dmg-pipe {
+      list-style: none;
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: .08em;
+      min-height: 24px;
+      align-content: flex-start
+    }
+
+    .dmg-pipe li {
+      padding: 4px 7px;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      color: var(--faint);
+      position: relative;
+      transition: .25s
+    }
+
+    .dmg-pipe li.done {
+      border-color: var(--ok);
+      color: var(--ok)
+    }
+
+    .dmg-pipe li.now {
+      border-color: var(--warn);
+      color: var(--warn)
+    }
+
+    .aip-scan {
+      height: 4px;
+      border-radius: 2px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden
+    }
+
+    .aip-scan i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: var(--info)
+    }
+
+    .aip-findings {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-family: var(--mono);
+      font-size: 9.5px;
+      height: 48px;
+      overflow: hidden;
+      justify-content: flex-start
+    }
+
+    .aip-findings div {
+      opacity: 0;
+      animation: lnin .3s forwards;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex: 0 0 auto
+    }
+
+    .aip-findings .sev-w {
+      color: var(--warn)
+    }
+
+    .aip-findings .sev-e {
+      color: var(--err)
+    }
+
+    .aip-findings .sev-ok {
+      color: var(--ok)
+    }
+
+    /* ================= peer review ================= */
+    .peer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px
+    }
+
+    .peer {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      padding: 20px 22px;
+      box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
+    }
+
+    blockquote.peer p {
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.65;
+      margin-bottom: 12px
+    }
+
+    blockquote.peer footer {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--muted);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    blockquote.peer footer b {
+      color: var(--text)
+    }
+
+    .p-badge {
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: .14em;
+      padding: 3px 8px;
+      border-radius: 3px;
+      background: color-mix(in srgb, var(--ok) 10%, transparent);
+      color: var(--ok);
+      border: 1px solid color-mix(in srgb, var(--ok) 40%, transparent);
+      margin-left: auto
+    }
+
+    .peer.link-out {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      color: var(--text);
+      grid-column: 1/-1
+    }
+
+    .peer.link-out:hover {
+      border-color: var(--ok);
+      text-decoration: none
+    }
+
+    .peer.link-out .p-icon {
+      font-size: 20px;
+      color: var(--info)
+    }
+
+    .peer.link-out .p-sub {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted)
+    }
+
+    @media(max-width:820px) {
+      .peer-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ================= certs slot ================= */
+    .cert-slot {
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      padding: 34px;
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      text-align: center;
+      background: color-mix(in srgb, var(--panel) 50%, transparent)
+    }
+
+    .cert-slot .cs-icon {
+      font-size: 22px;
+      opacity: .5
+    }
+
+    .cert-slot .cs-title {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: .15em;
+      color: var(--muted);
+      text-transform: uppercase
+    }
+
+    .cert-slot p {
+      color: var(--faint);
+      font-size: 13.5px;
+      max-width: 46ch
+    }
+
+    /* ================= contact ================= */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 8px
+    }
+
+    .c-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 18px 20px;
+      font-family: var(--mono);
+      font-size: 14px;
+      color: var(--text);
+      transition: .2s;
+      box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
+    }
+
+    .c-card:hover {
+      border-color: var(--ok);
+      text-decoration: none;
+      transform: translateY(-2px)
+    }
+
+    .c-proto {
+      color: var(--ok);
+      margin-right: 6px
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 44px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--faint)
+    }
+
+    section#contact {
+      border-bottom: none
+    }
+
+    @media(max-width:920px) {
+      .sys-grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:820px) {
+      .rag-q {
+        min-height: 42px
+      }
+
+      .rag-chips {
+        min-height: 62px
+      }
+
+      .rag-a {
+        height: 150px
+      }
+
+      :root {
+        --rail: 0px
+      }
+
+      .rail {
+        inset: auto 0 0 0;
+        width: 100%;
+        height: 60px;
+        flex-direction: row;
+        padding: 0 14px;
+        border-right: none;
+        border-top: 1px solid var(--line)
+      }
+
+      .rail .brand {
+        writing-mode: horizontal-tb;
+        margin: 0 10px 0 0;
+        font-size: 10px
+      }
+
+      .bus {
+        height: 2px;
+        width: auto;
+        flex: 1
+      }
+
+      .bus .packet {
+        display: none
+      }
+
+      .node {
+        top: 50% !important;
+        transform: translate(-50%, -50%)
+      }
+
+      .node::after {
+        display: none
+      }
+
+      .theme-toggle {
+        margin: 0 0 0 10px
+      }
+
+      main {
+        margin-left: 0;
+        padding-bottom: 70px
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr
+      }
+
+      .contact-grid,
+      .sys-grid,
+      .cap-grid {
+        grid-template-columns: 1fr
+      }
+
+      .dep {
+        grid-template-columns: 1fr;
+        gap: 10px
+      }
+
+      .dep-meta {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 14px
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important
+      }
+
+      .bus .packet {
+        display: none
+      }
+    }
+
+    /* ================= PRINT = clean CV ================= */
+    @media print {
+      :root {
+        --ink: #fff;
+        --panel: #fff;
+        --panel-2: #fff;
+        --line: #ccc;
+        --text: #111;
+        --muted: #444;
+        --faint: #777;
+        --ok: #0a7a44;
+        --warn: #8a6410;
+        --err: #b03a28;
+        --info: #0a6a8a
+      }
+
+      body {
+        background: #fff !important;
+        background-image: none !important;
+        font-size: 12px
+      }
+
+      .rail,
+      #boot,
+      .sim,
+      .hero-cta,
+      .badge.sim,
+      .theme-toggle,
+      .note .n-open,
+      .cert-slot .cs-icon {
+        display: none !important
+      }
+
+      main {
+        margin-left: 0
+      }
+
+      header.hero {
+        min-height: auto;
+        padding: 10mm 0 6mm
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 8mm
+      }
+
+      h1 {
+        font-size: 26pt
+      }
+
+      section.svc {
+        padding: 6mm 0;
+        page-break-inside: avoid
+      }
+
+      .sys,
+      .mini,
+      .cap,
+      .note,
+      .c-card {
+        box-shadow: none;
+        break-inside: avoid
+      }
+
+      .sys-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .note {
+        border: none;
+        border-top: 1px solid #ccc;
+        border-radius: 0
+      }
+
+      .note .n-body {
+        display: grid !important
+      }
+
+      details.note {
+        display: block
+      }
+
+      a {
+        color: #111
+      }
+
+      .c-card::after {
+        content: ''
+      }
+
+      .foot {
+        display: none
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- ================= boot sequence (skippable, first visit per session) ================= -->
-<div id="boot" role="presentation" aria-hidden="true">
-  <div class="boot-box">
-    <div class="boot-title">alm-ctrl · v4 boot</div>
-    <div class="bl">mounting capability modules <span class="ok">OK</span></div>
-    <div class="bl">attaching deployment history <span class="ok">OK</span></div>
-    <div class="bl">starting system simulations <span class="ok">LIVE</span></div>
-    <div class="bl">auth handshake · guest session <span class="ok">OK</span></div>
-    <div class="skip">click anywhere to skip</div>
-  </div>
-</div>
-
-<!-- ================= bus rail ================= -->
-<nav class="rail" aria-label="Section navigation">
-  <span class="brand">ALM · CTRL-PLANE</span>
-  <div class="bus" id="bus">
-    <span class="packet"></span><span class="packet p2"></span><span class="packet p3"></span>
-    <a class="node" href="#top" data-label="sys://overview" aria-label="Overview">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></a>
-    <a class="node" href="#stack" data-label="svc://capabilities" aria-label="Capabilities">
-      <svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></a>
-    <a class="node" href="#exp" data-label="svc://deployments" aria-label="Experience">
-      <svg viewBox="0 0 24 24"><path d="M12 3v18M12 3l-4 4M12 3l4 4"/><circle cx="12" cy="19" r="2"/></svg></a>
-    <a class="node" href="#proj" data-label="svc://systems.live" aria-label="Projects">
-      <svg viewBox="0 0 24 24"><path d="M4 17l6-6 4 4 6-8"/><path d="M4 21h16"/></svg></a>
-    <a class="node" href="#notes" data-label="notes://field" aria-label="Field notes">
-      <svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg></a>
-    <a class="node" href="#peers" data-label="probe://peers" aria-label="Peer review">
-      <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 16.5c2.4.4 4 2 4 3.5"/></svg></a>
-    <a class="node" href="#certs" data-label="certs://registry" aria-label="Certifications">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 21l5-2.6L17 21l-1.5-7.5"/></svg></a>
-    <a class="node" href="#contact" data-label="svc://handshake" aria-label="Contact">
-      <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg></a>
-  </div>
-  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme">◐</button>
-</nav>
-
-<main>
-<header class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="status-line">
-        <span class="dot"></span> STATUS: OPERATIONAL &nbsp;·&nbsp; REGION: DUBAI-UAE &nbsp;·&nbsp; UPTIME: 8+ YRS
-      </div>
-      <h1>Ahmed Lotfy Mahfouz
-        <span class="thin">Technical Team Lead — .NET Systems × Production AI</span>
-      </h1>
-      <p class="hero-sub">I lead a team of 5 engineers building the systems that <strong>fuel stations, POS terminals, and payment networks</strong> depend on — and I bring AI into them the enterprise way: <strong>self-hosted LLMs on NVIDIA DGX</strong> where data can't leave, hosted models where it can.</p>
-      <div class="hero-cta">
-        <a class="btn primary" href="#proj">Inspect live systems ↓</a>
-        <a class="btn" href="dgx-llm.html">case://dgx-llm ↗</a>
-        <a class="btn" href="Ahmed-Lotfy-Mahfouz-CV.pdf" download>⬇ resume.pdf</a>
-        <button class="btn" type="button" onclick="window.print()">⎙ print CV</button>
-      </div>
-    </div>
-    <aside class="tele" aria-label="Profile telemetry">
-      <div class="tele-head"><span>node: alm-01</span><span>probe: realtime</span></div>
-      <div class="tele-body">
-        <div class="tele-row"><span class="k">.NET / C#</span><span class="meter"><i data-w="96"></i></span><span class="v">core</span></div>
-        <div class="tele-row"><span class="k">Integration/ESB</span><span class="meter"><i data-w="92"></i></span><span class="v">core</span></div>
-        <div class="tele-row"><span class="k">Angular</span><span class="meter"><i data-w="84"></i></span><span class="v">prod</span></div>
-        <div class="tele-row"><span class="k">SQL / T-SQL</span><span class="meter"><i data-w="88"></i></span><span class="v">prod</span></div>
-        <div class="tele-row"><span class="k">LLM / RAG</span><span class="meter"><i data-w="82"></i></span><span class="v">prod</span></div>
-        <div class="tele-row"><span class="k">Team lead</span><span class="meter"><i data-w="90"></i></span><span class="v">5 eng</span></div>
-      </div>
-    </aside>
-  </div>
-</header>
-
-<section class="svc" id="stack">
-  <div class="wrap">
-    <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>capabilities <span>· 4 modules loaded</span></div>
-    <h2>Capability <em>Matrix</em></h2>
-    <div class="cap-grid">
-      <div class="cap">
-        <div class="cap-head"><span class="cap-id">MOD-01</span><h3>Languages &amp; Frameworks</h3></div>
-        <ul class="chips"><li>C#</li><li>.NET Core → 10</li><li>Entity Framework</li><li>gRPC</li><li>WCF</li><li>MVC / Web API</li><li>LINQ</li><li>TypeScript</li><li>Angular</li><li>JavaScript</li><li>HTML5 / CSS3</li></ul>
-      </div>
-      <div class="cap">
-        <div class="cap-head"><span class="cap-id">MOD-02</span><h3>AI &amp; LLM — production</h3></div>
-        <ul class="chips ai"><li>Claude API</li><li>OpenAI API</li><li>Ollama on NVIDIA DGX</li><li>RAG pipelines</li><li>Vector search / DBs</li><li>Microsoft.Extensions.AI</li><li>Structured output</li><li>fal.ai imagegen</li></ul>
-      </div>
-      <div class="cap">
-        <div class="cap-head"><span class="cap-id">MOD-03</span><h3>Platform &amp; Ops</h3></div>
-        <ul class="chips"><li>Azure Cloud</li><li>Azure DevOps</li><li>Docker</li><li>CI/CD pipelines</li><li>Git</li><li>MSSQL / T-SQL</li><li>AI-assisted IDEs</li></ul>
-      </div>
-      <div class="cap">
-        <div class="cap-head"><span class="cap-id">MOD-04</span><h3>Systems Expertise</h3></div>
-        <ul class="chips"><li>Microservices</li><li>System integration / ESB</li><li>Payment &amp; POS systems</li><li>API design</li><li>Active Directory</li><li>Single Sign-On</li><li>Multi-tenancy</li></ul>
-      </div>
+  <!-- ================= boot sequence (skippable, first visit per session) ================= -->
+  <div id="boot" role="presentation" aria-hidden="true">
+    <div class="boot-box">
+      <div class="boot-title">alm-ctrl · v4 boot</div>
+      <div class="bl">mounting capability modules <span class="ok">OK</span></div>
+      <div class="bl">attaching deployment history <span class="ok">OK</span></div>
+      <div class="bl">starting system simulations <span class="ok">LIVE</span></div>
+      <div class="bl">auth handshake · guest session <span class="ok">OK</span></div>
+      <div class="skip">click anywhere to skip</div>
     </div>
   </div>
-</section>
 
-<section class="svc" id="exp">
-  <div class="wrap">
-    <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>deployments <span>· chronological log</span></div>
-    <h2>Deployment <em>History</em></h2>
-    <article class="dep">
-      <div class="dep-meta"><span class="dep-ver">v4 · CURRENT</span><span class="dep-when">11/2020 → now</span><span class="dep-where">Dubai, UAE</span></div>
-      <div class="dep-body">
-        <h3>Technical Team Lead · <a href="https://enoc.com" rel="noopener">ENOC</a></h3>
-        <ul>
-          <li>Lead a team of <b>5 engineers</b> building internal &amp; external services for enterprise retail and payment systems — owning delivery from design through production.</li>
-          <li>Stood up <b>self-hosted LLM infrastructure</b> with Ollama on NVIDIA DGX Spark: open models fully on-premises, so sensitive corporate data never leaves the organization.</li>
-          <li>Built an internal <b>RAG assistant</b> over company knowledge and an AI code-assistance tool used by the engineering team.</li>
-          <li>Developed text-classification services and <b>autonomous agents</b> automating SDLC workflows including code review and security review.</li>
-          <li>POS &amp; KIOSK integration services on WCF, REST, and Software AG ESB; admin portals with Active Directory + custom SSO on .NET 10 / Angular.</li>
-          <li>Cut mobile API response times <b>~30%</b>; refactored legacy services for <b>~40%</b> better maintainability; CI/CD + docs adopted as team standard.</li>
-        </ul>
-      </div>
-    </article>
-    <article class="dep">
-      <div class="dep-meta"><span class="dep-ver">v3 · PARALLEL</span><span class="dep-when">11/2020 → 12/2025</span><span class="dep-where">Dubai · part-time</span></div>
-      <div class="dep-body">
-        <h3>Senior Software Engineer · Compass International</h3>
-        <ul><li>Built a <b>multi-tenant ERP platform</b> full-stack with .NET and the ABP framework; core modules plus the mobile-facing API layer; CI/CD for releases.</li></ul>
-      </div>
-    </article>
-    <article class="dep">
-      <div class="dep-meta"><span class="dep-ver">v2</span><span class="dep-when">10/2019 → 11/2020</span><span class="dep-where">Cairo, EG</span></div>
-      <div class="dep-body">
-        <h3>.NET Full-Stack Engineer · Compass International</h3>
-        <ul><li>Shipment tracking &amp; optimization; C#/.NET, JavaScript, AJAX applications.</li></ul>
-      </div>
-    </article>
-    <article class="dep">
-      <div class="dep-meta"><span class="dep-ver">v1</span><span class="dep-when">07/2017 → 10/2019</span><span class="dep-where">Cairo, EG</span></div>
-      <div class="dep-body">
-        <h3>.NET Full-Stack Engineer · Pearogram</h3>
-        <ul><li>Scalable web solutions for client projects — HTML, JavaScript, AJAX, JSON.</li></ul>
-      </div>
-    </article>
-    <article class="dep edu">
-      <div class="dep-meta"><span class="dep-ver">BOOT</span><span class="dep-when">2013 → 2019</span><span class="dep-where">Menoufia Univ.</span></div>
-      <div class="dep-body"><h3>B.Sc. Pure Mathematics &amp; Computer Science</h3></div>
-    </article>
-  </div>
-</section>
+  <!-- ================= bus rail ================= -->
+  <nav class="rail" aria-label="Section navigation">
+    <span class="brand">ALM · CTRL-PLANE</span>
+    <div class="bus" id="bus">
+      <span class="packet"></span><span class="packet p2"></span><span class="packet p3"></span>
+      <a class="node" href="#top" data-label="sys://overview" aria-label="Overview">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <circle cx="12" cy="12" r="3" />
+        </svg></a>
+      <a class="node" href="#stack" data-label="svc://capabilities" aria-label="Capabilities">
+        <svg viewBox="0 0 24 24">
+          <rect x="4" y="4" width="7" height="7" rx="1" />
+          <rect x="13" y="4" width="7" height="7" rx="1" />
+          <rect x="4" y="13" width="7" height="7" rx="1" />
+          <rect x="13" y="13" width="7" height="7" rx="1" />
+        </svg></a>
+      <a class="node" href="#exp" data-label="svc://deployments" aria-label="Experience">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 3v18M12 3l-4 4M12 3l4 4" />
+          <circle cx="12" cy="19" r="2" />
+        </svg></a>
+      <a class="node" href="#proj" data-label="svc://systems.live" aria-label="Projects">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 17l6-6 4 4 6-8" />
+          <path d="M4 21h16" />
+        </svg></a>
+      <a class="node" href="#notes" data-label="notes://field" aria-label="Field notes">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 3h9l4 4v14H6z" />
+          <path d="M9 12h7M9 16h7" />
+        </svg></a>
+      <a class="node" href="#peers" data-label="probe://peers" aria-label="Peer review">
+        <svg viewBox="0 0 24 24">
+          <circle cx="9" cy="8" r="3.5" />
+          <circle cx="17" cy="10" r="2.5" />
+          <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 16.5c2.4.4 4 2 4 3.5" />
+        </svg></a>
+      <a class="node" href="#certs" data-label="certs://registry" aria-label="Certifications">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="9" r="5" />
+          <path d="M8.5 13.5L7 21l5-2.6L17 21l-1.5-7.5" />
+        </svg></a>
+      <a class="node" href="#contact" data-label="svc://handshake" aria-label="Contact">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 6h16v12H4z" />
+          <path d="M4 7l8 6 8-6" />
+        </svg></a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme"
+      title="Switch theme">◐</button>
+  </nav>
 
-<section class="svc" id="proj">
-  <div class="wrap">
-    <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>systems.live <span>· internal systems shown as simulations</span></div>
-    <h2>Systems, <em>Running</em></h2>
-    <p class="sec-note">Enterprise systems can't be linked publicly — so the internal ones run here as live simulations of what they do. Public projects link out.</p>
-
-    <article class="sys">
-      <div class="sys-head">
-        <div><h3>ENOC Contactless &amp; POS Services</h3>
-        <p class="sys-sub">Contactless cards, vending &amp; POS machines · Network International payments · SOA financial accounts</p></div>
-        <span class="badge sim">SIMULATION</span>
-      </div>
-      <div class="sim pos">
-        <div class="sim-stats">
-          <div><span class="num" id="pos-count">0</span><span class="lbl">authorizations</span></div>
-          <div><span class="num" id="pos-approved">0%</span><span class="lbl">approval rate</span></div>
-          <div><span class="num" id="pos-lat">—</span><span class="lbl">avg auth latency</span></div>
+  <main>
+    <header class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="status-line">
+            <span class="dot"></span> STATUS: OPERATIONAL &nbsp;·&nbsp; REGION: DUBAI-UAE &nbsp;·&nbsp; UPTIME: 8+ YRS
+          </div>
+          <h1>Ahmed Lotfy Mahfouz
+            <span class="thin">Technical Team Lead — .NET Systems × Production AI</span>
+          </h1>
+          <p class="hero-sub">I lead a team of 5 engineers building the systems that <strong>fuel stations, POS
+              terminals, and payment networks</strong> depend on — and I bring AI into them the enterprise way:
+            <strong>self-hosted LLMs on NVIDIA DGX</strong> where data can't leave, hosted models where it can.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#proj">Inspect live systems ↓</a>
+            <a class="btn" href="dgx-llm.html">case://dgx-llm ↗</a>
+            <a class="btn" href="Ahmed-lotfy-resume.pdf.pdf" download>⬇ resume.pdf</a>
+            <button class="btn" type="button" onclick="window.print()">⎙ print CV</button>
+          </div>
         </div>
-        <div class="log" id="pos-log" aria-live="off"></div>
+        <aside class="tele" aria-label="Profile telemetry">
+          <div class="tele-head"><span>node: alm-01</span><span>probe: realtime</span></div>
+          <div class="tele-body">
+            <div class="tele-row"><span class="k">.NET / C#</span><span class="meter"><i data-w="96"></i></span><span
+                class="v">core</span></div>
+            <div class="tele-row"><span class="k">Integration/ESB</span><span class="meter"><i
+                  data-w="92"></i></span><span class="v">core</span></div>
+            <div class="tele-row"><span class="k">Angular</span><span class="meter"><i data-w="84"></i></span><span
+                class="v">prod</span></div>
+            <div class="tele-row"><span class="k">SQL / T-SQL</span><span class="meter"><i data-w="88"></i></span><span
+                class="v">prod</span></div>
+            <div class="tele-row"><span class="k">LLM / RAG</span><span class="meter"><i data-w="82"></i></span><span
+                class="v">prod</span></div>
+            <div class="tele-row"><span class="k">Team lead</span><span class="meter"><i data-w="90"></i></span><span
+                class="v">5 eng</span></div>
+          </div>
+        </aside>
       </div>
-      <ul class="sys-skills"><li>WCF</li><li>REST</li><li>Software AG ESB</li><li>Network International</li><li>SOA</li></ul>
-    </article>
+    </header>
 
-    <article class="sys">
-      <div class="sys-head">
-        <div><h3>Internal RAG Assistant + GenAI for .NET</h3>
-        <p class="sys-sub">Retrieval-augmented assistant over company knowledge · Microsoft.Extensions.AI abstraction · hosted &amp; self-hosted models</p></div>
-        <span class="badge sim">SIMULATION</span>
-      </div>
-      <div class="sim rag">
-        <div class="rag-route">
-          <span class="route-lbl">MODEL ROUTE</span>
-          <button class="route-btn active" id="route-local" type="button">⛨ On-prem · DGX / Ollama</button>
-          <button class="route-btn" id="route-hosted" type="button">☁ Hosted · Claude API</button>
-          <span class="route-note" id="route-note">data boundary: never leaves the org</span>
-        </div>
-        <div class="rag-q" id="rag-q"></div>
-        <div class="rag-chips" id="rag-chips"></div>
-        <div class="rag-a"><span id="rag-a"></span><span class="caret" id="rag-caret">▌</span></div>
-      </div>
-      <ul class="sys-skills"><li>RAG</li><li>Vector search</li><li>MEAI · IChatClient</li><li>Ollama on DGX Spark</li><li>Claude API</li></ul>
-    </article>
-
-    <article class="sys">
-      <div class="sys-head">
-        <div><h3>ViP — Vehicle Identification Pass</h3>
-        <p class="sys-sub">RFID-tagged vehicles authorized for fuelling &amp; payment · FastEndpoints APIs · ESB integration · Angular front-end</p></div>
-        <div class="badge-row"><span class="badge sim">API TRACE</span><a class="badge link" href="https://vipselect.enoc.com" rel="noopener">LIVE SITE ↗</a></div>
-      </div>
-      <div class="sim vip">
-        <div class="vip-lane"><div class="vip-road"><div class="vip-car" id="vip-car">🚗</div><div class="vip-gate" id="vip-gate"></div></div></div>
-        <ol class="trace" id="vip-trace">
-          <li data-ms="12">VEHICLE DETECTED · lane 03</li>
-          <li data-ms="28">RFID TAG READ · tag 8F:2C:…:A1</li>
-          <li data-ms="41">GET /passes/{tag} · account resolved</li>
-          <li data-ms="35">POST /limits/check · fleet policy OK</li>
-          <li data-ms="52">POST /pump/authorize · pump #7 unlocked</li>
-          <li data-ms="19">EVENT → ESB · fuelling.started published</li>
-        </ol>
-      </div>
-      <ul class="sys-skills"><li>FastEndpoints</li><li>.NET APIs</li><li>ESB</li><li>Angular</li><li>DB redesign</li></ul>
-    </article>
-
-    <div class="sys-grid">
-      <article class="mini">
-        <div class="mini-head"><h4>AnimeCV</h4><a class="badge link" href="https://animecv.app" rel="noopener">animecv.app ↗</a></div>
-        <p>Upload a resume → get an anime character card with derived stats and a generated hero image. Claude API for structured analysis, fal.ai for imagery.</p>
-        <div class="msim acv">
-          <div class="msim-status" id="acv-status">parsing resume…</div>
-          <div class="acv-card">
-            <div class="acv-arch" id="acv-arch">—</div>
-            <div class="acv-stats" id="acv-stats">
-              <div class="acv-row"><span>BACKEND</span><span class="acv-bar"><i data-v="92"></i></span><em>92</em></div>
-              <div class="acv-row"><span>INTEGRATION</span><span class="acv-bar"><i data-v="88"></i></span><em>88</em></div>
-              <div class="acv-row"><span>AI/LLM</span><span class="acv-bar"><i data-v="84"></i></span><em>84</em></div>
-              <div class="acv-row"><span>LEADERSHIP</span><span class="acv-bar"><i data-v="90"></i></span><em>90</em></div>
+    <section class="svc" id="stack">
+      <div class="wrap">
+        <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>capabilities <span>· 4 modules
+            loaded</span></div>
+        <h2>Capability <em>Matrix</em></h2>
+        <div class="cap-grid">
+          <div class="cap">
+            <div class="cap-head"><span class="cap-id">MOD-01</span>
+              <h3>Languages &amp; Frameworks</h3>
             </div>
+            <ul class="chips">
+              <li>C#</li>
+              <li>.NET Core → 10</li>
+              <li>Entity Framework</li>
+              <li>gRPC</li>
+              <li>WCF</li>
+              <li>MVC / Web API</li>
+              <li>LINQ</li>
+              <li>TypeScript</li>
+              <li>Angular</li>
+              <li>JavaScript</li>
+              <li>HTML5 / CSS3</li>
+            </ul>
+          </div>
+          <div class="cap">
+            <div class="cap-head"><span class="cap-id">MOD-02</span>
+              <h3>AI &amp; LLM — production</h3>
+            </div>
+            <ul class="chips ai">
+              <li>Claude API</li>
+              <li>OpenAI API</li>
+              <li>Ollama on NVIDIA DGX</li>
+              <li>RAG pipelines</li>
+              <li>Vector search / DBs</li>
+              <li>Microsoft.Extensions.AI</li>
+              <li>Structured output</li>
+              <li>fal.ai imagegen</li>
+            </ul>
+          </div>
+          <div class="cap">
+            <div class="cap-head"><span class="cap-id">MOD-03</span>
+              <h3>Platform &amp; Ops</h3>
+            </div>
+            <ul class="chips">
+              <li>Azure Cloud</li>
+              <li>Azure DevOps</li>
+              <li>Docker</li>
+              <li>CI/CD pipelines</li>
+              <li>Git</li>
+              <li>MSSQL / T-SQL</li>
+              <li>AI-assisted IDEs</li>
+            </ul>
+          </div>
+          <div class="cap">
+            <div class="cap-head"><span class="cap-id">MOD-04</span>
+              <h3>Systems Expertise</h3>
+            </div>
+            <ul class="chips">
+              <li>Microservices</li>
+              <li>System integration / ESB</li>
+              <li>Payment &amp; POS systems</li>
+              <li>API design</li>
+              <li>Active Directory</li>
+              <li>Single Sign-On</li>
+              <li>Multi-tenancy</li>
+            </ul>
           </div>
         </div>
-        <ul class="sys-skills"><li>Claude API</li><li>Structured JSON output</li><li>fal.ai</li><li>PDF render</li></ul>
-      </article>
-      <article class="mini">
-        <div class="mini-head"><h4>ENOC Pay</h4><a class="badge link" href="https://play.google.com/store/apps/details?id=com.enoc.pay" rel="noopener">Play Store ↗</a></div>
-        <p>Consumer fuelling &amp; payments app — enhanced REST endpoints and app redesign for a smoother experience.</p>
-        <div class="msim epay">
-          <div class="epay-flow" id="epay-flow">
-            <span data-s="0">SELECT PUMP</span><i>→</i><span data-s="1">AUTH ••••4411</span><i>→</i><span data-s="2">FUELLING</span><i>→</i><span data-s="3">E-RECEIPT ✓</span>
+      </div>
+    </section>
+
+    <section class="svc" id="exp">
+      <div class="wrap">
+        <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>deployments <span>· chronological
+            log</span></div>
+        <h2>Deployment <em>History</em></h2>
+        <article class="dep">
+          <div class="dep-meta"><span class="dep-ver">v4 · CURRENT</span><span class="dep-when">11/2020 →
+              now</span><span class="dep-where">Dubai, UAE</span></div>
+          <div class="dep-body">
+            <h3>Technical Team Lead · <a href="https://enoc.com" rel="noopener">ENOC</a></h3>
+            <ul>
+              <li>Lead a team of <b>5 engineers</b> building internal &amp; external services for enterprise retail and
+                payment systems — owning delivery from design through production.</li>
+              <li>Stood up <b>self-hosted LLM infrastructure</b> with Ollama on NVIDIA DGX Spark: open models fully
+                on-premises, so sensitive corporate data never leaves the organization.</li>
+              <li>Built an internal <b>RAG assistant</b> over company knowledge and an AI code-assistance tool used by
+                the engineering team.</li>
+              <li>Developed text-classification services and <b>autonomous agents</b> automating SDLC workflows
+                including code review and security review.</li>
+              <li>POS &amp; KIOSK integration services on WCF, REST, and Software AG ESB; admin portals with Active
+                Directory + custom SSO on .NET 10 / Angular.</li>
+              <li>Cut mobile API response times <b>~30%</b>; refactored legacy services for <b>~40%</b> better
+                maintainability; CI/CD + docs adopted as team standard.</li>
+            </ul>
           </div>
-        </div>
-        <div class="latbar"><span class="lat-lbl">API latency</span><div class="lat before"><i></i><em>before</em></div><div class="lat after"><i></i><em>after −30%</em></div></div>
-        <ul class="sys-skills"><li>REST</li><li>Mobile APIs</li><li>UX</li></ul>
-      </article>
-      <article class="mini">
-        <div class="mini-head"><h4>Tenxerp</h4><a class="badge link" href="https://www.tenxerp.com" rel="noopener">tenxerp.com ↗</a></div>
-        <p>Full-stack multi-tenant ERP on .NET + ABP. Try switching the tenant:</p>
-        <div class="tenant">
-          <div class="tenant-btns" id="tenant-btns">
-            <button class="t-btn active" data-t="0" type="button">Al Noor Trading</button>
-            <button class="t-btn" data-t="1" type="button">Gulf Fleet Co</button>
-            <button class="t-btn" data-t="2" type="button">Marina Retail</button>
+        </article>
+        <article class="dep">
+          <div class="dep-meta"><span class="dep-ver">v3 · PARALLEL</span><span class="dep-when">11/2020 →
+              12/2025</span><span class="dep-where">Dubai · part-time</span></div>
+          <div class="dep-body">
+            <h3>Senior Software Engineer · Compass International</h3>
+            <ul>
+              <li>Built a <b>multi-tenant ERP platform</b> full-stack with .NET and the ABP framework; core modules plus
+                the mobile-facing API layer; CI/CD for releases.</li>
+            </ul>
           </div>
-          <table class="t-table"><thead><tr><th>Invoice</th><th>Module</th><th>Status</th></tr></thead><tbody id="tenant-rows"></tbody></table>
-        </div>
-        <ul class="sys-skills"><li>ABP framework</li><li>Multi-tenancy</li><li>EF Core query filters</li></ul>
-      </article>
-      <article class="mini">
-        <div class="mini-head"><h4>Charity UAQ</h4><a class="badge link" href="https://charity.uaq.ae/home" rel="noopener">charity.uaq.ae ↗</a></div>
-        <p>ERP for UAE charities — ASP.NET Core APIs, Angular portal, MVC admin dashboard.</p>
-        <div class="msim cuaq">
-          <div class="cuaq-camp"><span id="cuaq-name">Winter Relief</span><span id="cuaq-pct">0%</span></div>
-          <div class="cuaq-track"><i id="cuaq-fill"></i></div>
-          <div class="msim-status" id="cuaq-feed">awaiting donations…</div>
-        </div>
-        <ul class="sys-skills"><li>ASP.NET Core</li><li>Angular</li><li>MVC</li></ul>
-      </article>
-      <article class="mini">
-        <div class="mini-head"><h4>DMG Publisher</h4><a class="badge link" href="https://dmgpublisher.com" rel="noopener">dmgpublisher.com ↗</a></div>
-        <p>Book publishing platform on .NET Framework + Bootstrap.</p>
-        <div class="msim dmg">
-          <div class="msim-status" id="dmg-title">"—"</div>
-          <ol class="dmg-pipe" id="dmg-pipe">
-            <li>MANUSCRIPT</li><li>REVIEW</li><li>TYPESET</li><li>PUBLISHED</li>
-          </ol>
-        </div>
-        <ul class="sys-skills"><li>.NET Framework</li><li>Bootstrap</li></ul>
-      </article>
-      <article class="mini">
-        <div class="mini-head"><h4>On-Prem AI Platform</h4><a class="badge link" href="dgx-llm.html">CASE STUDY ↗</a></div>
-        <p>Four AI workloads in production on self-hosted LLMs — code review, security review, grounded RAG, codegen. Data never leaves the org.</p>
-        <div class="msim aip">
-          <div class="msim-status"><span id="aip-mr">MR-1042</span> · <span id="aip-phase">scanning diff…</span></div>
-          <div class="aip-scan"><i id="aip-scanbar"></i></div>
-          <div class="aip-findings" id="aip-findings"></div>
-        </div>
-        <ul class="sys-skills"><li>Ollama · DGX</li><li>MEAI</li><li>Agents</li><li>RAG</li></ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FIELD NOTES ================= -->
-<section class="svc" id="notes">
-  <div class="wrap">
-    <div class="svc-tag"><span class="dot"></span><span class="proto">notes://</span>field <span>· how I think</span></div>
-    <h2>Field <em>Notes</em></h2>
-    <p class="sec-note">Short notes on engineering judgment — the decisions behind the systems above.</p>
-
-    <details class="note">
-      <summary><span class="n-id">NOTE-01</span><h3>Why we self-host LLMs on DGX (and when we don't)</h3><span class="n-open">▸ read</span></summary>
-      <div class="n-body">
-        <p>The question isn't "hosted or self-hosted" — it's <b>where is the data boundary?</b> Internal policies, incident reports, and customer records can't cross the org perimeter, so those workloads run on open models via Ollama on NVIDIA DGX hardware. General coding help and public-content generation route to hosted models like Claude, which are simply better at those tasks.</p>
-        <p>The engineering move that makes this cheap is <b>Microsoft.Extensions.AI</b>: every caller talks to <code>IChatClient</code>, so routing is configuration, not a rewrite. Sensitivity is decided per request, not per project. The lesson from running it: treat the local model server as production infrastructure — auth, rate limits, telemetry, and an eval set that runs before any model or quantization swap.</p>
+        </article>
+        <article class="dep">
+          <div class="dep-meta"><span class="dep-ver">v2</span><span class="dep-when">10/2019 → 11/2020</span><span
+              class="dep-where">Cairo, EG</span></div>
+          <div class="dep-body">
+            <h3>.NET Full-Stack Engineer · Compass International</h3>
+            <ul>
+              <li>Shipment tracking &amp; optimization; C#/.NET, JavaScript, AJAX applications.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="dep">
+          <div class="dep-meta"><span class="dep-ver">v1</span><span class="dep-when">07/2017 → 10/2019</span><span
+              class="dep-where">Cairo, EG</span></div>
+          <div class="dep-body">
+            <h3>.NET Full-Stack Engineer · Pearogram</h3>
+            <ul>
+              <li>Scalable web solutions for client projects — HTML, JavaScript, AJAX, JSON.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="dep edu">
+          <div class="dep-meta"><span class="dep-ver">BOOT</span><span class="dep-when">2013 → 2019</span><span
+              class="dep-where">Menoufia Univ.</span></div>
+          <div class="dep-body">
+            <h3>B.Sc. Pure Mathematics &amp; Computer Science</h3>
+          </div>
+        </article>
       </div>
-    </details>
+    </section>
 
-    <details class="note">
-      <summary><span class="n-id">NOTE-02</span><h3>Retiring an ESB without a big bang</h3><span class="n-open">▸ read</span></summary>
-      <div class="n-body">
-        <p>Payment and POS integrations punish big-bang migrations — a bad cutover is measured in failed transactions, not bug tickets. The pattern that works is the <b>strangler fig</b>: put a gateway in front of the ESB, then move one integration at a time to a dedicated service while everything else keeps flowing through the old path.</p>
-        <p>Two disciplines make it safe: <b>contract tests</b> so the new service provably speaks the same language as the old route, and <b>shadow traffic</b> — mirroring real requests to the new service and diffing responses before it ever takes live load. Cutover becomes a routing change you can reverse in seconds. Slow is smooth; smooth is fast.</p>
+    <section class="svc" id="proj">
+      <div class="wrap">
+        <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>systems.live <span>· internal
+            systems shown as simulations</span></div>
+        <h2>Systems, <em>Running</em></h2>
+        <p class="sec-note">Enterprise systems can't be linked publicly — so the internal ones run here as live
+          simulations of what they do. Public projects link out.</p>
+
+        <article class="sys">
+          <div class="sys-head">
+            <div>
+              <h3>ENOC Contactless &amp; POS Services</h3>
+              <p class="sys-sub">Contactless cards, vending &amp; POS machines · Network International payments · SOA
+                financial accounts</p>
+            </div>
+            <span class="badge sim">SIMULATION</span>
+          </div>
+          <div class="sim pos">
+            <div class="sim-stats">
+              <div><span class="num" id="pos-count">0</span><span class="lbl">authorizations</span></div>
+              <div><span class="num" id="pos-approved">0%</span><span class="lbl">approval rate</span></div>
+              <div><span class="num" id="pos-lat">—</span><span class="lbl">avg auth latency</span></div>
+            </div>
+            <div class="log" id="pos-log" aria-live="off"></div>
+          </div>
+          <ul class="sys-skills">
+            <li>WCF</li>
+            <li>REST</li>
+            <li>Software AG ESB</li>
+            <li>Network International</li>
+            <li>SOA</li>
+          </ul>
+        </article>
+
+        <article class="sys">
+          <div class="sys-head">
+            <div>
+              <h3>Internal RAG Assistant + GenAI for .NET</h3>
+              <p class="sys-sub">Retrieval-augmented assistant over company knowledge · Microsoft.Extensions.AI
+                abstraction · hosted &amp; self-hosted models</p>
+            </div>
+            <span class="badge sim">SIMULATION</span>
+          </div>
+          <div class="sim rag">
+            <div class="rag-route">
+              <span class="route-lbl">MODEL ROUTE</span>
+              <button class="route-btn active" id="route-local" type="button">⛨ On-prem · DGX / Ollama</button>
+              <button class="route-btn" id="route-hosted" type="button">☁ Hosted · Claude API</button>
+              <span class="route-note" id="route-note">data boundary: never leaves the org</span>
+            </div>
+            <div class="rag-q" id="rag-q"></div>
+            <div class="rag-chips" id="rag-chips"></div>
+            <div class="rag-a"><span id="rag-a"></span><span class="caret" id="rag-caret">▌</span></div>
+          </div>
+          <ul class="sys-skills">
+            <li>RAG</li>
+            <li>Vector search</li>
+            <li>MEAI · IChatClient</li>
+            <li>Ollama on DGX Spark</li>
+            <li>Claude API</li>
+          </ul>
+        </article>
+
+        <article class="sys">
+          <div class="sys-head">
+            <div>
+              <h3>ViP — Vehicle Identification Pass</h3>
+              <p class="sys-sub">RFID-tagged vehicles authorized for fuelling &amp; payment · FastEndpoints APIs · ESB
+                integration · Angular front-end</p>
+            </div>
+            <div class="badge-row"><span class="badge sim">API TRACE</span><a class="badge link"
+                href="https://vipselect.enoc.com" rel="noopener">LIVE SITE ↗</a></div>
+          </div>
+          <div class="sim vip">
+            <div class="vip-lane">
+              <div class="vip-road">
+                <div class="vip-car" id="vip-car">🚗</div>
+                <div class="vip-gate" id="vip-gate"></div>
+              </div>
+            </div>
+            <ol class="trace" id="vip-trace">
+              <li data-ms="12">VEHICLE DETECTED · lane 03</li>
+              <li data-ms="28">RFID TAG READ · tag 8F:2C:…:A1</li>
+              <li data-ms="41">GET /passes/{tag} · account resolved</li>
+              <li data-ms="35">POST /limits/check · fleet policy OK</li>
+              <li data-ms="52">POST /pump/authorize · pump #7 unlocked</li>
+              <li data-ms="19">EVENT → ESB · fuelling.started published</li>
+            </ol>
+          </div>
+          <ul class="sys-skills">
+            <li>FastEndpoints</li>
+            <li>.NET APIs</li>
+            <li>ESB</li>
+            <li>Angular</li>
+            <li>DB redesign</li>
+          </ul>
+        </article>
+
+        <div class="sys-grid">
+          <article class="mini">
+            <div class="mini-head">
+              <h4>AnimeCV</h4><a class="badge link" href="https://animecv.app" rel="noopener">animecv.app ↗</a>
+            </div>
+            <p>Upload a resume → get an anime character card with derived stats and a generated hero image. Claude API
+              for structured analysis, fal.ai for imagery.</p>
+            <div class="msim acv">
+              <div class="msim-status" id="acv-status">parsing resume…</div>
+              <div class="acv-card">
+                <div class="acv-arch" id="acv-arch">—</div>
+                <div class="acv-stats" id="acv-stats">
+                  <div class="acv-row"><span>BACKEND</span><span class="acv-bar"><i data-v="92"></i></span><em>92</em>
+                  </div>
+                  <div class="acv-row"><span>INTEGRATION</span><span class="acv-bar"><i
+                        data-v="88"></i></span><em>88</em></div>
+                  <div class="acv-row"><span>AI/LLM</span><span class="acv-bar"><i data-v="84"></i></span><em>84</em>
+                  </div>
+                  <div class="acv-row"><span>LEADERSHIP</span><span class="acv-bar"><i
+                        data-v="90"></i></span><em>90</em></div>
+                </div>
+              </div>
+            </div>
+            <ul class="sys-skills">
+              <li>Claude API</li>
+              <li>Structured JSON output</li>
+              <li>fal.ai</li>
+              <li>PDF render</li>
+            </ul>
+          </article>
+          <article class="mini">
+            <div class="mini-head">
+              <h4>ENOC Pay</h4><a class="badge link" href="https://play.google.com/store/apps/details?id=com.enoc.pay"
+                rel="noopener">Play Store ↗</a>
+            </div>
+            <p>Consumer fuelling &amp; payments app — enhanced REST endpoints and app redesign for a smoother
+              experience.</p>
+            <div class="msim epay">
+              <div class="epay-flow" id="epay-flow">
+                <span data-s="0">SELECT PUMP</span><i>→</i><span data-s="1">AUTH ••••4411</span><i>→</i><span
+                  data-s="2">FUELLING</span><i>→</i><span data-s="3">E-RECEIPT ✓</span>
+              </div>
+            </div>
+            <div class="latbar"><span class="lat-lbl">API latency</span>
+              <div class="lat before"><i></i><em>before</em></div>
+              <div class="lat after"><i></i><em>after −30%</em></div>
+            </div>
+            <ul class="sys-skills">
+              <li>REST</li>
+              <li>Mobile APIs</li>
+              <li>UX</li>
+            </ul>
+          </article>
+          <article class="mini">
+            <div class="mini-head">
+              <h4>Tenxerp</h4><a class="badge link" href="https://www.tenxerp.com" rel="noopener">tenxerp.com ↗</a>
+            </div>
+            <p>Full-stack multi-tenant ERP on .NET + ABP. Try switching the tenant:</p>
+            <div class="tenant">
+              <div class="tenant-btns" id="tenant-btns">
+                <button class="t-btn active" data-t="0" type="button">Al Noor Trading</button>
+                <button class="t-btn" data-t="1" type="button">Gulf Fleet Co</button>
+                <button class="t-btn" data-t="2" type="button">Marina Retail</button>
+              </div>
+              <table class="t-table">
+                <thead>
+                  <tr>
+                    <th>Invoice</th>
+                    <th>Module</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="tenant-rows"></tbody>
+              </table>
+            </div>
+            <ul class="sys-skills">
+              <li>ABP framework</li>
+              <li>Multi-tenancy</li>
+              <li>EF Core query filters</li>
+            </ul>
+          </article>
+          <article class="mini">
+            <div class="mini-head">
+              <h4>Charity UAQ</h4><a class="badge link" href="https://charity.uaq.ae/home" rel="noopener">charity.uaq.ae
+                ↗</a>
+            </div>
+            <p>ERP for UAE charities — ASP.NET Core APIs, Angular portal, MVC admin dashboard.</p>
+            <div class="msim cuaq">
+              <div class="cuaq-camp"><span id="cuaq-name">Winter Relief</span><span id="cuaq-pct">0%</span></div>
+              <div class="cuaq-track"><i id="cuaq-fill"></i></div>
+              <div class="msim-status" id="cuaq-feed">awaiting donations…</div>
+            </div>
+            <ul class="sys-skills">
+              <li>ASP.NET Core</li>
+              <li>Angular</li>
+              <li>MVC</li>
+            </ul>
+          </article>
+          <article class="mini">
+            <div class="mini-head">
+              <h4>DMG Publisher</h4><a class="badge link" href="https://dmgpublisher.com"
+                rel="noopener">dmgpublisher.com ↗</a>
+            </div>
+            <p>Book publishing platform on .NET Framework + Bootstrap.</p>
+            <div class="msim dmg">
+              <div class="msim-status" id="dmg-title">"—"</div>
+              <ol class="dmg-pipe" id="dmg-pipe">
+                <li>MANUSCRIPT</li>
+                <li>REVIEW</li>
+                <li>TYPESET</li>
+                <li>PUBLISHED</li>
+              </ol>
+            </div>
+            <ul class="sys-skills">
+              <li>.NET Framework</li>
+              <li>Bootstrap</li>
+            </ul>
+          </article>
+          <article class="mini">
+            <div class="mini-head">
+              <h4>On-Prem AI Platform</h4><a class="badge link" href="dgx-llm.html">CASE STUDY ↗</a>
+            </div>
+            <p>Four AI workloads in production on self-hosted LLMs — code review, security review, grounded RAG,
+              codegen. Data never leaves the org.</p>
+            <div class="msim aip">
+              <div class="msim-status"><span id="aip-mr">MR-1042</span> · <span id="aip-phase">scanning diff…</span>
+              </div>
+              <div class="aip-scan"><i id="aip-scanbar"></i></div>
+              <div class="aip-findings" id="aip-findings"></div>
+            </div>
+            <ul class="sys-skills">
+              <li>Ollama · DGX</li>
+              <li>MEAI</li>
+              <li>Agents</li>
+              <li>RAG</li>
+            </ul>
+          </article>
+        </div>
       </div>
-    </details>
+    </section>
 
-    <details class="note">
-      <summary><span class="n-id">NOTE-03</span><h3>Getting LLMs to return data, not prose</h3><span class="n-open">▸ read</span></summary>
-      <div class="n-body">
-        <p>The moment an LLM output feeds a system instead of a human, prose is a liability. The rule I enforce: <b>never regex model output</b>. Define a typed contract (a C# record), request schema-bound structured output, deserialize, validate, and on failure retry with the validation error appended — the model fixes its own mistake far more reliably than string surgery does.</p>
-        <p>This is how AnimeCV turns an arbitrary resume into a stable character card, and how our classification services stay boring and dependable. Treat the model like any untrusted upstream API: strict contract in, strict validation out, and telemetry on every call so drift shows up in dashboards, not incidents.</p>
+    <!-- ================= FIELD NOTES ================= -->
+    <section class="svc" id="notes">
+      <div class="wrap">
+        <div class="svc-tag"><span class="dot"></span><span class="proto">notes://</span>field <span>· how I
+            think</span></div>
+        <h2>Field <em>Notes</em></h2>
+        <p class="sec-note">Short notes on engineering judgment — the decisions behind the systems above.</p>
+
+        <details class="note">
+          <summary><span class="n-id">NOTE-01</span>
+            <h3>Why we self-host LLMs on DGX (and when we don't)</h3><span class="n-open">▸ read</span>
+          </summary>
+          <div class="n-body">
+            <p>The question isn't "hosted or self-hosted" — it's <b>where is the data boundary?</b> Internal policies,
+              incident reports, and customer records can't cross the org perimeter, so those workloads run on open
+              models via Ollama on NVIDIA DGX hardware. General coding help and public-content generation route to
+              hosted models like Claude, which are simply better at those tasks.</p>
+            <p>The engineering move that makes this cheap is <b>Microsoft.Extensions.AI</b>: every caller talks to
+              <code>IChatClient</code>, so routing is configuration, not a rewrite. Sensitivity is decided per request,
+              not per project. The lesson from running it: treat the local model server as production infrastructure —
+              auth, rate limits, telemetry, and an eval set that runs before any model or quantization swap.</p>
+          </div>
+        </details>
+
+        <details class="note">
+          <summary><span class="n-id">NOTE-02</span>
+            <h3>Retiring an ESB without a big bang</h3><span class="n-open">▸ read</span>
+          </summary>
+          <div class="n-body">
+            <p>Payment and POS integrations punish big-bang migrations — a bad cutover is measured in failed
+              transactions, not bug tickets. The pattern that works is the <b>strangler fig</b>: put a gateway in front
+              of the ESB, then move one integration at a time to a dedicated service while everything else keeps flowing
+              through the old path.</p>
+            <p>Two disciplines make it safe: <b>contract tests</b> so the new service provably speaks the same language
+              as the old route, and <b>shadow traffic</b> — mirroring real requests to the new service and diffing
+              responses before it ever takes live load. Cutover becomes a routing change you can reverse in seconds.
+              Slow is smooth; smooth is fast.</p>
+          </div>
+        </details>
+
+        <details class="note">
+          <summary><span class="n-id">NOTE-03</span>
+            <h3>Getting LLMs to return data, not prose</h3><span class="n-open">▸ read</span>
+          </summary>
+          <div class="n-body">
+            <p>The moment an LLM output feeds a system instead of a human, prose is a liability. The rule I enforce:
+              <b>never regex model output</b>. Define a typed contract (a C# record), request schema-bound structured
+              output, deserialize, validate, and on failure retry with the validation error appended — the model fixes
+              its own mistake far more reliably than string surgery does.</p>
+            <p>This is how AnimeCV turns an arbitrary resume into a stable character card, and how our classification
+              services stay boring and dependable. Treat the model like any untrusted upstream API: strict contract in,
+              strict validation out, and telemetry on every call so drift shows up in dashboards, not incidents.</p>
+          </div>
+        </details>
       </div>
-    </details>
-  </div>
-</section>
+    </section>
 
 
-<!-- ================= PEER REVIEW / TESTIMONIALS ================= -->
-<section class="svc" id="peers">
-  <div class="wrap">
-    <div class="svc-tag"><span class="dot"></span><span class="proto">probe://</span>peer-review</div>
-    <h2>Peer <em>Review</em></h2>
-    <p class="sec-note">Verified recommendations from people I've worked with — full text on LinkedIn.</p>
-    <div class="peer-grid" id="peer-grid">
-      <!-- PASTE RECOMMENDATIONS HERE — duplicate this card per quote:
+    <!-- ================= PEER REVIEW / TESTIMONIALS ================= -->
+    <section class="svc" id="peers">
+      <div class="wrap">
+        <div class="svc-tag"><span class="dot"></span><span class="proto">probe://</span>peer-review</div>
+        <h2>Peer <em>Review</em></h2>
+        <p class="sec-note">Verified recommendations from people I've worked with — full text on LinkedIn.</p>
+        <div class="peer-grid" id="peer-grid">
+          <!-- PASTE RECOMMENDATIONS HERE — duplicate this card per quote:
       <blockquote class="peer">
         <p>"QUOTE TEXT — keep to 1–3 sentences, trim with … if needed"</p>
         <footer><b>Full Name</b> · Their role · relationship (e.g. "managed Ahmed at ENOC")
         <span class="p-badge">VERIFIED ↗</span></footer>
       </blockquote>
       -->
-      <a class="peer link-out" href="https://www.linkedin.com/in/ahmed-lotfi-ba2206111/details/recommendations/" rel="noopener">
-        <span class="p-icon">⛿</span>
-        <span><b>Recommendations on LinkedIn</b><br>
-        <span class="p-sub">probe endpoint: linkedin/recommendations → read verified peer reviews</span></span>
-        <span class="p-badge">OPEN ↗</span>
-      </a>
-    </div>
-  </div>
-</section>
+          <a class="peer link-out" href="https://www.linkedin.com/in/ahmed-lotfi-ba2206111/details/recommendations/"
+            rel="noopener">
+            <span class="p-icon">⛿</span>
+            <span><b>Recommendations on LinkedIn</b><br>
+              <span class="p-sub">probe endpoint: linkedin/recommendations → read verified peer reviews</span></span>
+            <span class="p-badge">OPEN ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-<!-- ================= CERTS REGISTRY ================= -->
-<section class="svc" id="certs">
-  <div class="wrap">
-    <div class="svc-tag"><span class="dot"></span><span class="proto">certs://</span>registry</div>
-    <h2>Certification <em>Registry</em></h2>
-    <div class="cert-slot">
-      <span class="cs-icon">◇</span>
-      <span class="cs-title">slot provisioned · awaiting registration</span>
-      <p>Certifications will register on this node as they're earned. Verified credentials only — no badge inflation.</p>
-    </div>
-    <!-- TEMPLATE — duplicate & uncomment per earned cert:
+    <!-- ================= CERTS REGISTRY ================= -->
+    <section class="svc" id="certs">
+      <div class="wrap">
+        <div class="svc-tag"><span class="dot"></span><span class="proto">certs://</span>registry</div>
+        <h2>Certification <em>Registry</em></h2>
+        <div class="cert-slot">
+          <span class="cs-icon">◇</span>
+          <span class="cs-title">slot provisioned · awaiting registration</span>
+          <p>Certifications will register on this node as they're earned. Verified credentials only — no badge
+            inflation.</p>
+        </div>
+        <!-- TEMPLATE — duplicate & uncomment per earned cert:
     <div class="mini" style="margin-top:14px">
       <div class="mini-head"><h4>AZ-204 · Azure Developer Associate</h4><a class="badge link" href="CREDENTIAL_URL" rel="noopener">VERIFY ↗</a></div>
       <p>Microsoft Certified — issued MM/YYYY.</p>
     </div>
     -->
-  </div>
-</section>
+      </div>
+    </section>
 
-<section class="svc" id="contact">
-  <div class="wrap contact-wrap">
-    <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>handshake</div>
-    <h2>Open a <em>Channel</em></h2>
-    <p class="sec-note">Building enterprise .NET, payments, or bringing LLMs on-prem? Let's talk.</p>
-    <div class="contact-grid">
-      <a class="c-card" href="mailto:ahmedlotfiali@gmail.com"><span class="c-proto">smtp://</span>ahmedlotfiali@gmail.com</a>
-      <a class="c-card" href="tel:+971559290841"><span class="c-proto">tel://</span>+971 55 929 0841</a>
-      <a class="c-card" href="https://www.linkedin.com/in/ahmed-lotfi-ba2206111" rel="noopener"><span class="c-proto">in://</span>ahmed-lotfi</a>
-      <a class="c-card" href="https://github.com/AhmedLotfi" rel="noopener"><span class="c-proto">git://</span>AhmedLotfi</a>
-    </div>
-    <div class="hero-cta" style="margin-top:26px">
-      <a class="btn" href="Ahmed-Lotfy-Mahfouz-CV.pdf" download>⬇ resume.pdf</a>
-      <button class="btn" type="button" onclick="window.print()">⎙ print CV</button>
-    </div>
-    <footer class="foot">
-      <span>AR native · EN professional</span>
-      <span>© 2026 Ahmed Lotfy Mahfouz — rendered by the control plane you're looking at</span>
-    </footer>
-  </div>
-</section>
-</main>
+    <section class="svc" id="contact">
+      <div class="wrap contact-wrap">
+        <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>handshake</div>
+        <h2>Open a <em>Channel</em></h2>
+        <p class="sec-note">Building enterprise .NET, payments, or bringing LLMs on-prem? Let's talk.</p>
+        <div class="contact-grid">
+          <a class="c-card" href="mailto:ahmedlotfiali@gmail.com"><span
+              class="c-proto">smtp://</span>ahmedlotfiali@gmail.com</a>
+          <a class="c-card" href="tel:+971559290841"><span class="c-proto">tel://</span>+971 55 929 0841</a>
+          <a class="c-card" href="https://www.linkedin.com/in/ahmed-lotfi-ba2206111" rel="noopener"><span
+              class="c-proto">in://</span>ahmed-lotfi</a>
+          <a class="c-card" href="https://github.com/AhmedLotfi" rel="noopener"><span
+              class="c-proto">git://</span>AhmedLotfi</a>
+        </div>
+        <div class="hero-cta" style="margin-top:26px">
+          <a class="btn" href="Ahmed-lotfy-resume.pdf.pdf" download>⬇ resume.pdf</a>
+          <button class="btn" type="button" onclick="window.print()">⎙ print CV</button>
+        </div>
+        <footer class="foot">
+          <span>AR native · EN professional</span>
+          <span>© 2026 Ahmed Lotfy Mahfouz — rendered by the control plane you're looking at</span>
+        </footer>
+      </div>
+    </section>
+  </main>
 
-<script>
-/* ---------- safe storage (works even where storage is blocked) ---------- */
-const store={
-  get(k){try{return localStorage.getItem(k)}catch{return null}},
-  set(k,v){try{localStorage.setItem(k,v)}catch{}},
-  sget(k){try{return sessionStorage.getItem(k)}catch{return null}},
-  sset(k,v){try{sessionStorage.setItem(k,v)}catch{}}
-};
+  <script>
+    /* ---------- safe storage (works even where storage is blocked) ---------- */
+    const store = {
+      get(k) { try { return localStorage.getItem(k) } catch { return null } },
+      set(k, v) { try { localStorage.setItem(k, v) } catch { } },
+      sget(k) { try { return sessionStorage.getItem(k) } catch { return null } },
+      sset(k, v) { try { sessionStorage.setItem(k, v) } catch { } }
+    };
 
-/* ---------- theme: light default, dark on toggle, persisted ---------- */
-(function(){
-  const btn=document.getElementById('theme-toggle');
-  const apply=t=>{
-    if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');btn.textContent='◑';btn.setAttribute('aria-label','Switch to light theme');}
-    else{document.documentElement.removeAttribute('data-theme');btn.textContent='◐';btn.setAttribute('aria-label','Switch to dark theme');}
-  };
-  let theme=store.get('alm-theme')||'light';
-  apply(theme);
-  btn.onclick=()=>{theme=theme==='light'?'dark':'light';apply(theme);store.set('alm-theme',theme);};
-})();
+    /* ---------- theme: light default, dark on toggle, persisted ---------- */
+    (function () {
+      const btn = document.getElementById('theme-toggle');
+      const apply = t => {
+        if (t === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); btn.textContent = '◑'; btn.setAttribute('aria-label', 'Switch to light theme'); }
+        else { document.documentElement.removeAttribute('data-theme'); btn.textContent = '◐'; btn.setAttribute('aria-label', 'Switch to dark theme'); }
+      };
+      let theme = store.get('alm-theme') || 'light';
+      apply(theme);
+      btn.onclick = () => { theme = theme === 'light' ? 'dark' : 'light'; apply(theme); store.set('alm-theme', theme); };
+    })();
 
-/* ---------- boot sequence: ~1.3s, skippable, once per session ---------- */
-(function(){
-  const boot=document.getElementById('boot');
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduced || store.sget('alm-booted')){boot.classList.add('done');boot.remove();return;}
-  const lines=[...boot.querySelectorAll('.bl')];
-  lines.forEach((l,i)=>setTimeout(()=>l.classList.add('show'), 160+i*230));
-  const finish=()=>{store.sset('alm-booted','1');boot.classList.add('done');setTimeout(()=>boot.remove(),500);};
-  setTimeout(finish, 160+lines.length*230+420);
-  boot.addEventListener('click', finish);
-  addEventListener('keydown', finish, {once:true});
-})();
+    /* ---------- boot sequence: ~1.3s, skippable, once per session ---------- */
+    (function () {
+      const boot = document.getElementById('boot');
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced || store.sget('alm-booted')) { boot.classList.add('done'); boot.remove(); return; }
+      const lines = [...boot.querySelectorAll('.bl')];
+      lines.forEach((l, i) => setTimeout(() => l.classList.add('show'), 160 + i * 230));
+      const finish = () => { store.sset('alm-booted', '1'); boot.classList.add('done'); setTimeout(() => boot.remove(), 500); };
+      setTimeout(finish, 160 + lines.length * 230 + 420);
+      boot.addEventListener('click', finish);
+      addEventListener('keydown', finish, { once: true });
+    })();
 
-/* ---------- bus node positioning + scroll spy ---------- */
-(function(){
-  const bus=document.getElementById('bus');
-  const nodes=[...bus.querySelectorAll('.node')];
-  const ids=['top','stack','exp','proj','notes','peers','certs','contact'];
-  const mobile=()=>matchMedia('(max-width:820px)').matches;
-  function place(){
-    nodes.forEach((n,i)=>{
-      if(mobile()){n.style.left=(6+i*(100-12)/(nodes.length-1))+'%';n.style.top='50%';}
-      else{n.style.top=(5+i*(100-10)/(nodes.length-1))+'%';n.style.left='50%';}
-    });
-  }
-  place(); addEventListener('resize',place);
-  const spy=new IntersectionObserver(es=>{
-    es.forEach(e=>{
-      if(e.isIntersecting){
-        const i=ids.indexOf(e.target.id);
-        nodes.forEach((n,j)=>n.classList.toggle('active',j===i));
+    /* ---------- bus node positioning + scroll spy ---------- */
+    (function () {
+      const bus = document.getElementById('bus');
+      const nodes = [...bus.querySelectorAll('.node')];
+      const ids = ['top', 'stack', 'exp', 'proj', 'notes', 'peers', 'certs', 'contact'];
+      const mobile = () => matchMedia('(max-width:820px)').matches;
+      function place() {
+        nodes.forEach((n, i) => {
+          if (mobile()) { n.style.left = (6 + i * (100 - 12) / (nodes.length - 1)) + '%'; n.style.top = '50%'; }
+          else { n.style.top = (5 + i * (100 - 10) / (nodes.length - 1)) + '%'; n.style.left = '50%'; }
+        });
       }
+      place(); addEventListener('resize', place);
+      const spy = new IntersectionObserver(es => {
+        es.forEach(e => {
+          if (e.isIntersecting) {
+            const i = ids.indexOf(e.target.id);
+            nodes.forEach((n, j) => n.classList.toggle('active', j === i));
+          }
+        });
+      }, { rootMargin: '-40% 0px -50% 0px' });
+      ids.forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
+    })();
+
+    /* ---------- hero meters + latency bars ---------- */
+    addEventListener('load', () => {
+      document.querySelectorAll('.meter i').forEach(m => m.style.width = m.dataset.w + '%');
+      const b = document.querySelector('.lat.before i'), a = document.querySelector('.lat.after i');
+      if (b) b.style.width = '88%'; if (a) a.style.width = '60%';
     });
-  },{rootMargin:'-40% 0px -50% 0px'});
-  ids.forEach(id=>{const el=document.getElementById(id); if(el) spy.observe(el);});
-})();
 
-/* ---------- hero meters + latency bars ---------- */
-addEventListener('load',()=>{
-  document.querySelectorAll('.meter i').forEach(m=>m.style.width=m.dataset.w+'%');
-  const b=document.querySelector('.lat.before i'), a=document.querySelector('.lat.after i');
-  if(b) b.style.width='88%'; if(a) a.style.width='60%';
-});
+    /* ---------- SIM 1: POS transaction stream ---------- */
+    (function () {
+      const log = document.getElementById('pos-log'); if (!log) return;
+      const cEl = document.getElementById('pos-count'), aEl = document.getElementById('pos-approved'), lEl = document.getElementById('pos-lat');
+      let total = 0, ok = 0, latSum = 0;
+      const devices = ['POS-114', 'POS-089', 'VEND-22', 'KIOSK-07', 'POS-203', 'VEND-05'];
+      const sites = ['DXB-Jumeirah', 'DXB-Marina', 'SHJ-Airport Rd', 'DXB-Al Quoz', 'AUH-Corniche'];
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function line() {
+        const t = new Date().toTimeString().slice(0, 8);
+        const amt = (Math.random() * 180 + 15).toFixed(2);
+        const lat = Math.floor(Math.random() * 160 + 45);
+        const card = '••••' + Math.floor(1000 + Math.random() * 9000);
+        const dev = devices[Math.random() * devices.length | 0], site = sites[Math.random() * sites.length | 0];
+        const roll = Math.random();
+        let status, cls;
+        if (roll < 0.86) { status = 'APPROVED'; cls = 'ok'; ok++; }
+        else if (roll < 0.95) { status = 'DECLINED · insufficient funds'; cls = 'er'; }
+        else { status = 'RETRY · ESB timeout → recovered'; cls = 'wn'; ok++; }
+        total++; latSum += lat;
+        const el = document.createElement('div');
+        el.className = 'ln';
+        el.innerHTML = `<span class="t">${t}</span> <span class="in">${dev}</span> ${site} · TAP ${card} · ${amt} AED → <span class="${cls}">${status}</span> <span class="t">${lat}ms</span>`;
+        log.appendChild(el);
+        while (log.children.length > 9) log.removeChild(log.firstChild);
+        cEl.textContent = total;
+        aEl.textContent = Math.round(ok / total * 100) + '%';
+        lEl.textContent = Math.round(latSum / total) + 'ms';
+      }
+      for (let i = 0; i < 6; i++) line();
+      if (!reduced) setInterval(line, 1400);
+    })();
 
-/* ---------- SIM 1: POS transaction stream ---------- */
-(function(){
-  const log=document.getElementById('pos-log'); if(!log) return;
-  const cEl=document.getElementById('pos-count'),aEl=document.getElementById('pos-approved'),lEl=document.getElementById('pos-lat');
-  let total=0,ok=0,latSum=0;
-  const devices=['POS-114','POS-089','VEND-22','KIOSK-07','POS-203','VEND-05'];
-  const sites=['DXB-Jumeirah','DXB-Marina','SHJ-Airport Rd','DXB-Al Quoz','AUH-Corniche'];
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function line(){
-    const t=new Date().toTimeString().slice(0,8);
-    const amt=(Math.random()*180+15).toFixed(2);
-    const lat=Math.floor(Math.random()*160+45);
-    const card='••••'+Math.floor(1000+Math.random()*9000);
-    const dev=devices[Math.random()*devices.length|0],site=sites[Math.random()*sites.length|0];
-    const roll=Math.random();
-    let status,cls;
-    if(roll<0.86){status='APPROVED';cls='ok';ok++;}
-    else if(roll<0.95){status='DECLINED · insufficient funds';cls='er';}
-    else{status='RETRY · ESB timeout → recovered';cls='wn';ok++;}
-    total++;latSum+=lat;
-    const el=document.createElement('div');
-    el.className='ln';
-    el.innerHTML=`<span class="t">${t}</span> <span class="in">${dev}</span> ${site} · TAP ${card} · ${amt} AED → <span class="${cls}">${status}</span> <span class="t">${lat}ms</span>`;
-    log.appendChild(el);
-    while(log.children.length>9) log.removeChild(log.firstChild);
-    cEl.textContent=total;
-    aEl.textContent=Math.round(ok/total*100)+'%';
-    lEl.textContent=Math.round(latSum/total)+'ms';
-  }
-  for(let i=0;i<6;i++) line();
-  if(!reduced) setInterval(line,1400);
-})();
-
-/* ---------- SIM 2: RAG assistant ---------- */
-(function(){
-  const qEl=document.getElementById('rag-q'); if(!qEl) return;
-  const chipsEl=document.getElementById('rag-chips'),aEl=document.getElementById('rag-a');
-  const noteEl=document.getElementById('route-note');
-  const bLocal=document.getElementById('route-local'),bHosted=document.getElementById('route-hosted');
-  let route='local',timer;
-  const setRoute=r=>{route=r;
-    bLocal.classList.toggle('active',r==='local');bHosted.classList.toggle('active',r==='hosted');
-    noteEl.textContent=r==='local'?'data boundary: never leaves the org':'route: hosted API · general workloads';
-  };
-  bLocal.onclick=()=>setRoute('local');bHosted.onclick=()=>setRoute('hosted');
-  const scenarios=[
-    {q:'What is the refund flow for a failed contactless payment?',
-     chips:['payments-runbook.md §4','ni-integration-spec.pdf p.12','pos-faq.md'],
-     a:'Failed captures auto-reverse within 90s via the reconciliation job. If the ESB event was lost, trigger a manual reversal from the admin portal — the outbox guarantees the Network International call is idempotent.'},
-    {q:'Which service owns fleet fuel limits?',
-     chips:['vip-architecture.md','limits-api.yaml','fleet-policy.docx §2.1'],
-     a:'Limits live in the ViP Limits service (POST /limits/check). Fleet policies sync nightly from the ERP; per-vehicle overrides are cached 5 minutes.'},
-    {q:'How do I request SSO access for a new admin portal?',
-     chips:['sso-onboarding.md','ad-groups.xlsx','portal-checklist.md'],
-     a:'Register the app in the SSO service, map an AD security group to a portal role, then raise a CAB ticket. Token audience must match the portal API before go-live.'}
-  ];
-  let si=0;
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function type(el,text,done){
-    if(reduced){el.textContent=text;done&&done();return;}
-    el.textContent='';let i=0;
-    (function step(){el.textContent=text.slice(0,++i);
-      if(i<text.length) timer=setTimeout(step,12+Math.random()*18); else done&&done();})();
-  }
-  function run(){
-    const s=scenarios[si++%scenarios.length];
-    chipsEl.innerHTML='';aEl.textContent='';
-    type(qEl,s.q,()=>{
-      s.chips.forEach((c,i)=>setTimeout(()=>{
-        const sp=document.createElement('span');sp.textContent='⛁ '+c;chipsEl.appendChild(sp);
-      },250*i));
-      setTimeout(()=>type(aEl,s.a,()=>setTimeout(run,5200)),250*s.chips.length+500);
-    });
-  }
-  run();
-})();
-
-/* ---------- SIM 3: ViP lane trace ---------- */
-(function(){
-  const car=document.getElementById('vip-car'); if(!car) return;
-  const gate=document.getElementById('vip-gate');
-  const steps=[...document.querySelectorAll('#vip-trace li')];
-  steps.forEach(li=>{const ms=li.dataset.ms;li.innerHTML=li.textContent+`<span class="ms">${ms}ms</span>`;});
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduced){steps.forEach(s=>s.classList.add('done'));gate.classList.add('open');car.style.left='30%';return;}
-  function cycle(){
-    steps.forEach(s=>s.classList.remove('done'));
-    gate.classList.remove('open');
-    car.style.transition='none';car.style.left='-40px';
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      car.style.transition='left 1.6s cubic-bezier(.3,.7,.4,1)';
-      car.style.left='34%';
-      let i=0;
-      const iv=setInterval(()=>{
-        if(i<steps.length){steps[i++].classList.add('done');
-          if(i===steps.length-1) gate.classList.add('open');
-        }else{
-          clearInterval(iv);
-          car.style.transition='left 1.4s ease-in';
-          car.style.left='110%';
-          setTimeout(cycle,2600);
+    /* ---------- SIM 2: RAG assistant ---------- */
+    (function () {
+      const qEl = document.getElementById('rag-q'); if (!qEl) return;
+      const chipsEl = document.getElementById('rag-chips'), aEl = document.getElementById('rag-a');
+      const noteEl = document.getElementById('route-note');
+      const bLocal = document.getElementById('route-local'), bHosted = document.getElementById('route-hosted');
+      let route = 'local', timer;
+      const setRoute = r => {
+        route = r;
+        bLocal.classList.toggle('active', r === 'local'); bHosted.classList.toggle('active', r === 'hosted');
+        noteEl.textContent = r === 'local' ? 'data boundary: never leaves the org' : 'route: hosted API · general workloads';
+      };
+      bLocal.onclick = () => setRoute('local'); bHosted.onclick = () => setRoute('hosted');
+      const scenarios = [
+        {
+          q: 'What is the refund flow for a failed contactless payment?',
+          chips: ['payments-runbook.md §4', 'ni-integration-spec.pdf p.12', 'pos-faq.md'],
+          a: 'Failed captures auto-reverse within 90s via the reconciliation job. If the ESB event was lost, trigger a manual reversal from the admin portal — the outbox guarantees the Network International call is idempotent.'
+        },
+        {
+          q: 'Which service owns fleet fuel limits?',
+          chips: ['vip-architecture.md', 'limits-api.yaml', 'fleet-policy.docx §2.1'],
+          a: 'Limits live in the ViP Limits service (POST /limits/check). Fleet policies sync nightly from the ERP; per-vehicle overrides are cached 5 minutes.'
+        },
+        {
+          q: 'How do I request SSO access for a new admin portal?',
+          chips: ['sso-onboarding.md', 'ad-groups.xlsx', 'portal-checklist.md'],
+          a: 'Register the app in the SSO service, map an AD security group to a portal role, then raise a CAB ticket. Token audience must match the portal API before go-live.'
         }
-      },620);
-    }));
-  }
-  cycle();
-})();
+      ];
+      let si = 0;
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function type(el, text, done) {
+        if (reduced) { el.textContent = text; done && done(); return; }
+        el.textContent = ''; let i = 0;
+        (function step() {
+          el.textContent = text.slice(0, ++i);
+          if (i < text.length) timer = setTimeout(step, 12 + Math.random() * 18); else done && done();
+        })();
+      }
+      function run() {
+        const s = scenarios[si++ % scenarios.length];
+        chipsEl.innerHTML = ''; aEl.textContent = '';
+        type(qEl, s.q, () => {
+          s.chips.forEach((c, i) => setTimeout(() => {
+            const sp = document.createElement('span'); sp.textContent = '⛁ ' + c; chipsEl.appendChild(sp);
+          }, 250 * i));
+          setTimeout(() => type(aEl, s.a, () => setTimeout(run, 5200)), 250 * s.chips.length + 500);
+        });
+      }
+      run();
+    })();
 
-/* ---------- Tenxerp tenant switcher ---------- */
-(function(){
-  const rows=document.getElementById('tenant-rows'); if(!rows) return;
-  const data=[
-    [['INV-2041','Procurement','<span class="st-ok">Posted</span>'],['INV-2042','Inventory','<span class="st-wn">Pending</span>'],['INV-2043','Payroll','<span class="st-ok">Posted</span>']],
-    [['FLT-0771','Fleet fuel','<span class="st-ok">Posted</span>'],['FLT-0772','Maintenance','<span class="st-ok">Posted</span>'],['FLT-0773','Fleet fuel','<span class="st-wn">Pending</span>']],
-    [['RTL-5120','POS sales','<span class="st-ok">Posted</span>'],['RTL-5121','Returns','<span class="st-wn">Pending</span>'],['RTL-5122','POS sales','<span class="st-ok">Posted</span>']]
-  ];
-  const btns=[...document.querySelectorAll('.t-btn')];
-  function render(i){
-    rows.innerHTML=data[i].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
-    btns.forEach((b,j)=>b.classList.toggle('active',j===i));
-  }
-  btns.forEach((b,i)=>b.onclick=()=>render(i));
-  render(0);
-})();
+    /* ---------- SIM 3: ViP lane trace ---------- */
+    (function () {
+      const car = document.getElementById('vip-car'); if (!car) return;
+      const gate = document.getElementById('vip-gate');
+      const steps = [...document.querySelectorAll('#vip-trace li')];
+      steps.forEach(li => { const ms = li.dataset.ms; li.innerHTML = li.textContent + `<span class="ms">${ms}ms</span>`; });
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) { steps.forEach(s => s.classList.add('done')); gate.classList.add('open'); car.style.left = '30%'; return; }
+      function cycle() {
+        steps.forEach(s => s.classList.remove('done'));
+        gate.classList.remove('open');
+        car.style.transition = 'none'; car.style.left = '-40px';
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          car.style.transition = 'left 1.6s cubic-bezier(.3,.7,.4,1)';
+          car.style.left = '34%';
+          let i = 0;
+          const iv = setInterval(() => {
+            if (i < steps.length) {
+              steps[i++].classList.add('done');
+              if (i === steps.length - 1) gate.classList.add('open');
+            } else {
+              clearInterval(iv);
+              car.style.transition = 'left 1.4s ease-in';
+              car.style.left = '110%';
+              setTimeout(cycle, 2600);
+            }
+          }, 620);
+        }));
+      }
+      cycle();
+    })();
 
-/* ---------- mini sims (reduced-motion: settle to final state) ---------- */
-(function(){
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /* ---------- Tenxerp tenant switcher ---------- */
+    (function () {
+      const rows = document.getElementById('tenant-rows'); if (!rows) return;
+      const data = [
+        [['INV-2041', 'Procurement', '<span class="st-ok">Posted</span>'], ['INV-2042', 'Inventory', '<span class="st-wn">Pending</span>'], ['INV-2043', 'Payroll', '<span class="st-ok">Posted</span>']],
+        [['FLT-0771', 'Fleet fuel', '<span class="st-ok">Posted</span>'], ['FLT-0772', 'Maintenance', '<span class="st-ok">Posted</span>'], ['FLT-0773', 'Fleet fuel', '<span class="st-wn">Pending</span>']],
+        [['RTL-5120', 'POS sales', '<span class="st-ok">Posted</span>'], ['RTL-5121', 'Returns', '<span class="st-wn">Pending</span>'], ['RTL-5122', 'POS sales', '<span class="st-ok">Posted</span>']]
+      ];
+      const btns = [...document.querySelectorAll('.t-btn')];
+      function render(i) {
+        rows.innerHTML = data[i].map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
+        btns.forEach((b, j) => b.classList.toggle('active', j === i));
+      }
+      btns.forEach((b, i) => b.onclick = () => render(i));
+      render(0);
+    })();
 
-  /* AnimeCV: parse -> stats -> archetype, cycles */
-  const acvS=document.getElementById('acv-status');
-  if(acvS){
-    const arch=document.getElementById('acv-arch');
-    const bars=[...document.querySelectorAll('.acv-bar i')];
-    const archetypes=['⚔ THE SYSTEM WEAVER','🛡 THE GATEKEEPER','⚡ THE PIPELINE SAGE'];
-    let a=0;
-    function cycle(){
-      acvS.textContent='parsing resume…';arch.textContent='—';
-      bars.forEach(b=>b.style.width='0');
-      setTimeout(()=>{acvS.textContent='deriving stats (Claude · structured output)…';
-        bars.forEach(b=>b.style.width=b.dataset.v+'%');},900);
-      setTimeout(()=>{acvS.textContent='hero image generated (fal.ai) ✓';
-        arch.textContent=archetypes[a++%archetypes.length];},2100);
-      setTimeout(cycle,5600);
-    }
-    if(reduced){acvS.textContent='character card generated ✓';arch.textContent=archetypes[0];
-      bars.forEach(b=>b.style.width=b.dataset.v+'%');}
-    else cycle();
-  }
+    /* ---------- mini sims (reduced-motion: settle to final state) ---------- */
+    (function () {
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ENOC Pay: flow stepper */
-  const flow=document.getElementById('epay-flow');
-  if(flow){
-    const steps=[...flow.querySelectorAll('span')];
-    if(reduced){steps.forEach(s=>s.classList.add('on'));}
-    else{let k=0;setInterval(()=>{
-      k=(k+1)%(steps.length+2); // 0..4 lit progressively, then a blank beat
-      steps.forEach((s,j)=>s.classList.toggle('on', k<=steps.length && j<k));
-    },1100);}
-  }
+      /* AnimeCV: parse -> stats -> archetype, cycles */
+      const acvS = document.getElementById('acv-status');
+      if (acvS) {
+        const arch = document.getElementById('acv-arch');
+        const bars = [...document.querySelectorAll('.acv-bar i')];
+        const archetypes = ['⚔ THE SYSTEM WEAVER', '🛡 THE GATEKEEPER', '⚡ THE PIPELINE SAGE'];
+        let a = 0;
+        function cycle() {
+          acvS.textContent = 'parsing resume…'; arch.textContent = '—';
+          bars.forEach(b => b.style.width = '0');
+          setTimeout(() => {
+            acvS.textContent = 'deriving stats (Claude · structured output)…';
+            bars.forEach(b => b.style.width = b.dataset.v + '%');
+          }, 900);
+          setTimeout(() => {
+            acvS.textContent = 'hero image generated (fal.ai) ✓';
+            arch.textContent = archetypes[a++ % archetypes.length];
+          }, 2100);
+          setTimeout(cycle, 5600);
+        }
+        if (reduced) {
+          acvS.textContent = 'character card generated ✓'; arch.textContent = archetypes[0];
+          bars.forEach(b => b.style.width = b.dataset.v + '%');
+        }
+        else cycle();
+      }
 
-  /* Charity UAQ: donation ticker toward goal */
-  const cn=document.getElementById('cuaq-name');
-  if(cn){
-    const pct=document.getElementById('cuaq-pct'),fill=document.getElementById('cuaq-fill'),feed=document.getElementById('cuaq-feed');
-    const camps=['Winter Relief','School Kits','Iftar Meals','Medical Aid'];
-    let ci=0,p=18;
-    const render=()=>{pct.textContent=Math.min(100,Math.round(p))+'%';fill.style.width=Math.min(100,p)+'%';};
-    if(reduced){p=72;render();feed.textContent='donation received · 250 AED';return;}
-    render();
-    setInterval(()=>{
-      const amt=[25,50,100,150,250,500][Math.random()*6|0];
-      p+=amt/38;
-      if(p>=100){feed.textContent='🎉 goal reached — '+cn.textContent;
-        setTimeout(()=>{ci++;cn.textContent=camps[ci%camps.length];p=8+Math.random()*15;render();},1600);}
-      else feed.textContent='donation received · '+amt+' AED';
-      render();
-    },1900);
-  }
+      /* ENOC Pay: flow stepper */
+      const flow = document.getElementById('epay-flow');
+      if (flow) {
+        const steps = [...flow.querySelectorAll('span')];
+        if (reduced) { steps.forEach(s => s.classList.add('on')); }
+        else {
+          let k = 0; setInterval(() => {
+            k = (k + 1) % (steps.length + 2); // 0..4 lit progressively, then a blank beat
+            steps.forEach((s, j) => s.classList.toggle('on', k <= steps.length && j < k));
+          }, 1100);
+        }
+      }
 
-  /* DMG: publishing pipeline */
-  const pipe=document.getElementById('dmg-pipe');
-  if(pipe){
-    const t=document.getElementById('dmg-title');
-    const lis=[...pipe.querySelectorAll('li')];
-    const titles=['Desert Voices','Gulf Histories Vol. II','The Pearl Road','Modern Arabic Verse'];
-    let ti=0;
-    if(reduced){t.textContent='"'+titles[0]+'"';lis.forEach(l=>l.classList.add('done'));return;}
-    function run(){
-      t.textContent='"'+titles[ti++%titles.length]+'"';
-      lis.forEach(l=>l.classList.remove('done','now'));
-      let i=0;
-      const iv=setInterval(()=>{
-        if(i>0) lis[i-1].classList.replace('now','done');
-        if(i<lis.length){lis[i].classList.add('now');i++;}
-        else{clearInterval(iv);setTimeout(run,2200);}
-      },850);
-    }
-    run();
-  }
+      /* Charity UAQ: donation ticker toward goal */
+      const cn = document.getElementById('cuaq-name');
+      if (cn) {
+        const pct = document.getElementById('cuaq-pct'), fill = document.getElementById('cuaq-fill'), feed = document.getElementById('cuaq-feed');
+        const camps = ['Winter Relief', 'School Kits', 'Iftar Meals', 'Medical Aid'];
+        let ci = 0, p = 18;
+        const render = () => { pct.textContent = Math.min(100, Math.round(p)) + '%'; fill.style.width = Math.min(100, p) + '%'; };
+        if (reduced) { p = 72; render(); feed.textContent = 'donation received · 250 AED'; return; }
+        render();
+        setInterval(() => {
+          const amt = [25, 50, 100, 150, 250, 500][Math.random() * 6 | 0];
+          p += amt / 38;
+          if (p >= 100) {
+            feed.textContent = '🎉 goal reached — ' + cn.textContent;
+            setTimeout(() => { ci++; cn.textContent = camps[ci % camps.length]; p = 8 + Math.random() * 15; render(); }, 1600);
+          }
+          else feed.textContent = 'donation received · ' + amt + ' AED';
+          render();
+        }, 1900);
+      }
 
-  /* On-Prem AI: CI code review scan */
-  const mr=document.getElementById('aip-mr');
-  if(mr){
-    const phase=document.getElementById('aip-phase'),bar=document.getElementById('aip-scanbar'),out=document.getElementById('aip-findings');
-    const pool=[
-      ['sev-w','WARN  missing CancellationToken · OrderService.cs:41'],
-      ['sev-e','SEC   possible SQL injection · ReportQuery.cs:88'],
-      ['sev-w','WARN  N+1 query in loop · InvoiceSync.cs:112'],
-      ['sev-e','SEC   secret in config literal · appsettings.cs:9'],
-      ['sev-w','WARN  swallowed exception · PosAdapter.cs:203'],
-      ['sev-ok','PASS  0 blocking findings — ready for human review']
-    ];
-    let n=1042;
-    if(reduced){bar.style.width='100%';phase.textContent='review complete';
-      out.innerHTML='<div class="sev-w">'+pool[0][1]+'</div><div class="sev-ok">'+pool[5][1]+'</div>';return;}
-    function run(){
-      mr.textContent='MR-'+(n++);
-      phase.textContent='scanning diff…';out.innerHTML='';
-      bar.style.transition='none';bar.style.width='0';
-      requestAnimationFrame(()=>requestAnimationFrame(()=>{
-        bar.style.transition='width 1.6s linear';bar.style.width='100%';}));
-      setTimeout(()=>{
-        phase.textContent='LLM review (on-prem · DGX)…';
-        const picks=[pool[Math.random()*5|0],pool[Math.random()*5|0]].filter((v,i,a)=>a.indexOf(v)===i);
-        picks.forEach((f,i)=>setTimeout(()=>{
-          const d=document.createElement('div');d.className=f[0];d.textContent=f[1];out.appendChild(d);},500*i));
-        setTimeout(()=>{const d=document.createElement('div');d.className='sev-ok';
-          d.textContent='POST  '+picks.length+' finding(s) → MR comments';out.appendChild(d);
-          phase.textContent='review complete';},500*picks.length+600);
-      },1700);
-      setTimeout(run,7200);
-    }
-    run();
-  }
-})();
-</script>
+      /* DMG: publishing pipeline */
+      const pipe = document.getElementById('dmg-pipe');
+      if (pipe) {
+        const t = document.getElementById('dmg-title');
+        const lis = [...pipe.querySelectorAll('li')];
+        const titles = ['Desert Voices', 'Gulf Histories Vol. II', 'The Pearl Road', 'Modern Arabic Verse'];
+        let ti = 0;
+        if (reduced) { t.textContent = '"' + titles[0] + '"'; lis.forEach(l => l.classList.add('done')); return; }
+        function run() {
+          t.textContent = '"' + titles[ti++ % titles.length] + '"';
+          lis.forEach(l => l.classList.remove('done', 'now'));
+          let i = 0;
+          const iv = setInterval(() => {
+            if (i > 0) lis[i - 1].classList.replace('now', 'done');
+            if (i < lis.length) { lis[i].classList.add('now'); i++; }
+            else { clearInterval(iv); setTimeout(run, 2200); }
+          }, 850);
+        }
+        run();
+      }
+
+      /* On-Prem AI: CI code review scan */
+      const mr = document.getElementById('aip-mr');
+      if (mr) {
+        const phase = document.getElementById('aip-phase'), bar = document.getElementById('aip-scanbar'), out = document.getElementById('aip-findings');
+        const pool = [
+          ['sev-w', 'WARN  missing CancellationToken · OrderService.cs:41'],
+          ['sev-e', 'SEC   possible SQL injection · ReportQuery.cs:88'],
+          ['sev-w', 'WARN  N+1 query in loop · InvoiceSync.cs:112'],
+          ['sev-e', 'SEC   secret in config literal · appsettings.cs:9'],
+          ['sev-w', 'WARN  swallowed exception · PosAdapter.cs:203'],
+          ['sev-ok', 'PASS  0 blocking findings — ready for human review']
+        ];
+        let n = 1042;
+        if (reduced) {
+          bar.style.width = '100%'; phase.textContent = 'review complete';
+          out.innerHTML = '<div class="sev-w">' + pool[0][1] + '</div><div class="sev-ok">' + pool[5][1] + '</div>'; return;
+        }
+        function run() {
+          mr.textContent = 'MR-' + (n++);
+          phase.textContent = 'scanning diff…'; out.innerHTML = '';
+          bar.style.transition = 'none'; bar.style.width = '0';
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            bar.style.transition = 'width 1.6s linear'; bar.style.width = '100%';
+          }));
+          setTimeout(() => {
+            phase.textContent = 'LLM review (on-prem · DGX)…';
+            const picks = [pool[Math.random() * 5 | 0], pool[Math.random() * 5 | 0]].filter((v, i, a) => a.indexOf(v) === i);
+            picks.forEach((f, i) => setTimeout(() => {
+              const d = document.createElement('div'); d.className = f[0]; d.textContent = f[1]; out.appendChild(d);
+            }, 500 * i));
+            setTimeout(() => {
+              const d = document.createElement('div'); d.className = 'sev-ok';
+              d.textContent = 'POST  ' + picks.length + ' finding(s) → MR comments'; out.appendChild(d);
+              phase.textContent = 'review complete';
+            }, 500 * picks.length + 600);
+          }, 1700);
+          setTimeout(run, 7200);
+        }
+        run();
+      }
+    })();
+  </script>
 </body>
+
 </html>
