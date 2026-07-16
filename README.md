@@ -28,9 +28,5 @@ fonts/            woff2 (latin subsets)
 _headers          Cloudflare cache rules for fonts
 ```
 
-## Deploy
-Cloudflare Pages → Connect to Git → this repo → build command *empty*, output dir `/`.
-Every push auto-deploys.
-
 ## Contact
 📧 ahmedlotfiali@gmail.com · [LinkedIn](https://www.linkedin.com/in/ahmed-lotfi-ba2206111)
