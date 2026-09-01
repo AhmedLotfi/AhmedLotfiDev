@@ -939,6 +939,8 @@
     }
 
     .log .ln {
+      /* never let flex squash a line into its neighbour; the container clips the oldest lines instead */
+      flex: 0 0 auto;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -2612,7 +2614,7 @@
         el.className = 'ln';
         el.innerHTML = `<span class="t">${t}</span> <span class="in">${dev}</span> ${site} · TAP ${card} · ${amt} AED → <span class="${cls}">${status}</span> <span class="t">${lat}ms</span>`;
         log.appendChild(el);
-        while (log.children.length > 9) log.removeChild(log.firstChild);
+        while (log.children.length > 6) log.removeChild(log.firstChild); // 6 lines fit the 172px log
         cEl.textContent = total;
         aEl.textContent = Math.round(ok / total * 100) + '%';
         lEl.textContent = Math.round(latSum / total) + 'ms';
