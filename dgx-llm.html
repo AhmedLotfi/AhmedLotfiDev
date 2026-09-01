@@ -80,7 +80,15 @@ ul.plain li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-
 .btn{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:12px 20px;border:1px solid var(--ok);border-radius:4px;color:#fff;background:var(--ok);font-weight:600;white-space:nowrap}
 [data-theme="dark"] .btn{color:var(--ink)}
 .btn:hover{filter:brightness(1.08);text-decoration:none}
-@media(max-width:720px){.wl-grid{grid-template-columns:1fr}.facts{gap:16px}}
+@media(max-width:720px){
+  .wl-grid{grid-template-columns:1fr}.facts{gap:16px}
+  figure{overflow-x:auto}figure svg{min-width:720px}figcaption::after{content:' · scroll sideways for the full diagram'}
+  .tr-table thead{display:none}
+  .tr-table,.tr-table tbody,.tr-table tr,.tr-table td{display:block;width:100%}
+  .tr-table tr{padding:12px 0;border-bottom:1px dashed var(--line)}
+  .tr-table td,.tr-table td:first-child{padding:2px 0;border:0;white-space:normal}
+  .tr-table td[data-label]::before{content:attr(data-label);display:block;margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+}
 @media print{.top,.cta{display:none}body{background:#fff}:root{--ink:#fff;--panel:#fff;--text:#111;--muted:#444;--line:#ccc}}
 </style>
 </head>
@@ -211,11 +219,11 @@ ul.plain li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-
 <table class="tr-table">
   <thead><tr><th>Decision</th><th>Why</th><th>The trade-off we accepted</th></tr></thead>
   <tbody>
-    <tr><td>Self-host on DGX</td><td>Data boundary is non-negotiable for code and internal docs</td><td>We own ops, upgrades, and capacity planning; models trail frontier quality</td></tr>
-    <tr><td>MEAI abstraction</td><td>Routing is config, not rewrites; providers are swappable</td><td>A thin layer to maintain; occasional provider-specific features need escape hatches</td></tr>
-    <tr><td>Structured output everywhere</td><td>CI can't parse prose, so findings must be typed and validated</td><td>Stricter prompts; a retry-with-error loop for schema violations</td></tr>
-    <tr><td>Humans stay approvers</td><td>Model findings advise, never gate a merge alone</td><td>Slower than full automation, by design</td></tr>
-    <tr><td>Eval set before every swap</td><td>Model/quantization changes are deploys, not experiments</td><td>Maintaining golden datasets takes real time</td></tr>
+    <tr><td>Self-host on DGX</td><td data-label="Why">Data boundary is non-negotiable for code and internal docs</td><td data-label="Trade-off accepted">We own ops, upgrades, and capacity planning; models trail frontier quality</td></tr>
+    <tr><td>MEAI abstraction</td><td data-label="Why">Routing is config, not rewrites; providers are swappable</td><td data-label="Trade-off accepted">A thin layer to maintain; occasional provider-specific features need escape hatches</td></tr>
+    <tr><td>Structured output everywhere</td><td data-label="Why">CI can't parse prose, so findings must be typed and validated</td><td data-label="Trade-off accepted">Stricter prompts; a retry-with-error loop for schema violations</td></tr>
+    <tr><td>Humans stay approvers</td><td data-label="Why">Model findings advise, never gate a merge alone</td><td data-label="Trade-off accepted">Slower than full automation, by design</td></tr>
+    <tr><td>Eval set before every swap</td><td data-label="Why">Model/quantization changes are deploys, not experiments</td><td data-label="Trade-off accepted">Maintaining golden datasets takes real time</td></tr>
   </tbody>
 </table>
 
