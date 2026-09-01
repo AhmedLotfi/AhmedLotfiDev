@@ -1118,6 +1118,10 @@
       color: var(--faint);
       padding-left: 20px;
       position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
       transition: color .2s
     }
 
@@ -1142,13 +1146,13 @@
     }
 
     .trace .ms {
-      float: right;
+      flex: 0 0 auto;
       color: var(--faint)
     }
 
     .sys-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
       margin-top: 6px
     }
@@ -1158,6 +1162,7 @@
       border-radius: 10px;
       background: var(--panel);
       padding: 20px;
+      min-width: 0;
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -1599,11 +1604,13 @@
       background: color-mix(in srgb, var(--ok) 10%, transparent);
       color: var(--ok);
       border: 1px solid color-mix(in srgb, var(--ok) 40%, transparent);
-      margin-left: auto
+      margin-left: auto;
+      white-space: nowrap
     }
 
     .peer.link-out {
       display: flex;
+      flex-wrap: wrap;
       gap: 14px;
       align-items: center;
       color: var(--text);
@@ -1670,6 +1677,8 @@
       font-family: var(--mono);
       font-size: 14px;
       color: var(--text);
+      min-width: 0;
+      overflow-wrap: anywhere;
       transition: .2s;
       box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
     }
@@ -1700,9 +1709,9 @@
       border-bottom: none
     }
 
-    @media(max-width:920px) {
+    @media(max-width:1100px) {
       .sys-grid {
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr)
       }
     }
 
@@ -1771,10 +1780,8 @@
         grid-template-columns: 1fr
       }
 
-      .contact-grid,
-      .sys-grid,
       .cap-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: minmax(0, 1fr)
       }
 
       .dep {
@@ -1786,6 +1793,28 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 14px
+      }
+    }
+
+    @media(max-width:700px) {
+      .sys-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr)
+      }
+
+      .mini-head {
+        flex-wrap: wrap
+      }
+
+      .log {
+        height: 288px;
+        /* wrapped lines overflow at the top; fade them out instead of cutting them mid-row */
+        -webkit-mask-image: linear-gradient(to bottom, transparent 6px, #000 40px);
+        mask-image: linear-gradient(to bottom, transparent 6px, #000 40px)
+      }
+
+      .log .ln {
+        white-space: normal
       }
     }
 
