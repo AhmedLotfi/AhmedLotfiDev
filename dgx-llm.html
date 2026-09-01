@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Case Study: On-Prem LLM Platform on NVIDIA DGX — Ahmed Lotfy Mahfouz</title>
-<meta name="description" content="How we run AI code review, security review, grounded RAG chat, and code generation on self-hosted LLMs — with sensitive data never leaving the organization.">
+<title>Case Study: On-Prem LLM Platform on NVIDIA DGX | Ahmed Lotfy Mahfouz</title>
+<meta name="description" content="How we run AI code review, security review, grounded RAG chat, and code generation on self-hosted LLMs, with sensitive data never leaving the organization.">
 <link rel="canonical" href="https://ahmedlotfi.dev/dgx-llm.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Case Study: Production AI on-premises — code review, security review, RAG, codegen">
+<meta property="og:title" content="Case Study: Production AI On-Premises with Code Review, Security Review, RAG, and Code Generation">
 <meta property="og:description" content="Four AI workloads in production on self-hosted LLMs (Ollama × NVIDIA DGX) behind one .NET abstraction. Architecture, decisions, trade-offs.">
 <meta property="og:url" content="https://ahmedlotfi.dev/dgx-llm.html">
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="%230b141a"/><line x1="16" y1="3" x2="16" y2="29" stroke="%231d3140" stroke-width="2"/><circle cx="16" cy="16" r="6.5" fill="%230b141a" stroke="%2343d17c" stroke-width="2"/><circle cx="16" cy="16" r="2.2" fill="%2343d17c"/></svg>'>
@@ -96,7 +96,7 @@ ul.plain li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-
 <header class="case">
   <div class="svc-tag"><span class="dot"></span><span class="proto">case://</span>dgx-llm <span>· in production</span></div>
   <h1>Production AI, <em>On-Premises</em></h1>
-  <p class="lede">How my team runs <b>four AI workloads in production</b> — code review, security code review, grounded RAG chat, and code generation — on <b>self-hosted LLMs</b> (Ollama × NVIDIA DGX), behind one .NET abstraction, with sensitive data never leaving the organization.</p>
+  <p class="lede">How my team runs <b>four AI workloads in production</b> (code review, security code review, grounded RAG chat, and code generation) on <b>self-hosted LLMs</b> served by Ollama on NVIDIA DGX, behind one .NET abstraction, with sensitive data never leaving the organization.</p>
   <div class="facts">
     <div><span class="k">Role</span><span class="v">Technical Team Lead · owner</span></div>
     <div><span class="k">Team</span><span class="v">5 engineers</span></div>
@@ -106,11 +106,11 @@ ul.plain li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-
 </header>
 
 <h2><span class="n">01</span>The Problem</h2>
-<p>Hosted LLM APIs are the fastest way to ship AI features — and a non-starter for a large part of enterprise work. Our source code, internal policies, incident history, and operational documents are exactly the inputs that make AI useful for engineering teams, and exactly the data that <b>cannot cross the organization's boundary</b>.</p>
-<p>The naive answers both fail. "Just use the API" fails compliance. "Ban AI" fails the team — engineers were already losing hours to manual code review passes, repetitive security checklists, and hunting through documentation. The real requirement was: <b>bring the model to the data, not the data to the model.</b></p>
+<p>Hosted LLM APIs are the fastest way to ship AI features, and a non-starter for a large part of enterprise work. Our source code, internal policies, incident history, and operational documents are exactly the inputs that make AI useful for engineering teams, and exactly the data that <b>cannot cross the organization's boundary</b>.</p>
+<p>The naive answers both fail. "Just use the API" fails compliance. "Ban AI" fails the team: engineers were already losing hours to manual code review passes, repetitive security checklists, and hunting through documentation. The real requirement was: <b>bring the model to the data, not the data to the model.</b></p>
 
 <h2><span class="n">02</span>The Architecture</h2>
-<p>Every consumer — CI pipelines, the chat UI, IDE tooling — talks to one .NET gateway built on <b>Microsoft.Extensions.AI's <code>IChatClient</code></b> abstraction. The gateway routes each request by data sensitivity: workloads touching internal code or documents go to <b>open models served by Ollama on NVIDIA DGX hardware</b>, fully on-premises; general-purpose requests can route to hosted models. Sensitivity is a per-request decision, not a per-project rewrite.</p>
+<p>Every consumer (CI pipelines, the chat UI, IDE tooling) talks to one .NET gateway built on <b>Microsoft.Extensions.AI's <code>IChatClient</code></b> abstraction. The gateway routes each request by data sensitivity: workloads touching internal code or documents go to <b>open models served by Ollama on NVIDIA DGX hardware</b>, fully on-premises; general-purpose requests can route to hosted models. Sensitivity is a per-request decision, not a per-project rewrite.</p>
 
 <figure>
 <svg viewBox="0 0 860 430" xmlns="http://www.w3.org/2000/svg" font-family="'Plex Mono',monospace" role="img" aria-label="Architecture: consumers connect to a .NET AI gateway which routes by sensitivity to on-prem DGX models or hosted APIs; a RAG ingestion pipeline feeds a vector store used for grounding">
@@ -145,7 +145,7 @@ ul.plain li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-
 
   <!-- on-prem -->
   <rect x="560" y="26" width="280" height="196" fill="none" stroke="var(--ok)" stroke-dasharray="6 5" rx="10"/>
-  <text class="tm" x="576" y="48" fill="var(--ok)">ORG BOUNDARY — DATA STAYS INSIDE</text>
+  <text class="tm" x="576" y="48" fill="var(--ok)">ORG BOUNDARY · DATA STAYS INSIDE</text>
   <rect class="bx2" x="580" y="62" width="240" height="64"/>
   <text class="tt" x="596" y="86">Ollama · NVIDIA DGX</text>
   <text class="ts" x="596" y="104">open models · quantized · queued</text>
@@ -176,7 +176,7 @@ ul.plain li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-
   <text class="tm" x="488" y="88" fill="var(--ok)">sensitive</text>
   <text class="tm" x="482" y="232" fill="var(--info)">general</text>
 </svg>
-<figcaption>fig.01 — one gateway, two worlds: routing by sensitivity makes on-prem vs hosted a configuration decision</figcaption>
+<figcaption>fig.01 · one gateway, two worlds: routing by sensitivity makes on-prem vs hosted a configuration decision</figcaption>
 </figure>
 
 <h2><span class="n">03</span>Four Workloads in Production</h2>
@@ -184,13 +184,13 @@ ul.plain li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-
   <div class="wl">
     <span class="wl-id">WL-01 · CI-INTEGRATED</span>
     <h3>AI Code Review</h3>
-    <p>Every merge request gets a model pass before human review: correctness risks, N+1 queries, missing cancellation tokens, convention drift. Findings post as structured review comments — humans stay the approvers; the model clears the underbrush.</p>
+    <p>Every merge request gets a model pass before human review: correctness risks, N+1 queries, missing cancellation tokens, convention drift. Findings post as structured review comments. Humans stay the approvers; the model clears the underbrush.</p>
     <div class="io"><span><b>in</b> diff + surrounding context</span><span><b>out</b> typed findings → MR comments</span></div>
   </div>
   <div class="wl">
     <span class="wl-id">WL-02 · CI-INTEGRATED</span>
     <h3>Security Code Review</h3>
-    <p>A separate pass with a security-specific prompt and ruleset: injection risks, authZ gaps, secret leakage, unsafe deserialization. Runs on-prem by necessity — the code being audited is exactly what can't be sent to an external API.</p>
+    <p>A separate pass with a security-specific prompt and ruleset: injection risks, authZ gaps, secret leakage, unsafe deserialization. Runs on-prem by necessity: the code being audited is exactly what can't be sent to an external API.</p>
     <div class="io"><span><b>in</b> diff + dependency manifest</span><span><b>out</b> severity-ranked findings</span></div>
   </div>
   <div class="wl">
@@ -202,7 +202,7 @@ ul.plain li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-
   <div class="wl">
     <span class="wl-id">WL-04 · TOOLING</span>
     <h3>Code Generation</h3>
-    <p>Scaffolding, tests, migrations, and boilerplate generated against our conventions, with repository context retrieved the same way the chat is grounded. Output is a starting point that compiles against our patterns — not generic samples from the internet.</p>
+    <p>Scaffolding, tests, migrations, and boilerplate generated against our conventions, with repository context retrieved the same way the chat is grounded. Output is a starting point that compiles against our patterns, not generic samples from the internet.</p>
     <div class="io"><span><b>in</b> spec + retrieved repo context</span><span><b>out</b> code, reviewed like any code</span></div>
   </div>
 </div>
@@ -213,20 +213,20 @@ ul.plain li::before{content:'▸';position:absolute;left:0;color:var(--ok);font-
   <tbody>
     <tr><td>Self-host on DGX</td><td>Data boundary is non-negotiable for code and internal docs</td><td>We own ops, upgrades, and capacity planning; models trail frontier quality</td></tr>
     <tr><td>MEAI abstraction</td><td>Routing is config, not rewrites; providers are swappable</td><td>A thin layer to maintain; occasional provider-specific features need escape hatches</td></tr>
-    <tr><td>Structured output everywhere</td><td>CI can't parse prose — findings must be typed and validated</td><td>Stricter prompts; a retry-with-error loop for schema violations</td></tr>
-    <tr><td>Humans stay approvers</td><td>Model findings advise, never gate a merge alone</td><td>Slower than full automation — deliberately</td></tr>
+    <tr><td>Structured output everywhere</td><td>CI can't parse prose, so findings must be typed and validated</td><td>Stricter prompts; a retry-with-error loop for schema violations</td></tr>
+    <tr><td>Humans stay approvers</td><td>Model findings advise, never gate a merge alone</td><td>Slower than full automation, by design</td></tr>
     <tr><td>Eval set before every swap</td><td>Model/quantization changes are deploys, not experiments</td><td>Maintaining golden datasets takes real time</td></tr>
   </tbody>
 </table>
 
 <h2><span class="n">05</span>What It Changed</h2>
 <ul class="plain">
-  <li><b>Review depth without review delay</b> — every merge request now gets a consistent automated pass for both quality and security before a human ever looks, so human reviewers spend their attention on design instead of lint-level findings.</li>
-  <li><b>Institutional knowledge became queryable</b> — questions that used to mean finding-the-right-person now get cited answers from the docs themselves.</li>
-  <li><b>AI adoption without a compliance fight</b> — because the boundary question was answered by architecture, not by policy exceptions.</li>
-  <li><b>A reusable platform, not a feature</b> — new workloads onboard by writing a prompt and a typed contract against the same gateway.</li>
+  <li><b>Review depth without review delay.</b> Every merge request now gets a consistent automated pass for both quality and security before a human ever looks, so human reviewers spend their attention on design instead of lint-level findings.</li>
+  <li><b>Institutional knowledge became queryable.</b> Questions that used to mean finding-the-right-person now get cited answers from the docs themselves.</li>
+  <li><b>AI adoption without a compliance fight.</b> The boundary question was answered by architecture, not by policy exceptions.</li>
+  <li><b>A reusable platform, not a feature.</b> New workloads onboard by writing a prompt and a typed contract against the same gateway.</li>
 </ul>
-<p class="pull">The unlock wasn't the model — it was treating AI infrastructure like any other production system: one abstraction, routed by data sensitivity, observable, and evaluated before every change.</p>
+<p class="pull">The unlock wasn't the model. It was treating AI infrastructure like any other production system: one abstraction, routed by data sensitivity, observable, and evaluated before every change.</p>
 
 <div class="cta">
   <p><b>Building something similar?</b><br>I'm happy to compare notes on running LLMs inside the boundary.</p>

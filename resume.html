@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Lotfy Mahfouz Resume</title>
+<meta name="description" content="Resume of Ahmed Lotfy Mahfouz, Technical Team Lead building enterprise .NET systems and production AI in Dubai.">
+<meta name="author" content="Ahmed Lotfy Mahfouz">
+<link rel="canonical" href="https://ahmedlotfi.dev/resume.html">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="%230b141a"/><line x1="16" y1="3" x2="16" y2="29" stroke="%231d3140" stroke-width="2"/><circle cx="16" cy="16" r="6.5" fill="%230b141a" stroke="%2343d17c" stroke-width="2"/><circle cx="16" cy="16" r="2.2" fill="%2343d17c"/></svg>'>
+<style>
+@font-face{font-family:'Archivo Var';src:url('fonts/archivo-latin-wdth-normal.woff2') format('woff2');font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:swap}
+@font-face{font-family:'Plex Sans Var';src:url('fonts/ibm-plex-sans-latin-wght-normal.woff2') format('woff2');font-weight:100 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Plex Mono';src:url('fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+
+:root{--text:#152530;--muted:#4e6574;--faint:#8ba1ad;--line:#d7e1e6;--accent:#0a6a8a;--paper:#fff;--ground:#eef2f4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:var(--ground);color:var(--text);font-family:'Plex Sans Var',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:10pt;line-height:1.45;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+.sheet{background:var(--paper);width:210mm;margin:28px auto;padding:15mm 16mm 14mm;box-shadow:0 2px 16px rgba(21,37,48,.10)}
+a{color:var(--accent);text-decoration:none}
+
+/* ---------- header ---------- */
+.head{padding-bottom:10px;border-bottom:2px solid var(--text)}
+h1{font-family:'Archivo Var',sans-serif;font-weight:800;font-stretch:112%;font-size:22pt;line-height:1;letter-spacing:-.005em;text-transform:uppercase}
+.role{font-family:'Plex Mono',monospace;font-weight:500;font-size:8.75pt;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-top:7px}
+.contact{list-style:none;display:flex;flex-wrap:wrap;margin-top:8px;font-size:9pt;color:var(--muted)}
+.contact li{white-space:nowrap}
+.contact li:not(:last-child)::after{content:'·';margin:0 7px;color:var(--faint)}
+.contact+.contact{margin-top:2px}
+.contact a{color:var(--text)}
+.summary{margin-top:11px}
+
+/* ---------- sections ---------- */
+h2{font-family:'Archivo Var',sans-serif;font-weight:800;font-stretch:110%;font-size:9.25pt;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:14px 0 7px;padding-bottom:4px;border-bottom:1px solid var(--line)}
+h3{font-size:10.25pt;font-weight:650;line-height:1.3}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:7px 22px}
+.grid2 h3{font-size:9.5pt}
+.grid2 p{color:var(--muted)}
+
+.entry{margin-bottom:9px;break-inside:avoid}
+.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.when{font-family:'Plex Mono',monospace;font-weight:500;font-size:8.5pt;color:var(--muted);white-space:nowrap}
+.sub{color:var(--muted);font-size:9.5pt;margin:1px 0 3px}
+.entry ul{list-style:disc;padding-left:14px;display:grid;gap:2px}
+.entry li::marker{color:var(--faint)}
+
+/* ---------- print ---------- */
+@page{size:A4;margin:13mm 15mm}
+@media print{
+  body{background:#fff}
+  .sheet{width:auto;margin:0;padding:0;box-shadow:none}
+  h2{break-after:avoid}
+  .entry{break-inside:avoid}
+}
+@media screen and (max-width:760px){
+  .sheet{width:auto;margin:0;padding:22px 18px}
+  .grid2{grid-template-columns:1fr}
+  .entry-head{flex-direction:column;align-items:flex-start;gap:0}
+  .contact li{white-space:normal}
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header class="head">
+    <h1>Ahmed Lotfy Mahfouz</h1>
+    <p class="role">Technical Team Lead · .NET Systems · Production AI</p>
+    <ul class="contact">
+      <li><a href="mailto:ahmedlotfiali@gmail.com">ahmedlotfiali@gmail.com</a></li>
+      <li><a href="tel:+971559290841">+971 55 929 0841</a></li>
+      <li>Dubai, United Arab Emirates</li>
+    </ul>
+    <ul class="contact">
+      <li><a href="https://ahmedlotfi.dev">ahmedlotfi.dev</a></li>
+      <li><a href="https://www.linkedin.com/in/ahmed-lotfi-ba2206111">linkedin.com/in/ahmed-lotfi-ba2206111</a></li>
+      <li><a href="https://github.com/AhmedLotfi">github.com/AhmedLotfi</a></li>
+    </ul>
+  </header>
+
+  <section class="summary">
+    <p>Technical Team Lead and .NET full-stack engineer with 8+ years building enterprise APIs, system integrations, and microservices, now focused on bringing AI into production .NET systems. Experienced integrating hosted LLMs (Claude, OpenAI) and self-hosted models via Ollama on NVIDIA DGX hardware for data-sensitive use cases, backed by a strong core in .NET, Angular, and cloud. Leads a team delivering payment, POS, and SSO integrations at enterprise scale, and ships AI-powered products independently.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="grid2">
+      <div><h3>Languages &amp; Frameworks</h3><p>C#, .NET (Core, Entity Framework, WCF, MVC, Web API, gRPC), LINQ, TypeScript, JavaScript, HTML5, CSS3, Angular, jQuery, MSSQL, T-SQL</p></div>
+      <div><h3>AI &amp; LLM</h3><p>Claude API (Anthropic), OpenAI API, Ollama (self-hosted models on NVIDIA DGX Spark), RAG, vector search and vector databases, Microsoft.Extensions.AI (MEAI), structured output, fal.ai (image generation)</p></div>
+      <div><h3>Architecture &amp; Integration</h3><p>Microservices, API development, system integration (ESB), payment and POS systems, Active Directory, Single Sign-On (SSO), multi-tenancy</p></div>
+      <div><h3>Tools &amp; Platforms</h3><p>Azure Cloud, Azure DevOps, CI/CD pipelines, Docker, Git, AI-assisted IDEs</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Work Experience</h2>
+
+    <article class="entry">
+      <div class="entry-head"><h3>Technical Team Lead</h3><span class="when">Nov 2020 - Present</span></div>
+      <p class="sub"><a href="https://enoc.com">ENOC</a> · Dubai, United Arab Emirates</p>
+      <ul>
+        <li>Lead a team of 5 engineers building internal and external services for enterprise retail and payment systems, owning delivery from design through production.</li>
+        <li>Stood up self-hosted LLM infrastructure with Ollama on NVIDIA DGX Spark, running open models fully on-premises so sensitive corporate data never leaves the organization.</li>
+        <li>Built an internal RAG assistant over company policies and technical documentation, and an AI code-assistance tool used daily by the engineering team.</li>
+        <li>Developed text-classification services and autonomous agents that automate SDLC workflows, including AI code review and security review in CI.</li>
+        <li>Built POS and kiosk integration services using WCF, RESTful APIs, and Software AG ESB; delivered admin portals with Active Directory and custom SSO on .NET 10 and Angular 22.</li>
+        <li>Optimized mobile-facing APIs, reducing response times by ~30%, and refactored legacy services, improving maintainability by ~40%.</li>
+        <li>Established CI/CD pipelines and authored integration and deployment documentation adopted as the team standard.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head"><h3>Senior Software Engineer (Part-time)</h3><span class="when">Nov 2020 - Dec 2025</span></div>
+      <p class="sub">Compass International Software Company · Dubai, United Arab Emirates</p>
+      <ul>
+        <li>Built a multi-tenant ERP platform end to end with .NET and the ABP (ASP.NET Boilerplate) framework.</li>
+        <li>Implemented core ERP modules and the mobile-facing API layer.</li>
+        <li>Established CI/CD pipelines for streamlined releases.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head"><h3>.NET Full Stack Engineer / C# Developer</h3><span class="when">Oct 2019 - Nov 2020</span></div>
+      <p class="sub">Compass International Software Company · Cairo, Egypt</p>
+      <ul>
+        <li>Developed shipment-tracking and optimization features that improved customer satisfaction.</li>
+        <li>Developed and supported C# .NET, JavaScript, and AJAX applications.</li>
+        <li>Independently investigated and resolved complex issues to extend system functionality.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head"><h3>.NET Full Stack Engineer / C# Developer</h3><span class="when">Jul 2017 - Oct 2019</span></div>
+      <p class="sub">Pearogram · Cairo, Egypt</p>
+      <ul>
+        <li>Analyzed requirements and developed scalable software solutions for multiple websites.</li>
+        <li>Designed, implemented, and optimized web pages using HTML, JavaScript, AJAX, and JSON.</li>
+        <li>Delivered client projects with a focus on continuous improvement and user satisfaction.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <article class="entry">
+      <div class="entry-head"><h3>B.Sc. in Pure Mathematics and Computer Science</h3><span class="when">Sep 2013 - Jan 2019</span></div>
+      <p class="sub">Menoufia University · Shibin El Kom, Egypt</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <article class="entry">
+      <div class="entry-head"><h3>GenAI for .NET · On-Premises LLM Platform</h3><span class="when"><a href="https://ahmedlotfi.dev/dgx-llm.html">ahmedlotfi.dev/dgx-llm.html</a></span></div>
+      <p>Chat, RAG, and vector-search applications in .NET built on Microsoft.Extensions.AI, with OpenAI and self-hosted Ollama models behind one abstraction. Now runs four workloads in production: AI code review, security review, grounded RAG chat, and code generation, with data never leaving the organization.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head"><h3>ViP · Vehicle Identification Pass (ENOC APIs)</h3><span class="when"><a href="https://vipselect.enoc.com">vipselect.enoc.com</a></span></div>
+      <p>Modernized the system with a redesigned database and enterprise service bus integration, built FastEndpoints APIs to streamline fueling and payment, and delivered an Angular interface for end users.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head"><h3>AnimeCV</h3><span class="when"><a href="https://animecv.app">animecv.app</a></span></div>
+      <p>Full-stack web app that parses an uploaded resume and regenerates it as an anime character card with derived stats, an archetype, and a generated hero image, exportable as an HD PDF. Uses the Claude API for structured resume analysis and content generation and fal.ai for image generation, covering prompt design, JSON output parsing, and PDF rendering.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head"><h3>ENOC Services · Contactless Cards, Vending and POS Machines (APIs)</h3></div>
+      <p>Designed contactless payment services integrated with POS and vending machines, including the Network International payment integration, and built financial account management services on a service-oriented architecture.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head"><h3>ENOC Pay · Mobile Application</h3><span class="when"><a href="https://play.google.com/store/apps/details?id=com.enoc.pay">Google Play</a></span></div>
+      <p>Enhanced REST API endpoints and redesigned the application for a better user experience; delivered complete technical and deployment documentation.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head"><h3>Tenxerp · ERP System</h3><span class="when"><a href="https://www.tenxerp.com">tenxerp.com</a></span></div>
+      <p>Full-stack multi-tenant ERP built on .NET and the ABP framework.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head"><h3>Charity UAQ · Web Portal</h3><span class="when"><a href="https://charity.uaq.ae/home">charity.uaq.ae</a></span></div>
+      <p>ERP for UAE charities with ASP.NET Core APIs, an Angular portal, and an ASP.NET Core MVC admin dashboard.</p>
+    </article>
+
+    <article class="entry">
+      <div class="entry-head"><h3>DMG Publisher · Web Portal</h3><span class="when"><a href="https://dmgpublisher.com">dmgpublisher.com</a></span></div>
+      <p>Book publishing platform built on .NET Framework and Bootstrap.</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <div class="grid2">
+      <div><h3>Arabic</h3><p>Native</p></div>
+      <div><h3>English</h3><p>Professional working proficiency</p></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
