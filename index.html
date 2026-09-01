@@ -38,6 +38,13 @@
   "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE"},
   "alumniOf": {"@type": "CollegeOrUniversity", "name": "Menoufia University"},
   "worksFor": {"@type": "Organization", "name": "ENOC"},
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Hands-On: System Design for Beginners",
+    "credentialCategory": "certificate",
+    "recognizedBy": {"@type": "Organization", "name": "Dometrain"},
+    "url": "https://dometrain.com/certificate/kdejiLiMrXCx3o"
+  },
   "sameAs": [
     "https://www.linkedin.com/in/ahmed-lotfi-ba2206111",
     "https://github.com/AhmedLotfi"
@@ -1073,7 +1080,8 @@
       position: absolute;
       top: 50%;
       left: -40px;
-      transform: translateY(-50%);
+      /* the car emoji faces left on every major platform; mirror it so it faces the direction of travel */
+      transform: translateY(-50%) scaleX(-1);
       font-size: 24px;
       filter: saturate(.75)
     }
@@ -1622,35 +1630,26 @@
       }
     }
 
-    /* ================= certs slot ================= */
-    .cert-slot {
-      border: 1px dashed var(--line);
-      border-radius: 10px;
-      padding: 34px;
-      display: grid;
-      gap: 8px;
-      justify-items: center;
-      text-align: center;
-      background: color-mix(in srgb, var(--panel) 50%, transparent)
+    /* ================= certs registry ================= */
+    .cert-thumb {
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--panel-2);
+      aspect-ratio: 16 / 10
     }
 
-    .cert-slot .cs-icon {
-      font-size: 22px;
-      opacity: .5
+    .cert-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .25s
     }
 
-    .cert-slot .cs-title {
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: .15em;
-      color: var(--muted);
-      text-transform: uppercase
-    }
-
-    .cert-slot p {
-      color: var(--faint);
-      font-size: 13.5px;
-      max-width: 46ch
+    .cert-thumb:hover img {
+      transform: scale(1.02)
     }
 
     /* ================= contact ================= */
@@ -1831,8 +1830,7 @@
       .hero-cta,
       .badge.sim,
       .theme-toggle,
-      .note .n-open,
-      .cert-slot .cs-icon {
+      .note .n-open {
         display: none !important
       }
 
@@ -2471,19 +2469,31 @@
     <!-- ================= CERTS REGISTRY ================= -->
     <section class="svc" id="certs">
       <div class="wrap">
-        <div class="svc-tag"><span class="dot"></span><span class="proto">certs://</span>registry</div>
+        <div class="svc-tag"><span class="dot"></span><span class="proto">certs://</span>registry <span>· 1 verified
+            credential</span></div>
         <h2>Certification <em>Registry</em></h2>
-        <div class="cert-slot">
-          <span class="cs-icon">◇</span>
-          <span class="cs-title">slot provisioned · awaiting registration</span>
-          <p>Certifications will be listed here as they are earned. Verified credentials only.</p>
+        <p class="sec-note">Verified credentials only. Each entry links to the issuer's verification page.</p>
+        <div class="sys-grid">
+          <article class="mini cert">
+            <a class="cert-thumb" href="certificates/dometrain-system-design-for-beginners.png" rel="noopener"
+              aria-label="Open the full-size certificate image">
+              <img src="certificates/dometrain-system-design-for-beginners-thumb.jpg" width="864" height="540"
+                loading="lazy" decoding="async"
+                alt="Dometrain certificate of completion for Hands-On: System Design for Beginners, presented to Ahmed Mahfouz on August 14, 2026">
+            </a>
+            <div class="mini-head">
+              <h4>Hands-On: System Design for Beginners</h4>
+              <a class="badge link" href="https://dometrain.com/certificate/kdejiLiMrXCx3o" rel="noopener">VERIFY ↗</a>
+            </div>
+            <p>Dometrain course certificate, authored by Nick Chapsas. Completed August 14, 2026 · 4h 10m course.</p>
+            <ul class="sys-skills">
+              <li>System design</li>
+              <li>ID kdejiLiMrXCx3o</li>
+            </ul>
+          </article>
         </div>
-        <!-- TEMPLATE: duplicate and uncomment per earned cert:
-    <div class="mini" style="margin-top:14px">
-      <div class="mini-head"><h4>AZ-204 · Azure Developer Associate</h4><a class="badge link" href="CREDENTIAL_URL" rel="noopener">VERIFY ↗</a></div>
-      <p>Microsoft Certified · issued MM/YYYY.</p>
-    </div>
-    -->
+        <!-- To add a credential: duplicate the <article class="mini cert"> above, drop the image in certificates/
+             (original plus an 864px-wide JPEG thumbnail), and point VERIFY at the issuer's verification page. -->
       </div>
     </section>
 

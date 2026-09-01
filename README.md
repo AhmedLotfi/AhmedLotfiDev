@@ -26,6 +26,7 @@ index.html                the site
 dgx-llm.html              case study: production AI on-premises
 resume.html               resume source (A4 print layout)
 Ahmed-lotfy-resume.pdf    resume PDF, rendered from resume.html
+certificates/             credential images (original plus web thumbnail)
 fonts/                    woff2 (latin subsets)
 _headers                  Cloudflare cache rules for fonts
 ```
