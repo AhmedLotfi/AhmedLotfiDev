@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahmed Lotfy Mahfouz | Technical Team Lead · .NET × Production AI</title>
+  <title>Ahmed Lotfy Mahfouz | Technical Team Lead, .NET Systems and Production AI</title>
   <meta name="description"
     content="Technical Team Lead in Dubai building enterprise .NET systems for payments, POS, and SSO, plus production AI with self-hosted LLMs on NVIDIA DGX.">
   <link rel="canonical" href="https://ahmedlotfi.dev/">
@@ -13,12 +13,12 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ahmed Lotfy Mahfouz | Technical Team Lead">
   <meta property="og:description"
-    content="Enterprise .NET systems × production AI. Payments, POS, and SSO integrations, plus self-hosted LLMs on NVIDIA DGX.">
+    content="Enterprise .NET systems and production AI. Payments, POS, and SSO integrations, plus self-hosted LLMs on NVIDIA DGX.">
   <meta property="og:url" content="https://ahmedlotfi.dev/">
-  <meta property="og:site_name" content="ALM Control Plane">
+  <meta property="og:site_name" content="Ahmed Lotfy Mahfouz">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ahmed Lotfy Mahfouz | Technical Team Lead">
-  <meta name="twitter:description" content="Enterprise .NET systems × production AI, Dubai.">
+  <meta name="twitter:description" content="Enterprise .NET systems and production AI, Dubai.">
 
   <!-- Favicon: bus node -->
   <link rel="icon"
@@ -155,7 +155,7 @@
       color: var(--text);
       font-family: var(--body);
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.65;
       background-image: var(--bg-orbs);
       transition: background-color .25s, color .25s
     }
@@ -181,69 +181,8 @@
     }
 
     .mono,
-    .svc-tag,
-    .status-line {
+    .eyebrow {
       font-variant-numeric: tabular-nums
-    }
-
-    /* ================= BOOT SEQUENCE ================= */
-    #boot {
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      background: #0b141a;
-      color: #d7e3ea;
-      display: grid;
-      place-items: center;
-      font-family: var(--mono);
-      font-size: 13.5px;
-      transition: opacity .45s;
-      cursor: pointer
-    }
-
-    #boot.done {
-      opacity: 0;
-      pointer-events: none
-    }
-
-    #boot .boot-box {
-      width: min(420px, 86vw)
-    }
-
-    #boot .boot-title {
-      color: #43d17c;
-      letter-spacing: .2em;
-      font-size: 11px;
-      margin-bottom: 14px;
-      text-transform: uppercase
-    }
-
-    #boot .bl {
-      opacity: 0;
-      margin: 3px 0;
-      color: #7d93a1
-    }
-
-    #boot .bl .ok {
-      color: #43d17c;
-      float: right
-    }
-
-    #boot .bl.show {
-      animation: bl-in .18s forwards
-    }
-
-    @keyframes bl-in {
-      to {
-        opacity: 1
-      }
-    }
-
-    #boot .skip {
-      margin-top: 18px;
-      font-size: 10.5px;
-      color: #3d5260;
-      letter-spacing: .12em
     }
 
     /* ================= THE BUS ================= */
@@ -263,12 +202,17 @@
 
     .rail .brand {
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 10.5px;
       color: var(--ok);
       writing-mode: vertical-rl;
-      letter-spacing: .35em;
+      letter-spacing: .26em;
       text-transform: uppercase;
-      margin-bottom: 14px
+      margin-bottom: 16px;
+      white-space: nowrap
+    }
+
+    .rail .brand-short {
+      display: none
     }
 
     .bus {
@@ -355,7 +299,7 @@
       transform: translateY(-50%);
       font-family: var(--mono);
       font-size: 10.5px;
-      letter-spacing: .14em;
+      letter-spacing: .1em;
       text-transform: uppercase;
       color: var(--muted);
       background: var(--panel);
@@ -427,47 +371,48 @@
     }
 
     .wrap {
-      max-width: 1060px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 0 clamp(20px, 4vw, 56px)
+      padding: 0 clamp(24px, 5vw, 64px)
     }
 
     section.svc {
-      padding: clamp(56px, 8vh, 96px) 0;
+      padding: clamp(72px, 10vh, 120px) 0;
       border-bottom: 1px solid var(--line)
     }
 
-    .svc-tag {
+    .sec-head {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 44px
+    }
+
+    .eyebrow {
       font-family: var(--mono);
-      font-size: 12px;
+      font-size: 11px;
       color: var(--muted);
+      letter-spacing: .18em;
+      text-transform: uppercase;
       display: flex;
-      gap: 14px;
       align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 14px
+      gap: 12px
     }
 
-    .svc-tag .proto {
-      color: var(--ok)
-    }
-
-    .svc-tag .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
+    .eyebrow::before {
+      content: '';
+      width: 22px;
+      height: 1px;
       background: var(--ok);
-      box-shadow: var(--glow-ok);
-      display: inline-block
+      flex: 0 0 auto
     }
 
     h2 {
       font-family: var(--disp);
       font-weight: 800;
-      font-stretch: 115%;
-      font-size: clamp(26px, 3.6vw, 40px);
+      font-stretch: 112%;
+      font-size: clamp(26px, 3.4vw, 38px);
+      line-height: 1.08;
       letter-spacing: -.01em;
-      margin-bottom: 26px;
       text-transform: uppercase
     }
 
@@ -478,14 +423,13 @@
 
     .sec-note {
       color: var(--muted);
-      max-width: 62ch;
-      margin: -8px 0 34px;
-      font-size: 15px
+      max-width: 64ch;
+      font-size: 15.5px
     }
 
     /* ================= HERO ================= */
     header.hero {
-      min-height: 92vh;
+      min-height: 88vh;
       display: flex;
       align-items: center;
       border-bottom: 1px solid var(--line);
@@ -497,28 +441,12 @@
       width: 100%;
       display: grid;
       grid-template-columns: 1.5fr 1fr;
-      gap: 40px;
-      align-items: end
+      gap: 56px;
+      align-items: center
     }
 
-    .status-line {
-      font-family: var(--mono);
-      font-size: 12.5px;
-      color: var(--muted);
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 22px
-    }
-
-    .status-line .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--ok);
-      box-shadow: var(--glow-ok);
-      animation: blink 2.4s infinite
+    .hero .eyebrow {
+      margin-bottom: 26px
     }
 
     @keyframes blink {
@@ -529,27 +457,27 @@
 
     h1 {
       font-family: var(--disp);
-      font-weight: 900;
-      font-stretch: 120%;
+      font-weight: 800;
+      font-stretch: 112%;
       text-transform: uppercase;
-      line-height: .95;
-      font-size: clamp(40px, 7.2vw, 88px);
-      letter-spacing: -.015em
+      line-height: .98;
+      font-size: clamp(40px, 6.6vw, 80px);
+      letter-spacing: -.02em
     }
 
-    h1 .thin {
-      display: block;
+    .hero-role {
       font-family: var(--disp);
       font-weight: 500;
-      font-stretch: 75%;
-      font-size: .42em;
-      letter-spacing: .12em;
+      font-stretch: 80%;
+      font-size: clamp(15px, 1.7vw, 19px);
+      letter-spacing: .14em;
+      text-transform: uppercase;
       color: var(--muted);
-      margin-top: 14px
+      margin-top: 18px
     }
 
     .hero-sub {
-      margin-top: 26px;
+      margin-top: 28px;
       max-width: 56ch;
       color: var(--muted);
       font-size: 17px
@@ -561,7 +489,7 @@
     }
 
     .hero-cta {
-      margin-top: 34px;
+      margin-top: 40px;
       display: flex;
       gap: 14px;
       flex-wrap: wrap
@@ -622,21 +550,21 @@
       font-family: var(--mono);
       font-size: 11px;
       color: var(--muted);
-      padding: 10px 14px;
+      padding: 12px 16px;
       border-bottom: 1px solid var(--line);
       letter-spacing: .1em;
       text-transform: uppercase
     }
 
     .tele-body {
-      padding: 16px 14px;
+      padding: 18px 16px;
       display: grid;
-      gap: 13px
+      gap: 14px
     }
 
     .tele-row {
       display: grid;
-      grid-template-columns: 130px 1fr auto;
+      grid-template-columns: 136px 1fr auto;
       gap: 10px;
       align-items: center;
       font-family: var(--mono);
@@ -673,14 +601,14 @@
     .cap-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 18px
+      gap: 20px
     }
 
     .cap {
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       background: var(--panel);
-      padding: 20px 20px 16px;
+      padding: 24px 24px 20px;
       box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
     }
 
@@ -688,20 +616,13 @@
       display: flex;
       align-items: baseline;
       gap: 12px;
-      margin-bottom: 14px
-    }
-
-    .cap-id {
-      font-family: var(--mono);
-      font-size: 10.5px;
-      color: var(--warn);
-      letter-spacing: .15em
+      margin-bottom: 16px
     }
 
     .cap h3 {
       font-family: var(--disp);
       font-weight: 700;
-      font-size: 15px;
+      font-size: 15.5px;
       text-transform: uppercase;
       letter-spacing: .05em
     }
@@ -741,14 +662,15 @@
     /* ================= deployment log ================= */
     .dep {
       display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 24px;
-      padding: 26px 0;
+      grid-template-columns: 220px 1fr;
+      gap: 32px;
+      padding: 32px 0;
       border-top: 1px dashed var(--line)
     }
 
     .dep:first-of-type {
-      border-top: none
+      border-top: none;
+      padding-top: 0
     }
 
     .dep-meta {
@@ -761,31 +683,44 @@
       font-variant-numeric: tabular-nums
     }
 
-    .dep-ver {
-      color: var(--ok);
-      letter-spacing: .12em
+    .dep-when {
+      color: var(--text);
+      font-weight: 500
     }
 
-    .dep.edu .dep-ver {
-      color: var(--info)
+    .dep-note {
+      color: var(--faint)
     }
 
     .dep-body h3 {
       font-family: var(--disp);
       font-weight: 700;
       font-size: 18px;
-      margin-bottom: 10px;
+      margin-bottom: 4px;
       letter-spacing: .01em
     }
 
-    .dep-body h3 a {
-      color: var(--text)
+    .dep-org {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px
+    }
+
+    .dep-org:last-child {
+      margin-bottom: 0
+    }
+
+    .dep-org a {
+      color: inherit
     }
 
     .dep-body ul {
       list-style: none;
       display: grid;
-      gap: 8px
+      gap: 10px
     }
 
     .dep-body li {
@@ -814,8 +749,8 @@
       border: 1px solid var(--line);
       border-radius: 10px;
       background: var(--panel);
-      padding: 24px;
-      margin-bottom: 22px;
+      padding: 28px;
+      margin-bottom: 24px;
       box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
     }
 
@@ -824,7 +759,7 @@
       justify-content: space-between;
       gap: 18px;
       align-items: flex-start;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       flex-wrap: wrap
     }
 
@@ -847,15 +782,16 @@
       font-family: var(--mono);
       font-size: 10.5px;
       letter-spacing: .14em;
+      text-transform: uppercase;
       padding: 5px 10px;
       border-radius: 3px;
       white-space: nowrap
     }
 
     .badge.sim {
-      background: color-mix(in srgb, var(--warn) 12%, transparent);
-      color: var(--warn);
-      border: 1px solid color-mix(in srgb, var(--warn) 45%, transparent)
+      background: var(--panel-2);
+      color: var(--muted);
+      border: 1px solid var(--line)
     }
 
     .badge.link {
@@ -879,8 +815,8 @@
       list-style: none;
       display: flex;
       flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 16px
+      gap: 8px;
+      margin-top: 18px
     }
 
     .sys-skills li {
@@ -901,8 +837,8 @@
 
     .sim-stats {
       display: flex;
-      gap: 34px;
-      padding: 14px 16px;
+      gap: 40px;
+      padding: 16px 18px;
       border-bottom: 1px solid var(--line);
       flex-wrap: wrap
     }
@@ -928,7 +864,7 @@
     .log {
       height: 172px;
       overflow: hidden;
-      padding: 12px 16px;
+      padding: 14px 18px;
       font-family: var(--mono);
       font-size: 12.5px;
       display: flex;
@@ -954,6 +890,14 @@
       }
     }
 
+    .log .ln>span {
+      margin-right: 12px
+    }
+
+    .log .ln>span:last-child {
+      margin-right: 0
+    }
+
     .log .t {
       color: var(--faint)
     }
@@ -975,7 +919,7 @@
     }
 
     .rag {
-      padding: 16px
+      padding: 18px
     }
 
     .rag-route {
@@ -990,7 +934,8 @@
       font-family: var(--mono);
       font-size: 10.5px;
       color: var(--muted);
-      letter-spacing: .14em
+      letter-spacing: .14em;
+      text-transform: uppercase
     }
 
     .route-btn {
@@ -1081,11 +1026,18 @@
     .vip-car {
       position: absolute;
       top: 50%;
-      left: -40px;
-      /* the car emoji faces left on every major platform; mirror it so it faces the direction of travel */
-      transform: translateY(-50%) scaleX(-1);
-      font-size: 24px;
-      filter: saturate(.75)
+      left: -48px;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 22px;
+      color: var(--text)
+    }
+
+    .vip-car svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: currentColor
     }
 
     .vip-gate {
@@ -1153,19 +1105,18 @@
     .sys-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 6px
+      gap: 20px
     }
 
     .mini {
       border: 1px solid var(--line);
       border-radius: 10px;
       background: var(--panel);
-      padding: 20px;
+      padding: 24px;
       min-width: 0;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
       box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
     }
 
@@ -1281,7 +1232,7 @@
       border: 1px solid var(--line);
       border-radius: 10px;
       background: var(--panel);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       overflow: hidden;
       box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
     }
@@ -1289,11 +1240,11 @@
     .note summary {
       list-style: none;
       cursor: pointer;
-      padding: 18px 22px;
+      padding: 20px 24px;
       display: flex;
       gap: 16px;
-      align-items: baseline;
-      flex-wrap: wrap
+      align-items: center;
+      justify-content: space-between
     }
 
     .note summary::-webkit-details-marker {
@@ -1304,38 +1255,51 @@
       background: var(--panel-2)
     }
 
-    .note .n-id {
-      font-family: var(--mono);
-      font-size: 10.5px;
-      color: var(--info);
-      letter-spacing: .15em
-    }
-
     .note h3 {
       font-family: var(--disp);
       font-weight: 700;
       font-size: 16.5px;
       flex: 1;
-      min-width: 240px
+      min-width: 0
     }
 
     .note .n-open {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--faint)
+      flex: 0 0 auto;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      transition: border-color .2s
+    }
+
+    .note .n-open::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid var(--muted);
+      border-bottom: 1.5px solid var(--muted);
+      transform: translateY(-1.5px) rotate(45deg);
+      transition: transform .2s, border-color .2s
     }
 
     .note[open] .n-open {
-      color: var(--ok)
+      border-color: var(--ok)
+    }
+
+    .note[open] .n-open::before {
+      border-color: var(--ok);
+      transform: translateY(1.5px) rotate(-135deg)
     }
 
     .note .n-body {
-      padding: 0 22px 22px;
+      padding: 0 24px 26px;
       color: var(--muted);
       font-size: 15px;
       max-width: 74ch;
       display: grid;
-      gap: 12px
+      gap: 14px
     }
 
     .note .n-body b {
@@ -1559,18 +1523,35 @@
       color: var(--ok)
     }
 
+    .aip-findings b {
+      font-weight: 600;
+      display: inline-block;
+      min-width: 4ch
+    }
+
+    .aip-findings i {
+      font-style: normal;
+      color: var(--faint);
+      margin-left: 6px
+    }
+
+    .aip .msim-status {
+      display: flex;
+      gap: 10px
+    }
+
     /* ================= peer review ================= */
     .peer-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px
+      gap: 16px
     }
 
     .peer {
       border: 1px solid var(--line);
       border-radius: 10px;
       background: var(--panel);
-      padding: 20px 22px;
+      padding: 24px;
       box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
     }
 
@@ -1623,13 +1604,30 @@
     }
 
     .peer.link-out .p-icon {
-      font-size: 20px;
-      color: var(--info)
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      display: grid;
+      place-items: center;
+      color: var(--info);
+      flex: 0 0 auto
+    }
+
+    .peer.link-out .p-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round
     }
 
     .peer.link-out .p-sub {
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 12px;
       color: var(--muted)
     }
 
@@ -1665,20 +1663,19 @@
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 8px
+      gap: 16px
     }
 
     .c-card {
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       background: var(--panel);
-      padding: 18px 20px;
-      font-family: var(--mono);
-      font-size: 14px;
+      padding: 20px 22px;
       color: var(--text);
       min-width: 0;
       overflow-wrap: anywhere;
+      display: grid;
+      gap: 6px;
       transition: .2s;
       box-shadow: 0 1px 3px rgba(21, 37, 48, .05)
     }
@@ -1689,9 +1686,21 @@
       transform: translateY(-2px)
     }
 
-    .c-proto {
-      color: var(--ok);
-      margin-right: 6px
+    .c-label {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted)
+    }
+
+    .c-card:hover .c-label {
+      color: var(--ok)
+    }
+
+    .c-value {
+      font-size: 15.5px;
+      font-weight: 500
     }
 
     .foot {
@@ -1699,7 +1708,7 @@
       justify-content: space-between;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 44px;
+      margin-top: 56px;
       font-family: var(--mono);
       font-size: 11px;
       color: var(--faint)
@@ -1745,7 +1754,21 @@
       .rail .brand {
         writing-mode: horizontal-tb;
         margin: 0 10px 0 0;
-        font-size: 10px
+        font-size: 10px;
+        letter-spacing: .2em
+      }
+
+      .rail .brand-full {
+        display: none
+      }
+
+      .rail .brand-short {
+        display: inline
+      }
+
+      .node {
+        width: 28px;
+        height: 28px
       }
 
       .bus {
@@ -1856,7 +1879,6 @@
       }
 
       .rail,
-      #boot,
       .sim,
       .hero-cta,
       .badge.sim,
@@ -1932,62 +1954,50 @@
 
 <body>
 
-  <!-- ================= boot sequence (skippable, first visit per session) ================= -->
-  <div id="boot" role="presentation" aria-hidden="true">
-    <div class="boot-box">
-      <div class="boot-title">alm-ctrl · v4 boot</div>
-      <div class="bl">mounting capability modules <span class="ok">OK</span></div>
-      <div class="bl">attaching deployment history <span class="ok">OK</span></div>
-      <div class="bl">starting system simulations <span class="ok">LIVE</span></div>
-      <div class="bl">auth handshake · guest session <span class="ok">OK</span></div>
-      <div class="skip">click anywhere to skip</div>
-    </div>
-  </div>
-
   <!-- ================= bus rail ================= -->
   <nav class="rail" aria-label="Section navigation">
-    <span class="brand">ALM · CTRL-PLANE</span>
+    <span class="brand"><span class="brand-full">Ahmed Lotfy Mahfouz</span><span class="brand-short">ALM</span></span>
     <div class="bus" id="bus">
       <span class="packet"></span><span class="packet p2"></span><span class="packet p3"></span>
-      <a class="node" href="#top" data-label="sys://overview" aria-label="Overview">
+      <a class="node" href="#top" data-label="Overview" aria-label="Overview">
         <svg viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="9" />
           <circle cx="12" cy="12" r="3" />
         </svg></a>
-      <a class="node" href="#stack" data-label="svc://capabilities" aria-label="Capabilities">
+      <a class="node" href="#stack" data-label="Capabilities" aria-label="Capabilities">
         <svg viewBox="0 0 24 24">
           <rect x="4" y="4" width="7" height="7" rx="1" />
           <rect x="13" y="4" width="7" height="7" rx="1" />
           <rect x="4" y="13" width="7" height="7" rx="1" />
           <rect x="13" y="13" width="7" height="7" rx="1" />
         </svg></a>
-      <a class="node" href="#exp" data-label="svc://deployments" aria-label="Experience">
+      <a class="node" href="#exp" data-label="Experience" aria-label="Experience">
         <svg viewBox="0 0 24 24">
           <path d="M12 3v18M12 3l-4 4M12 3l4 4" />
           <circle cx="12" cy="19" r="2" />
         </svg></a>
-      <a class="node" href="#proj" data-label="svc://systems.live" aria-label="Projects">
+      <a class="node" href="#proj" data-label="Projects" aria-label="Projects">
         <svg viewBox="0 0 24 24">
           <path d="M4 17l6-6 4 4 6-8" />
           <path d="M4 21h16" />
         </svg></a>
-      <a class="node" href="#notes" data-label="notes://field" aria-label="Field notes">
+      <a class="node" href="#notes" data-label="Field notes" aria-label="Field notes">
         <svg viewBox="0 0 24 24">
           <path d="M6 3h9l4 4v14H6z" />
           <path d="M9 12h7M9 16h7" />
         </svg></a>
-      <a class="node" href="#peers" data-label="probe://peers" aria-label="Peer review">
+      <a class="node" href="#peers" data-label="Recommendations" aria-label="Peer review">
         <svg viewBox="0 0 24 24">
           <circle cx="9" cy="8" r="3.5" />
           <circle cx="17" cy="10" r="2.5" />
           <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 16.5c2.4.4 4 2 4 3.5" />
         </svg></a>
-      <a class="node" href="#certs" data-label="certs://registry" aria-label="Certifications">
+      <a class="node" href="#certs" data-label="Certifications" aria-label="Certifications">
         <svg viewBox="0 0 24 24">
           <circle cx="12" cy="9" r="5" />
           <path d="M8.5 13.5L7 21l5-2.6L17 21l-1.5-7.5" />
         </svg></a>
-      <a class="node" href="#contact" data-label="svc://handshake" aria-label="Contact">
+      <a class="node" href="#contact" data-label="Contact" aria-label="Contact">
         <svg viewBox="0 0 24 24">
           <path d="M4 6h16v12H4z" />
           <path d="M4 7l8 6 8-6" />
@@ -2001,37 +2011,34 @@
     <header class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <div class="status-line">
-            <span class="dot"></span> STATUS: OPERATIONAL &nbsp;·&nbsp; REGION: DUBAI-UAE &nbsp;·&nbsp; UPTIME: 8+ YRS
-          </div>
-          <h1>Ahmed Lotfy Mahfouz
-            <span class="thin">Technical Team Lead · .NET Systems × Production AI</span>
-          </h1>
-          <p class="hero-sub">I lead a team of 5 engineers building the systems that <strong>fuel stations, POS
+          <p class="eyebrow">Technical Team Lead</p>
+          <h1>Ahmed Lotfy Mahfouz</h1>
+          <p class="hero-role">.NET Systems and Production AI</p>
+          <p class="hero-sub">I lead a team of 5 engineers in Dubai building the systems that <strong>fuel stations, POS
               terminals, and payment networks</strong> depend on, and I bring AI into them the enterprise way:
             <strong>self-hosted LLMs on NVIDIA DGX</strong> where data can't leave, hosted models where it can.</p>
           <div class="hero-cta">
-            <a class="btn primary" href="#proj">Inspect live systems ↓</a>
-            <a class="btn" href="dgx-llm.html">case://dgx-llm ↗</a>
-            <a class="btn" href="Ahmed-lotfy-resume.pdf" download="Ahmed-Lotfy-Mahfouz-Resume.pdf">⬇ resume.pdf</a>
-            <button class="btn" type="button" onclick="window.print()">⎙ print CV</button>
+            <a class="btn primary" href="#proj">View live systems</a>
+            <a class="btn" href="dgx-llm.html">Read the case study</a>
+            <a class="btn" href="Ahmed-lotfy-resume.pdf" download="Ahmed-Lotfy-Mahfouz-Resume.pdf">Download resume</a>
+            <button class="btn" type="button" onclick="window.print()">Print CV</button>
           </div>
         </div>
-        <aside class="tele" aria-label="Profile telemetry">
-          <div class="tele-head"><span>node: alm-01</span><span>probe: realtime</span></div>
+        <aside class="tele" aria-label="Core strengths">
+          <div class="tele-head"><span>Core strengths</span><span>8+ years</span></div>
           <div class="tele-body">
             <div class="tele-row"><span class="k">.NET / C#</span><span class="meter"><i data-w="96"></i></span><span
-                class="v">core</span></div>
-            <div class="tele-row"><span class="k">Integration/ESB</span><span class="meter"><i
-                  data-w="92"></i></span><span class="v">core</span></div>
+                class="v">Core</span></div>
+            <div class="tele-row"><span class="k">Integration / ESB</span><span class="meter"><i
+                  data-w="92"></i></span><span class="v">Core</span></div>
             <div class="tele-row"><span class="k">Angular</span><span class="meter"><i data-w="84"></i></span><span
-                class="v">prod</span></div>
+                class="v">Production</span></div>
             <div class="tele-row"><span class="k">SQL / T-SQL</span><span class="meter"><i data-w="88"></i></span><span
-                class="v">prod</span></div>
+                class="v">Production</span></div>
             <div class="tele-row"><span class="k">LLM / RAG</span><span class="meter"><i data-w="82"></i></span><span
-                class="v">prod</span></div>
-            <div class="tele-row"><span class="k">Team lead</span><span class="meter"><i data-w="90"></i></span><span
-                class="v">5 eng</span></div>
+                class="v">Production</span></div>
+            <div class="tele-row"><span class="k">Team leadership</span><span class="meter"><i data-w="90"></i></span><span
+                class="v">5 engineers</span></div>
           </div>
         </aside>
       </div>
@@ -2039,17 +2046,18 @@
 
     <section class="svc" id="stack">
       <div class="wrap">
-        <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>capabilities <span>· 4 modules
-            loaded</span></div>
-        <h2>Capability <em>Matrix</em></h2>
+        <div class="sec-head">
+          <p class="eyebrow">Skills</p>
+          <h2>Capability <em>Matrix</em></h2>
+        </div>
         <div class="cap-grid">
           <div class="cap">
-            <div class="cap-head"><span class="cap-id">MOD-01</span>
+            <div class="cap-head">
               <h3>Languages &amp; Frameworks</h3>
             </div>
             <ul class="chips">
               <li>C#</li>
-              <li>.NET Core → 10</li>
+              <li>.NET Core to .NET 10</li>
               <li>Entity Framework</li>
               <li>gRPC</li>
               <li>WCF</li>
@@ -2062,7 +2070,7 @@
             </ul>
           </div>
           <div class="cap">
-            <div class="cap-head"><span class="cap-id">MOD-02</span>
+            <div class="cap-head">
               <h3>AI &amp; LLM in Production</h3>
             </div>
             <ul class="chips ai">
@@ -2077,7 +2085,7 @@
             </ul>
           </div>
           <div class="cap">
-            <div class="cap-head"><span class="cap-id">MOD-03</span>
+            <div class="cap-head">
               <h3>Platform &amp; Ops</h3>
             </div>
             <ul class="chips">
@@ -2091,7 +2099,7 @@
             </ul>
           </div>
           <div class="cap">
-            <div class="cap-head"><span class="cap-id">MOD-04</span>
+            <div class="cap-head">
               <h3>Systems Expertise</h3>
             </div>
             <ul class="chips">
@@ -2110,14 +2118,15 @@
 
     <section class="svc" id="exp">
       <div class="wrap">
-        <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>deployments <span>· chronological
-            log</span></div>
-        <h2>Deployment <em>History</em></h2>
+        <div class="sec-head">
+          <p class="eyebrow">Experience</p>
+          <h2>Deployment <em>History</em></h2>
+        </div>
         <article class="dep">
-          <div class="dep-meta"><span class="dep-ver">v4 · CURRENT</span><span class="dep-when">11/2020 →
-              now</span><span class="dep-where">Dubai, UAE</span></div>
+          <div class="dep-meta"><span class="dep-when">Nov 2020 - Present</span><span class="dep-where">Dubai, UAE</span></div>
           <div class="dep-body">
-            <h3>Technical Team Lead · <a href="https://enoc.com" rel="noopener">ENOC</a></h3>
+            <h3>Technical Team Lead</h3>
+            <p class="dep-org"><a href="https://enoc.com" rel="noopener">ENOC</a></p>
             <ul>
               <li>Lead a team of <b>5 engineers</b> building internal &amp; external services for enterprise retail and
                 payment systems, owning delivery from design through production.</li>
@@ -2135,10 +2144,10 @@
           </div>
         </article>
         <article class="dep">
-          <div class="dep-meta"><span class="dep-ver">v3 · PARALLEL</span><span class="dep-when">11/2020 →
-              12/2025</span><span class="dep-where">Dubai · part-time</span></div>
+          <div class="dep-meta"><span class="dep-when">Nov 2020 - Dec 2025</span><span class="dep-where">Dubai, UAE</span><span class="dep-note">Part-time</span></div>
           <div class="dep-body">
-            <h3>Senior Software Engineer · Compass International</h3>
+            <h3>Senior Software Engineer</h3>
+            <p class="dep-org">Compass International</p>
             <ul>
               <li>Built a <b>multi-tenant ERP platform</b> full-stack with .NET and the ABP framework; core modules plus
                 the mobile-facing API layer; CI/CD for releases.</li>
@@ -2146,30 +2155,30 @@
           </div>
         </article>
         <article class="dep">
-          <div class="dep-meta"><span class="dep-ver">v2</span><span class="dep-when">10/2019 → 11/2020</span><span
-              class="dep-where">Cairo, EG</span></div>
+          <div class="dep-meta"><span class="dep-when">Oct 2019 - Nov 2020</span><span class="dep-where">Cairo, Egypt</span></div>
           <div class="dep-body">
-            <h3>.NET Full-Stack Engineer · Compass International</h3>
+            <h3>.NET Full-Stack Engineer</h3>
+            <p class="dep-org">Compass International</p>
             <ul>
               <li>Shipment tracking &amp; optimization; C#/.NET, JavaScript, AJAX applications.</li>
             </ul>
           </div>
         </article>
         <article class="dep">
-          <div class="dep-meta"><span class="dep-ver">v1</span><span class="dep-when">07/2017 → 10/2019</span><span
-              class="dep-where">Cairo, EG</span></div>
+          <div class="dep-meta"><span class="dep-when">Jul 2017 - Oct 2019</span><span class="dep-where">Cairo, Egypt</span></div>
           <div class="dep-body">
-            <h3>.NET Full-Stack Engineer · Pearogram</h3>
+            <h3>.NET Full-Stack Engineer</h3>
+            <p class="dep-org">Pearogram</p>
             <ul>
               <li>Scalable web solutions for client projects using HTML, JavaScript, AJAX, and JSON.</li>
             </ul>
           </div>
         </article>
         <article class="dep edu">
-          <div class="dep-meta"><span class="dep-ver">BOOT</span><span class="dep-when">2013 → 2019</span><span
-              class="dep-where">Menoufia Univ.</span></div>
+          <div class="dep-meta"><span class="dep-when">2013 - 2019</span><span class="dep-where">Shibin El Kom, Egypt</span></div>
           <div class="dep-body">
             <h3>B.Sc. Pure Mathematics &amp; Computer Science</h3>
+            <p class="dep-org">Menoufia University</p>
           </div>
         </article>
       </div>
@@ -2177,20 +2186,20 @@
 
     <section class="svc" id="proj">
       <div class="wrap">
-        <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>systems.live <span>· internal
-            systems shown as simulations</span></div>
-        <h2>Systems, <em>Running</em></h2>
-        <p class="sec-note">Enterprise systems can't be linked publicly, so the internal ones run here as live
-          simulations of what they do. Public projects link out.</p>
+        <div class="sec-head">
+          <p class="eyebrow">Projects</p>
+          <h2>Systems, <em>Running</em></h2>
+          <p class="sec-note">Enterprise systems can't be linked publicly, so the internal ones run here as live
+            simulations of what they do. Public projects link out.</p>
+        </div>
 
         <article class="sys">
           <div class="sys-head">
             <div>
               <h3>ENOC Contactless &amp; POS Services</h3>
-              <p class="sys-sub">Contactless cards, vending &amp; POS machines · Network International payments · SOA
-                financial accounts</p>
+              <p class="sys-sub">Contactless cards, vending and POS machines, Network International payments, and SOA financial accounts.</p>
             </div>
-            <span class="badge sim">SIMULATION</span>
+            <span class="badge sim">Simulation</span>
           </div>
           <div class="sim pos">
             <div class="sim-stats">
@@ -2213,17 +2222,16 @@
           <div class="sys-head">
             <div>
               <h3>Internal RAG Assistant + GenAI for .NET</h3>
-              <p class="sys-sub">Retrieval-augmented assistant over company knowledge · Microsoft.Extensions.AI
-                abstraction · hosted &amp; self-hosted models</p>
+              <p class="sys-sub">Retrieval-augmented assistant over company knowledge, built on the Microsoft.Extensions.AI abstraction with hosted and self-hosted models.</p>
             </div>
-            <span class="badge sim">SIMULATION</span>
+            <span class="badge sim">Simulation</span>
           </div>
           <div class="sim rag">
             <div class="rag-route">
-              <span class="route-lbl">MODEL ROUTE</span>
-              <button class="route-btn active" id="route-local" type="button">⛨ On-prem · DGX / Ollama</button>
-              <button class="route-btn" id="route-hosted" type="button">☁ Hosted · Claude API</button>
-              <span class="route-note" id="route-note">data boundary: never leaves the org</span>
+              <span class="route-lbl">Model route</span>
+              <button class="route-btn active" id="route-local" type="button">On-premises (DGX, Ollama)</button>
+              <button class="route-btn" id="route-hosted" type="button">Hosted (Claude API)</button>
+              <span class="route-note" id="route-note">Data stays inside the organization</span>
             </div>
             <div class="rag-q" id="rag-q"></div>
             <div class="rag-chips" id="rag-chips"></div>
@@ -2232,7 +2240,7 @@
           <ul class="sys-skills">
             <li>RAG</li>
             <li>Vector search</li>
-            <li>MEAI · IChatClient</li>
+            <li>IChatClient (MEAI)</li>
             <li>Ollama on DGX Spark</li>
             <li>Claude API</li>
           </ul>
@@ -2241,27 +2249,26 @@
         <article class="sys">
           <div class="sys-head">
             <div>
-              <h3>ViP · Vehicle Identification Pass</h3>
-              <p class="sys-sub">RFID-tagged vehicles authorized for fueling &amp; payment · FastEndpoints APIs · ESB
-                integration · Angular front-end</p>
+              <h3>Vehicle Identification Pass (ViP)</h3>
+              <p class="sys-sub">RFID-tagged vehicles authorized for fueling and payment. FastEndpoints APIs, ESB integration, and an Angular front end.</p>
             </div>
-            <div class="badge-row"><span class="badge sim">API TRACE</span><a class="badge link"
-                href="https://vipselect.enoc.com" rel="noopener">LIVE SITE ↗</a></div>
+            <div class="badge-row"><span class="badge sim">API trace</span><a class="badge link"
+                href="https://vipselect.enoc.com" rel="noopener">Live site ↗</a></div>
           </div>
           <div class="sim vip">
             <div class="vip-lane">
               <div class="vip-road">
-                <div class="vip-car" id="vip-car">🚗</div>
+                <div class="vip-car" id="vip-car"><svg viewBox="0 0 36 18" aria-hidden="true"><path d="M3 14v-4h4l2.6-4.4A1.5 1.5 0 0 1 10.9 5h8.6a1.5 1.5 0 0 1 1.1.5L25 10h7a2 2 0 0 1 2 2v2h-4a3 3 0 0 0-6 0h-9a3 3 0 0 0-6 0z" /><circle cx="27" cy="14" r="2.2" /><circle cx="12" cy="14" r="2.2" /></svg></div>
                 <div class="vip-gate" id="vip-gate"></div>
               </div>
             </div>
             <ol class="trace" id="vip-trace">
-              <li data-ms="12">VEHICLE DETECTED · lane 03</li>
-              <li data-ms="28">RFID TAG READ · tag 8F:2C:…:A1</li>
-              <li data-ms="41">GET /passes/{tag} · account resolved</li>
-              <li data-ms="35">POST /limits/check · fleet policy OK</li>
-              <li data-ms="52">POST /pump/authorize · pump #7 unlocked</li>
-              <li data-ms="19">EVENT → ESB · fueling.started published</li>
+              <li data-ms="12">Vehicle detected on lane 03</li>
+              <li data-ms="28">RFID tag read 8F:2C:7A:A1</li>
+              <li data-ms="41">GET /passes/{tag} resolved the account</li>
+              <li data-ms="35">POST /limits/check passed fleet policy</li>
+              <li data-ms="52">POST /pump/authorize unlocked pump 7</li>
+              <li data-ms="19">Fueling started event published to ESB</li>
             </ol>
           </div>
           <ul class="sys-skills">
@@ -2276,9 +2283,9 @@
         <div class="sys-grid">
           <article class="mini">
             <div class="mini-head">
-              <h4>AnimeCV</h4><a class="badge link" href="https://animecv.app" rel="noopener">animecv.app ↗</a>
+              <h4>AnimeCV</h4><a class="badge link" href="https://animecv.app" rel="noopener">Visit site ↗</a>
             </div>
-            <p>Upload a resume → get an anime character card with derived stats and a generated hero image. Claude API
+            <p>Upload a resume and get an anime character card with derived stats and a generated hero image. Claude API
               for structured analysis, fal.ai for imagery.</p>
             <div class="msim acv">
               <div class="msim-status" id="acv-status">parsing resume…</div>
@@ -2328,7 +2335,7 @@
           </article>
           <article class="mini">
             <div class="mini-head">
-              <h4>Tenxerp</h4><a class="badge link" href="https://www.tenxerp.com" rel="noopener">tenxerp.com ↗</a>
+              <h4>Tenxerp</h4><a class="badge link" href="https://www.tenxerp.com" rel="noopener">Visit site ↗</a>
             </div>
             <p>Full-stack multi-tenant ERP on .NET + ABP. Try switching the tenant:</p>
             <div class="tenant">
@@ -2356,14 +2363,13 @@
           </article>
           <article class="mini">
             <div class="mini-head">
-              <h4>Charity UAQ</h4><a class="badge link" href="https://charity.uaq.ae/home" rel="noopener">charity.uaq.ae
-                ↗</a>
+              <h4>Charity UAQ</h4><a class="badge link" href="https://charity.uaq.ae/home" rel="noopener">Visit site ↗</a>
             </div>
             <p>ERP for UAE charities: ASP.NET Core APIs, Angular portal, MVC admin dashboard.</p>
             <div class="msim cuaq">
               <div class="cuaq-camp"><span id="cuaq-name">Winter Relief</span><span id="cuaq-pct">0%</span></div>
               <div class="cuaq-track"><i id="cuaq-fill"></i></div>
-              <div class="msim-status" id="cuaq-feed">awaiting donations…</div>
+              <div class="msim-status" id="cuaq-feed">Awaiting donations…</div>
             </div>
             <ul class="sys-skills">
               <li>ASP.NET Core</li>
@@ -2374,7 +2380,7 @@
           <article class="mini">
             <div class="mini-head">
               <h4>DMG Publisher</h4><a class="badge link" href="https://dmgpublisher.com"
-                rel="noopener">dmgpublisher.com ↗</a>
+                rel="noopener">Visit site ↗</a>
             </div>
             <p>Book publishing platform on .NET Framework + Bootstrap.</p>
             <div class="msim dmg">
@@ -2393,18 +2399,18 @@
           </article>
           <article class="mini">
             <div class="mini-head">
-              <h4>On-Prem AI Platform</h4><a class="badge link" href="dgx-llm.html">CASE STUDY ↗</a>
+              <h4>On-Prem AI Platform</h4><a class="badge link" href="dgx-llm.html">Case study →</a>
             </div>
             <p>Four AI workloads in production on self-hosted LLMs: code review, security review, grounded RAG,
               and code generation. Data never leaves the organization.</p>
             <div class="msim aip">
-              <div class="msim-status"><span id="aip-mr">MR-1042</span> · <span id="aip-phase">scanning diff…</span>
+              <div class="msim-status"><span id="aip-mr">MR-1042</span><span id="aip-phase">Scanning diff…</span>
               </div>
               <div class="aip-scan"><i id="aip-scanbar"></i></div>
               <div class="aip-findings" id="aip-findings"></div>
             </div>
             <ul class="sys-skills">
-              <li>Ollama · DGX</li>
+              <li>Ollama on DGX</li>
               <li>MEAI</li>
               <li>Agents</li>
               <li>RAG</li>
@@ -2417,14 +2423,15 @@
     <!-- ================= FIELD NOTES ================= -->
     <section class="svc" id="notes">
       <div class="wrap">
-        <div class="svc-tag"><span class="dot"></span><span class="proto">notes://</span>field <span>· how I
-            think</span></div>
-        <h2>Field <em>Notes</em></h2>
-        <p class="sec-note">Short notes on engineering judgment: the decisions behind the systems above.</p>
+        <div class="sec-head">
+          <p class="eyebrow">How I think</p>
+          <h2>Field <em>Notes</em></h2>
+          <p class="sec-note">Short notes on engineering judgment: the decisions behind the systems above.</p>
+        </div>
 
         <details class="note">
-          <summary><span class="n-id">NOTE-01</span>
-            <h3>Why we self-host LLMs on DGX (and when we don't)</h3><span class="n-open">▸ read</span>
+          <summary>
+            <h3>Why we self-host LLMs on DGX (and when we don't)</h3><span class="n-open" aria-hidden="true"></span>
           </summary>
           <div class="n-body">
             <p>The question isn't "hosted or self-hosted". It's <b>where is the data boundary?</b> Internal policies,
@@ -2439,8 +2446,8 @@
         </details>
 
         <details class="note">
-          <summary><span class="n-id">NOTE-02</span>
-            <h3>Retiring an ESB without a big bang</h3><span class="n-open">▸ read</span>
+          <summary>
+            <h3>Retiring an ESB without a big bang</h3><span class="n-open" aria-hidden="true"></span>
           </summary>
           <div class="n-body">
             <p>Payment and POS integrations punish big-bang migrations. A bad cutover is measured in failed
@@ -2455,8 +2462,8 @@
         </details>
 
         <details class="note">
-          <summary><span class="n-id">NOTE-03</span>
-            <h3>Getting LLMs to return data, not prose</h3><span class="n-open">▸ read</span>
+          <summary>
+            <h3>Getting LLMs to return data, not prose</h3><span class="n-open" aria-hidden="true"></span>
           </summary>
           <div class="n-body">
             <p>The moment an LLM output feeds a system instead of a human, prose is a liability. The rule I enforce:
@@ -2475,23 +2482,25 @@
     <!-- ================= PEER REVIEW / TESTIMONIALS ================= -->
     <section class="svc" id="peers">
       <div class="wrap">
-        <div class="svc-tag"><span class="dot"></span><span class="proto">probe://</span>peer-review</div>
-        <h2>Peer <em>Review</em></h2>
-        <p class="sec-note">Verified recommendations from people I've worked with. Full text on LinkedIn.</p>
+        <div class="sec-head">
+          <p class="eyebrow">Recommendations</p>
+          <h2>Peer <em>Review</em></h2>
+          <p class="sec-note">Verified recommendations from people I've worked with. Full text on LinkedIn.</p>
+        </div>
         <div class="peer-grid" id="peer-grid">
           <!-- PASTE RECOMMENDATIONS HERE: duplicate this card per quote:
       <blockquote class="peer">
         <p>"QUOTE TEXT: keep to one to three sentences, trim with … if needed"</p>
-        <footer><b>Full Name</b> · Their role · relationship (e.g. "managed Ahmed at ENOC")
-        <span class="p-badge">VERIFIED ↗</span></footer>
+        <footer><b>Full Name</b><span>Their role, relationship (e.g. "managed Ahmed at ENOC")</span>
+        <span class="p-badge">Verified ↗</span></footer>
       </blockquote>
       -->
           <a class="peer link-out" href="https://www.linkedin.com/in/ahmed-lotfi-ba2206111/details/recommendations/"
             rel="noopener">
-            <span class="p-icon">⛿</span>
+            <span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" /><path d="M8 9h8M8 12.5h5" /></svg></span>
             <span><b>Recommendations on LinkedIn</b><br>
-              <span class="p-sub">probe endpoint: linkedin/recommendations → read verified peer reviews</span></span>
-            <span class="p-badge">OPEN ↗</span>
+              <span class="p-sub">Read verified recommendations from managers and colleagues</span></span>
+            <span class="p-badge">Open ↗</span>
           </a>
         </div>
       </div>
@@ -2500,10 +2509,11 @@
     <!-- ================= CERTS REGISTRY ================= -->
     <section class="svc" id="certs">
       <div class="wrap">
-        <div class="svc-tag"><span class="dot"></span><span class="proto">certs://</span>registry <span>· 1 verified
-            credential</span></div>
-        <h2>Certification <em>Registry</em></h2>
-        <p class="sec-note">Verified credentials only. Each entry links to the issuer's verification page.</p>
+        <div class="sec-head">
+          <p class="eyebrow">Credentials</p>
+          <h2>Certification <em>Registry</em></h2>
+          <p class="sec-note">Verified credentials only. Each entry links to the issuer's verification page.</p>
+        </div>
         <div class="sys-grid">
           <article class="mini cert">
             <a class="cert-thumb" href="certificates/dometrain-system-design-for-beginners.png" rel="noopener"
@@ -2514,12 +2524,12 @@
             </a>
             <div class="mini-head">
               <h4>Hands-On: System Design for Beginners</h4>
-              <a class="badge link" href="https://dometrain.com/certificate/kdejiLiMrXCx3o" rel="noopener">VERIFY ↗</a>
+              <a class="badge link" href="https://dometrain.com/certificate/kdejiLiMrXCx3o" rel="noopener">Verify ↗</a>
             </div>
-            <p>Dometrain course certificate, authored by Nick Chapsas. Completed August 14, 2026 · 4h 10m course.</p>
+            <p>Dometrain course certificate, authored by Nick Chapsas. Completed August 14, 2026 (4h 10m course).</p>
             <ul class="sys-skills">
               <li>System design</li>
-              <li>ID kdejiLiMrXCx3o</li>
+              <li>Credential kdejiLiMrXCx3o</li>
             </ul>
           </article>
         </div>
@@ -2530,25 +2540,24 @@
 
     <section class="svc" id="contact">
       <div class="wrap contact-wrap">
-        <div class="svc-tag"><span class="dot"></span><span class="proto">svc://</span>handshake</div>
-        <h2>Open a <em>Channel</em></h2>
-        <p class="sec-note">Building enterprise .NET, payments, or bringing LLMs on-prem? Let's talk.</p>
-        <div class="contact-grid">
-          <a class="c-card" href="mailto:ahmedlotfiali@gmail.com"><span
-              class="c-proto">smtp://</span>ahmedlotfiali@gmail.com</a>
-          <a class="c-card" href="tel:+971559290841"><span class="c-proto">tel://</span>+971 55 929 0841</a>
-          <a class="c-card" href="https://www.linkedin.com/in/ahmed-lotfi-ba2206111" rel="noopener"><span
-              class="c-proto">in://</span>ahmed-lotfi</a>
-          <a class="c-card" href="https://github.com/AhmedLotfi" rel="noopener"><span
-              class="c-proto">git://</span>AhmedLotfi</a>
+        <div class="sec-head">
+          <p class="eyebrow">Contact</p>
+          <h2>Open a <em>Channel</em></h2>
+          <p class="sec-note">Building enterprise .NET, payments, or bringing LLMs on-prem? Let's talk.</p>
         </div>
-        <div class="hero-cta" style="margin-top:26px">
-          <a class="btn" href="Ahmed-lotfy-resume.pdf" download="Ahmed-Lotfy-Mahfouz-Resume.pdf">⬇ resume.pdf</a>
-          <button class="btn" type="button" onclick="window.print()">⎙ print CV</button>
+        <div class="contact-grid">
+          <a class="c-card" href="mailto:ahmedlotfiali@gmail.com"><span class="c-label">Email</span><span class="c-value">ahmedlotfiali@gmail.com</span></a>
+          <a class="c-card" href="tel:+971559290841"><span class="c-label">Phone</span><span class="c-value">+971 55 929 0841</span></a>
+          <a class="c-card" href="https://www.linkedin.com/in/ahmed-lotfi-ba2206111" rel="noopener"><span class="c-label">LinkedIn</span><span class="c-value">View profile ↗</span></a>
+          <a class="c-card" href="https://github.com/AhmedLotfi" rel="noopener"><span class="c-label">GitHub</span><span class="c-value">AhmedLotfi ↗</span></a>
+        </div>
+        <div class="hero-cta" style="margin-top:32px">
+          <a class="btn" href="Ahmed-lotfy-resume.pdf" download="Ahmed-Lotfy-Mahfouz-Resume.pdf">Download resume</a>
+          <button class="btn" type="button" onclick="window.print()">Print CV</button>
         </div>
         <footer class="foot">
-          <span>AR native · EN professional</span>
-          <span>© 2026 Ahmed Lotfy Mahfouz · rendered by the control plane you're looking at</span>
+          <span>Arabic (native), English (professional)</span>
+          <span>© 2026 Ahmed Lotfy Mahfouz. Built with plain HTML, CSS, and JavaScript.</span>
         </footer>
       </div>
     </section>
@@ -2573,19 +2582,6 @@
       let theme = store.get('alm-theme') || 'light';
       apply(theme);
       btn.onclick = () => { theme = theme === 'light' ? 'dark' : 'light'; apply(theme); store.set('alm-theme', theme); };
-    })();
-
-    /* ---------- boot sequence: ~1.3s, skippable, once per session ---------- */
-    (function () {
-      const boot = document.getElementById('boot');
-      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduced || store.sget('alm-booted')) { boot.classList.add('done'); boot.remove(); return; }
-      const lines = [...boot.querySelectorAll('.bl')];
-      lines.forEach((l, i) => setTimeout(() => l.classList.add('show'), 160 + i * 230));
-      const finish = () => { store.sset('alm-booted', '1'); boot.classList.add('done'); setTimeout(() => boot.remove(), 500); };
-      setTimeout(finish, 160 + lines.length * 230 + 420);
-      boot.addEventListener('click', finish);
-      addEventListener('keydown', finish, { once: true });
     })();
 
     /* ---------- bus node positioning + scroll spy ---------- */
@@ -2634,14 +2630,14 @@
         const card = '••••' + Math.floor(1000 + Math.random() * 9000);
         const dev = devices[Math.random() * devices.length | 0], site = sites[Math.random() * sites.length | 0];
         const roll = Math.random();
-        let status, cls;
+        let status, cls, why = '';
         if (roll < 0.86) { status = 'APPROVED'; cls = 'ok'; ok++; }
-        else if (roll < 0.95) { status = 'DECLINED · insufficient funds'; cls = 'er'; }
-        else { status = 'RETRY · ESB timeout → recovered'; cls = 'wn'; ok++; }
+        else if (roll < 0.95) { status = 'DECLINED'; cls = 'er'; why = 'insufficient funds'; }
+        else { status = 'RETRY'; cls = 'wn'; why = 'ESB timeout, recovered'; ok++; }
         total++; latSum += lat;
         const el = document.createElement('div');
         el.className = 'ln';
-        el.innerHTML = `<span class="t">${t}</span> <span class="in">${dev}</span> ${site} · TAP ${card} · ${amt} AED → <span class="${cls}">${status}</span> <span class="t">${lat}ms</span>`;
+        el.innerHTML = `<span class="t">${t}</span><span class="in">${dev}</span><span>${site}</span><span>tap ${card}</span><span>${amt} AED</span><span class="${cls}">${status}</span>${why ? `<span class="t">${why}</span>` : ''}<span class="t">${lat}ms</span>`;
         log.appendChild(el);
         while (log.children.length > 6) log.removeChild(log.firstChild); // 6 lines fit the 172px log
         cEl.textContent = total;
@@ -2662,23 +2658,23 @@
       const setRoute = r => {
         route = r;
         bLocal.classList.toggle('active', r === 'local'); bHosted.classList.toggle('active', r === 'hosted');
-        noteEl.textContent = r === 'local' ? 'data boundary: never leaves the org' : 'route: hosted API · general workloads';
+        noteEl.textContent = r === 'local' ? 'Data stays inside the organization' : 'General workloads routed to a hosted API';
       };
       bLocal.onclick = () => setRoute('local'); bHosted.onclick = () => setRoute('hosted');
       const scenarios = [
         {
           q: 'What is the refund flow for a failed contactless payment?',
-          chips: ['payments-runbook.md §4', 'ni-integration-spec.pdf p.12', 'pos-faq.md'],
+          chips: ['Payments runbook §4', 'NI integration spec, page 12', 'POS FAQ'],
           a: 'Failed captures auto-reverse within 90s via the reconciliation job. If the ESB event was lost, trigger a manual reversal from the admin portal. The outbox guarantees the Network International call is idempotent.'
         },
         {
           q: 'Which service owns fleet fuel limits?',
-          chips: ['vip-architecture.md', 'limits-api.yaml', 'fleet-policy.docx §2.1'],
+          chips: ['ViP architecture doc', 'Limits API spec', 'Fleet policy §2'],
           a: 'Limits live in the ViP Limits service (POST /limits/check). Fleet policies sync nightly from the ERP; per-vehicle overrides are cached 5 minutes.'
         },
         {
           q: 'How do I request SSO access for a new admin portal?',
-          chips: ['sso-onboarding.md', 'ad-groups.xlsx', 'portal-checklist.md'],
+          chips: ['SSO onboarding guide', 'AD group matrix', 'Portal checklist'],
           a: 'Register the app in the SSO service, map an AD security group to a portal role, then raise a CAB ticket. Token audience must match the portal API before go-live.'
         }
       ];
@@ -2697,7 +2693,7 @@
         chipsEl.innerHTML = ''; aEl.textContent = '';
         type(qEl, s.q, () => {
           s.chips.forEach((c, i) => setTimeout(() => {
-            const sp = document.createElement('span'); sp.textContent = '⛁ ' + c; chipsEl.appendChild(sp);
+            const sp = document.createElement('span'); sp.textContent = c; chipsEl.appendChild(sp);
           }, 250 * i));
           setTimeout(() => type(aEl, s.a, () => setTimeout(run, 5200)), 250 * s.chips.length + 500);
         });
@@ -2716,7 +2712,7 @@
       function cycle() {
         steps.forEach(s => s.classList.remove('done'));
         gate.classList.remove('open');
-        car.style.transition = 'none'; car.style.left = '-40px';
+        car.style.transition = 'none'; car.style.left = '-48px';
         requestAnimationFrame(() => requestAnimationFrame(() => {
           car.style.transition = 'left 1.6s cubic-bezier(.3,.7,.4,1)';
           car.style.left = '34%';
@@ -2763,23 +2759,23 @@
       if (acvS) {
         const arch = document.getElementById('acv-arch');
         const bars = [...document.querySelectorAll('.acv-bar i')];
-        const archetypes = ['⚔ THE SYSTEM WEAVER', '🛡 THE GATEKEEPER', '⚡ THE PIPELINE SAGE'];
+        const archetypes = ['The System Weaver', 'The Gatekeeper', 'The Pipeline Sage'];
         let a = 0;
         function cycle() {
-          acvS.textContent = 'parsing resume…'; arch.textContent = '…';
+          acvS.textContent = 'Parsing resume…'; arch.textContent = '…';
           bars.forEach(b => b.style.width = '0');
           setTimeout(() => {
-            acvS.textContent = 'deriving stats (Claude · structured output)…';
+            acvS.textContent = 'Deriving stats with Claude structured output…';
             bars.forEach(b => b.style.width = b.dataset.v + '%');
           }, 900);
           setTimeout(() => {
-            acvS.textContent = 'hero image generated (fal.ai) ✓';
+            acvS.textContent = 'Hero image generated with fal.ai';
             arch.textContent = archetypes[a++ % archetypes.length];
           }, 2100);
           setTimeout(cycle, 5600);
         }
         if (reduced) {
-          acvS.textContent = 'character card generated ✓'; arch.textContent = archetypes[0];
+          acvS.textContent = 'Character card generated'; arch.textContent = archetypes[0];
           bars.forEach(b => b.style.width = b.dataset.v + '%');
         }
         else cycle();
@@ -2805,16 +2801,16 @@
         const camps = ['Winter Relief', 'School Kits', 'Iftar Meals', 'Medical Aid'];
         let ci = 0, p = 18;
         const render = () => { pct.textContent = Math.min(100, Math.round(p)) + '%'; fill.style.width = Math.min(100, p) + '%'; };
-        if (reduced) { p = 72; render(); feed.textContent = 'donation received · 250 AED'; return; }
+        if (reduced) { p = 72; render(); feed.textContent = 'Donation received: 250 AED'; return; }
         render();
         setInterval(() => {
           const amt = [25, 50, 100, 150, 250, 500][Math.random() * 6 | 0];
           p += amt / 38;
           if (p >= 100) {
-            feed.textContent = '🎉 goal reached · ' + cn.textContent;
+            feed.textContent = 'Goal reached: ' + cn.textContent;
             setTimeout(() => { ci++; cn.textContent = camps[ci % camps.length]; p = 8 + Math.random() * 15; render(); }, 1600);
           }
-          else feed.textContent = 'donation received · ' + amt + ' AED';
+          else feed.textContent = 'Donation received: ' + amt + ' AED';
           render();
         }, 1900);
       }
@@ -2845,35 +2841,37 @@
       if (mr) {
         const phase = document.getElementById('aip-phase'), bar = document.getElementById('aip-scanbar'), out = document.getElementById('aip-findings');
         const pool = [
-          ['sev-w', 'WARN  missing CancellationToken · OrderService.cs:41'],
-          ['sev-e', 'SEC   possible SQL injection · ReportQuery.cs:88'],
-          ['sev-w', 'WARN  N+1 query in loop · InvoiceSync.cs:112'],
-          ['sev-e', 'SEC   secret in config literal · appsettings.cs:9'],
-          ['sev-w', 'WARN  swallowed exception · PosAdapter.cs:203'],
-          ['sev-ok', 'PASS  0 blocking findings · ready for human review']
+          ['sev-w', 'WARN', 'Missing CancellationToken', 'OrderService.cs:41'],
+          ['sev-e', 'SEC', 'Possible SQL injection', 'ReportQuery.cs:88'],
+          ['sev-w', 'WARN', 'N+1 query in loop', 'InvoiceSync.cs:112'],
+          ['sev-e', 'SEC', 'Secret in config literal', 'appsettings.json:9'],
+          ['sev-w', 'WARN', 'Swallowed exception', 'PosAdapter.cs:203'],
+          ['sev-ok', 'PASS', 'No blocking findings', 'ready for human review']
         ];
+        const row = f => {
+          const d = document.createElement('div'); d.className = f[0];
+          d.innerHTML = `<b>${f[1]}</b> ${f[2]}` + (f[3] ? ` <i>${f[3]}</i>` : '');
+          return d;
+        };
         let n = 1042;
         if (reduced) {
-          bar.style.width = '100%'; phase.textContent = 'review complete';
-          out.innerHTML = '<div class="sev-w">' + pool[0][1] + '</div><div class="sev-ok">' + pool[5][1] + '</div>'; return;
+          bar.style.width = '100%'; phase.textContent = 'Review complete';
+          out.appendChild(row(pool[0])); out.appendChild(row(pool[5])); return;
         }
         function run() {
           mr.textContent = 'MR-' + (n++);
-          phase.textContent = 'scanning diff…'; out.innerHTML = '';
+          phase.textContent = 'Scanning diff…'; out.innerHTML = '';
           bar.style.transition = 'none'; bar.style.width = '0';
           requestAnimationFrame(() => requestAnimationFrame(() => {
             bar.style.transition = 'width 1.6s linear'; bar.style.width = '100%';
           }));
           setTimeout(() => {
-            phase.textContent = 'LLM review (on-prem · DGX)…';
+            phase.textContent = 'LLM review on DGX…';
             const picks = [pool[Math.random() * 5 | 0], pool[Math.random() * 5 | 0]].filter((v, i, a) => a.indexOf(v) === i);
-            picks.forEach((f, i) => setTimeout(() => {
-              const d = document.createElement('div'); d.className = f[0]; d.textContent = f[1]; out.appendChild(d);
-            }, 500 * i));
+            picks.forEach((f, i) => setTimeout(() => out.appendChild(row(f)), 500 * i));
             setTimeout(() => {
-              const d = document.createElement('div'); d.className = 'sev-ok';
-              d.textContent = 'POST  ' + picks.length + ' finding(s) → MR comments'; out.appendChild(d);
-              phase.textContent = 'review complete';
+              out.appendChild(row(['sev-ok', 'DONE', picks.length + (picks.length === 1 ? ' finding' : ' findings') + ' posted as MR comments', '']));
+              phase.textContent = 'Review complete';
             }, 500 * picks.length + 600);
           }, 1700);
           setTimeout(run, 7200);
